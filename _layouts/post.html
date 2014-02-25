@@ -32,14 +32,15 @@ layout: post
     <link rel="stylesheet" href="/css/screen.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+    <!---Typekit-->
+    <script type="text/javascript" src="//use.typekit.net/rpn5qcd.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   </head>
     <body>
-
-      <!--Header-->
-      <header>
-        <a href="/"><h1 class="title">{{ site.name }}</h1></a>
-      </header>
       
+      {% include _header.html %}
+
       <!--Content-->
       <section id="wrapper">
         {{ content }}
@@ -48,8 +49,6 @@ layout: post
       <section id="comments">
         {% include _disqus.html %}
       </section>
-
-      {% include _footer.html %}
       
   </body>
 </html>

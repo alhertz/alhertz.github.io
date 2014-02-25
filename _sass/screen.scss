@@ -27,11 +27,15 @@ header {
     }
   }
 } 
-#wrapper, 
-#comments {
+#wrapper {
   padding: 40px;
   max-width:500px;
   margin:0 auto;
+}
+#comments {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 80px;
 }
 footer {
   border-top:1px solid #eee;
@@ -64,9 +68,14 @@ ul#posts {
     }
   }
 }
-#comments {
-  display: none;
+.button {
+  background: #5694f1;
+  color: #fff;
+  padding: 10px 20px;
+  @include border-radius(2px);
+  font-weight: 600;
 }
+
 /*=========================================
   Typography
 =========================================== */

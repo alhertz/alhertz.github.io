@@ -1,1 +1,139 @@
 @import "compass/reset";
+
+/*=========================================
+Base
+=========================================== */
+html,
+body {
+  height: 100%;
+}
+body {
+  font:16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#777;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  // &.home {
+  //   background: url('../images/bg.jpg');
+  //   background-size: 100%;
+  //   background-position: center bottom;
+  //   color: #FFF;
+  // }
+}
+
+header {
+  border-bottom:1px solid #eee;
+  padding: 40px 0;
+  max-width:500px;
+  margin:40px auto 0 auto;
+  h1 {
+    font-size: 32px;
+  }
+}
+
+#comments, 
+#wrapper {
+  padding: 40px;
+  max-width:500px;
+  margin:0 auto;
+}
+
+footer {
+  border-top:1px solid #eee;
+  margin-top:40px;
+  padding-top:40px;
+  max-width:500px;
+  margin: 0 auto 0 auto;
+  .social {
+    a {
+      color: #CCC;
+      font-size: 32px;
+      margin-right: 10px;
+
+    }
+  }
+}
+ul#posts {
+  li {
+    line-height: 1.8;
+    span {
+      float: right;
+      color: #CCC;
+    }
+  }
+}
+#avatar {
+  display:inline-block;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  margin-bottom:20px;
+}
+#comments {
+  display: none;
+}
+/*=========================================
+Typography
+=========================================== */
+
+/*Accent color*/
+a {
+  text-decoration:none;
+  color:#5694f1;
+  font-weight:400;
+}
+
+h1 {
+  font-weight:400;
+  font-size:20px;
+  color:#222;
+  margin-bottom: 30px;
+  &.title {
+    margin-bottom: 0;
+    background: url('../images/a.png');
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    text-indent: -9999px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+  color:#aaa; 
+  margin-top:10px;
+  margin-bottom: 30px;
+}
+h3 {
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  span {
+    font-weight: 400;
+  }
+}
+strong {
+  font-weight: 600;
+}
+p {
+  line-height: 1.8;
+  margin-bottom:30px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    padding: 20px;
+  }
+ header, footer, #wrapper { padding-left:0; padding-right: 0;}
+}
+
+@media screen and (max-width:440px) {
+  header, footer, #wrapper { padding-left:0; padding-right: 0; }
+}
+
+/*=========================================
+Home
+=========================================== */
+

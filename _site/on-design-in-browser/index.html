@@ -38,14 +38,16 @@
     <body>
       
       <!--Header-->
+      <!--Header-->
 <header id="header" class="home">
-  <a class="logo" href="/">
-    <div class="sq sq-letter">A</div>
-    <div class="sq sq-one"></div>
-    <div class="sq sq-two"></div>
-    <div class="sq sq-three"></div>
-  </a>
-  <section class="social">
+  <section class="container">
+    <a class="logo" href="/">
+      <div class="sq sq-letter">A</div>
+      <div class="sq sq-one"></div>
+      <div class="sq sq-two"></div>
+      <div class="sq sq-three"></div>
+    </a>
+    <section class="social">
   <ul>
     <li><a href="https://github.com/alhertz"><i class="fa fa-github"></i></a></li>
     <li><a href="mailto: hey@hey.al"><i class="fa fa-envelope-o"></i></a></li>
@@ -54,6 +56,7 @@
     <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
   </ul>
 </section>
+  </section>
 </header>
 
       <!--Content-->
@@ -69,16 +72,16 @@
 <p>What I am trying to get across is this question: Is being able to create perfectly stylized elements in a PSD what being a web designer is? Or is that only one cavet? In my opinion, web designers design systems for solving problems related to experience, aesthetic, <a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density">device sizes</a>, and performance.</p>
 
       </section>
-
+      
+      <!--Comments-->
       <section id="comments">
-        <!-- <a class="button" href="#" id="showComments">Show comments</a> -->
+  <div id="disqus_thread"></div>
+</section>
 
-        <div id="disqus_thread"></div>
 <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'alhertz'; // required: replace example with your forum shortname
+    
+    var disqus_shortname = 'alhertz'; 
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -87,13 +90,21 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     
-      </section>
+
+      <!--Footer-->
+      <!--Footer-->
+<footer>
+  <section class="colophon">
+    <p>Built using <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and hosted on <a href="http://pages.github.com/" target="_blank">Github Pages</a>.</p>
+    <!-- <p>Need to get in touch? <a href="mailto: hey@hey.al">Say Hey</a></p> -->
+  </section>
+</footer>
     
     <!--JS-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-    <script src="/js/hey.js"></script>
-    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
     
     <!--Google Analytics-->
     <script type="text/javascript">

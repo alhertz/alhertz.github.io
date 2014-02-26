@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--General Meta-->
+    <title>Styling File Inputs Without Going Insane</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="My name is Alex Hertz but feel free to call me Al. I design and develop the part of the internet you see and interact with."/>
+    <link rel="canonical" href="http://hey.al" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    
+    <!--Facebook-->
+    <meta property="og:title" content="Alex Hertz - Design / Code" />
+    <meta property="og:description" content="My name is Alex Hertz but feel free to call me Al. I design and develop the part of the internet you see and interact with." />
+    <meta property="og:url" content="http://hey.al" />
+    <meta property="og:site_name" content="Alex Hertz" />
+    <meta property="og:image" content="http://hey.al/img/fb.jpg" />
+    
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@alhertz"/>
+    <meta name="twitter:domain" content="Alex Hertz"/>
+    <meta name="twitter:creator" content="@alhertz"/>
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/screen.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!---Typekit-->
+    <script type="text/javascript" src="//use.typekit.net/rpn5qcd.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  </head>
+    <body>
+      
+      <!--Header-->
+<header id="header" class="home">
+  <a class="logo" href="/">
+    <div class="sq sq-letter">A</div>
+    <div class="sq sq-one"></div>
+    <div class="sq sq-two"></div>
+    <div class="sq sq-three"></div>
+  </a>
+  <section class="social">
+  <ul>
+    <li><a href="https://github.com/alhertz"><i class="fa fa-github"></i></a></li>
+    <li><a href="mailto: hey@hey.al"><i class="fa fa-envelope-o"></i></a></li>
+    <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://instagram.com/alhertz"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
+  </ul>
+</section>
+</header>
+
+      <!--Content-->
+      <section id="wrapper">
+        <h1>Styling File Inputs Without Going Insane</h1>
+
+<p>I know there are many examples of how to do this so please feel free express your undying hatred if you so desire. I just need to get this ingrained in my head after feeling quite nagged by it on a recent project. Writing a quick little tutorial is the best way to do that for me. Additionally, share any thoughts on how this could be improved or done differently too. I would love that.</p>
+
+<h2>HTML</h2>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;file&quot;</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+
+<h2>SCSS</h2>
+
+<div class="highlight"><pre><code class="scss"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="o">]</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="no">transparent</span><span class="p">;</span> 
+  <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
+  <span class="na">-webkit-user-select</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
+  <span class="na">&amp;</span><span class="o">::-</span><span class="n">webkit-file-upload-button</span> <span class="p">{</span>
+    <span class="na">visibility</span><span class="o">:</span> <span class="no">hidden</span>
+  <span class="p">}</span>
+  <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="mh">#999</span><span class="p">;</span>
+    <span class="na">content</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">Upload Image&#39;</span><span class="p">;</span>
+    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span><span class="p">;</span>
+    <span class="na">left</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="mh">#CCC</span><span class="p">;</span>
+    <span class="na">content</span><span class="o">:</span> <span class="s2">&quot;\f030&quot;</span><span class="p">;</span>
+    <span class="na">font-family</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">FontAwesome&#39;</span><span class="p">;</span>
+    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span><span class="p">;</span>
+    <span class="na">right</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span><span class="p">;</span>
+    <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#999</span><span class="p">;</span>
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span>
+      <span class="na">color</span><span class="o">:</span> <span class="mh">#999</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+    <span class="na">outline</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2>Result</h2>
+
+<p><input name="file" type="file"></p>
+
+<p>I&#39;m using <a href="http://fontawesome.io">Font Awesome</a> for the camera icon if you couldn&#39;t tell by looking at the code and I&#39;m not sure how well it will work with other icon fonts but I have a feeling the approach should be similar for other ones like <a href="http://www.entypo.com/">Entypo</a>. <a href="http://symbolset.com/">Symbol Set</a> I know is a bit different but not much. It actually requires a bit less code which is nice. The only important thing to remember is the power of the :before and :after pseudo-selectors. They dope.</p>
+
+<p>Feel free to post any thoughts, questions, critique, etc. Thanks for reading.</p>
+
+      </section>
+
+      <section id="comments">
+        <!-- <a class="button" href="#" id="showComments">Show comments</a> -->
+
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'alhertz'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+      </section>
+    
+    <!--JS-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="/js/hey.js"></script>
+    
+    
+    <!--Google Analytics-->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18980393-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+  </body>
+</html>

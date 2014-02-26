@@ -1,6 +1,8 @@
 @import "compass/reset";
 @import "compass/css3";
 
+@import "_syntax";
+
 /*=========================================
 Base
 =========================================== */
@@ -16,6 +18,45 @@ body {
   // background: url(../img/bg.jpg);
   // background-size: 100%;
   // background-repeat: no-repeat;
+}
+input {
+  border: 1px solid #CCC;
+  height: 50px;
+  @include border-radius(2px);
+  font:16px "Adelle",Helvetica,Arial,sans-serif;
+  line-height: 50px;
+  width: 100%;
+}
+input[type="file"] {
+  color: transparent;
+  position: relative;
+  -webkit-user-select: none;
+  &::-webkit-file-upload-button {
+    visibility: hidden
+  }
+  &:before {
+    color: #999;
+    content: 'Upload Image';
+    position: absolute;
+    left: 20px;
+  }
+  &:after {
+    color: #999;
+    content: "\f030";
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: 20px;
+  }
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #999;
+    &:before {
+      color: #999;
+    }
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 header {
   height: 60px;

@@ -1,6 +1,6 @@
 @import "compass/reset";
 @import "compass/css3";
-
+@import "blueprint/grid"
 @import "_syntax";
 
 /*=========================================
@@ -73,11 +73,11 @@ header {
 } 
 #wrapper {
   padding: 40px;
-  max-width:500px;
+  max-width:600px;
   margin:0 auto;
 }
 #comments {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
@@ -223,6 +223,27 @@ p {
     .sq-three {
       @include rotate(75deg); 
     }
+  }
+}
+/*=========================================
+  Grid Stuff
+=========================================== */
+$blueprint_grid_columns: 12;
+$blueprint_grid_width: 40px;
+ 
+@import "blueprint";
+ 
+.two-col {
+  @include container;
+  background-color: #cccccc;
+  #header, #footer {
+    @include column(8);
+  }
+  #sidebar {
+    @include column(3);
+  }
+  #content {
+    @include column(5, true);
   }
 }
 /*=========================================

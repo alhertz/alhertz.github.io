@@ -880,7 +880,7 @@ p {
     display: inline;
     float: left;
     margin-right: 0;
-    width: 600px;
+    width: 0px;
   }
   /* line 147, ../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
   * html .row .col-6 {

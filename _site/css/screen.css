@@ -874,23 +874,9 @@ p {
     display: none;
   }
 
-  /* line 239, ../_sass/screen.sass */
-  .row {
-    width: 950px;
-    margin: 0 auto;
-    overflow: hidden;
-    *zoom: 1;
-  }
   /* line 241, ../_sass/screen.sass */
-  .row .col-6 {
-    display: inline;
-    float: left;
-    margin-right: 0;
-    width: 0px;
-  }
-  /* line 147, ../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-  * html .row .col-6 {
-    overflow-x: hidden;
+  ul#posts li span {
+    float: none;
   }
 }
 @media screen and (max-width: 440px) {

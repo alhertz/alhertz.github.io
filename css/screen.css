@@ -869,13 +869,18 @@ p {
   }
 
   /* line 236, ../_sass/screen.sass */
+  footer {
+    display: none;
+  }
+
+  /* line 238, ../_sass/screen.sass */
   .row {
     width: 950px;
     margin: 0 auto;
     overflow: hidden;
     *zoom: 1;
   }
-  /* line 238, ../_sass/screen.sass */
+  /* line 240, ../_sass/screen.sass */
   .row .col-6 {
     display: inline;
     float: left;
@@ -888,7 +893,7 @@ p {
   }
 }
 @media screen and (max-width: 440px) {
-  /* line 242, ../_sass/screen.sass */
+  /* line 244, ../_sass/screen.sass */
   header, footer, #wrapper {
     padding-left: 0;
     padding-right: 0;

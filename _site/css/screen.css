@@ -881,12 +881,17 @@ p {
 }
 @media screen and (max-width: 440px) {
   /* line 245, ../_sass/screen.sass */
+  header {
+    padding-top: 0;
+  }
+
+  /* line 248, ../_sass/screen.sass */
   header, footer, #wrapper {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 248, ../_sass/screen.sass */
+  /* line 251, ../_sass/screen.sass */
   img {
     width: 120%;
   }

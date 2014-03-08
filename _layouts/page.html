@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <!--General Meta-->
-    <title>Alex Hertz</title>
+    <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="My name is Alex Hertz but feel free to call me Al. I design and develop the part of the internet you see and interact with."/>
     <link rel="canonical" href="http://hey.al" />
@@ -35,68 +35,16 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   </head>
-  <body class="home">
+  <body class="page">
       
-    <!--Header-->
-<header id="header" class="home">
-  <section class="container">
-    <a class="logo" href="/">
-      <div class="sq sq-letter">A</div>
-      <div class="sq sq-one"></div>
-      <div class="sq sq-two"></div>
-      <div class="sq sq-three"></div>
-    </a>
-    <section class="social">
-  <ul>
-    <li><a href="https://github.com/alhertz"><i class="fa fa-github"></i></a></li>
-    <li><a href="mailto: hey@hey.al"><i class="fa fa-envelope-o"></i></a></li>
-    <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
-    <li><a href="https://instagram.com/alhertz"><i class="fa fa-instagram"></i></a></li>
-    <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
-  </ul>
-</section>
-  </section>
-</header>
+    {% include _header.html %}
 
     <!--Content-->
     <section id="wrapper">
-      <section class="bio">
-  <!-- <h3>Hey.</h3> -->
-  <p>My name is Alex Hertz but feel free to call me Al. I design and develop the part of the internet you see and interact with. I'm always trying to find new ways to make the internet a more exciting place for music. <a href="/about#continued">More about me</a>.</p>
-</section>
-
-<ul id="posts" class="thoughts">
-  <h3>Thoughts</h3>
-  
-    <li>
-      <a href="/styling-file-inputs-with-out-going-insane"><i class="fa fa-angle-right"></i>  Styling File Inputs Without Going Insane <span>25 Feb 2014</span> </a>
-    </li>
-  
-    <li>
-      <a href="/on-design-in-browser"><i class="fa fa-angle-right"></i>  On Designing In Browser <span>24 Feb 2014</span> </a>
-    </li>
-  
-</ul>
-
-<!-- <section class="work">
-  <h3>Recent Work</h3>
-  <p>Still working on this...while I get this together, feel free to <a href="mailto:hey@hey.al">shoot me an email</a> asking to see some of my work.</p>
-</section> -->
+      {{ content }}
     </section>
 
-    <!--Footer-->
-<footer>
-  <section class="colophon">
-    <div class="row">
-      <div class="col-6">
-        <p>Built using <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and hosted on <a href="http://pages.github.com/" target="_blank">Github Pages</a>.</p>
-      </div>
-      <div class="col-6">
-        <p class="text-right"><a href="/">Home</a> / <a href="/about">About</a></p>
-      </div>
-    </div>
-  </section>
-</footer>
+    {% include _footer.html %}
     
     <!--JS-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

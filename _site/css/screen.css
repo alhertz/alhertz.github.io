@@ -885,4 +885,9 @@ p {
     padding-left: 0;
     padding-right: 0;
   }
+
+  /* line 248, ../_sass/screen.sass */
+  img {
+    width: 120%;
+  }
 }

@@ -4,7 +4,6 @@ title:  "On Designing In Browser"
 date:   2014-02-24 10:41:50
 categories: Thoughts
 permalink: on-design-in-browser
-permalink: styling-file-inputs-with-out-going-insane
 description: A couple of weeks ago, I was asked to give a talk at Front End Party and because I was working on a project being designed entirely in the browser at the time, I figured it only would make sense to go over some of my thoughts on just that.
 ---
 

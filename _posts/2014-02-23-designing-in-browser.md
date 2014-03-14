@@ -10,7 +10,7 @@ description: A couple of weeks ago, I was asked to give a talk at Front End Part
 On designing in browser
 ==========
 
-A couple of weeks ago, I was asked to give a talk at [Front End Party](http://frontendparty.com) and because I was working on a project being designed entirely in the browser at the time, I figured it only would make sense to go over some of my thoughts on just that. 
+A couple of weeks ago, I was asked to give a talk at [Front End Party](http://frontendparty.com) ([here's a link to the deck I was working with] (https://dl.dropboxusercontent.com/u/19527741/party.pdf))and because I was working on a project being designed entirely in the browser at the time, I figured it only would make sense to go over some of my thoughts on just that. 
 
 The first time I designed something in browser was about six months ago and ever since then I now know **mocking something up can very often be a huge waste of time.** 
 

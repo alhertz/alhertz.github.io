@@ -20,3 +20,8 @@
         }
     }
 }());
+
+// Scroll
+function scrollToElement($('#biography-continued')) {
+  $(window).scrollTop(ele.offset().top).scrollLeft(ele.offset().left);
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--General Meta-->
+    <title>Useful Mobile Web App User Experience Sprinkles / Al Hertz</title>
+    <meta name="viewport" content="width=device-width">
+    
+    <meta name="description" content="Useful Mobile Web App User Experience Sprinkles Before I get down to business, let me preface this post with a quick story. The first real Hackathon I ever attended was only about a year ago and man was I green behind the ears. I had used frontend frameworks before, and played around with version control using git but overall I was completely in the dark. I didn&#39;t know what the hell languages like node, ruby, python, etc were and the only thing I knew of PHP was what I knew from Wordpress. Shit man, at the time, I thought because I knew how to build a wordpress site that I was a PHP developer. I had a lot to learn. Needless to say, the hackathon blew my mind and I learned a lot. Out of all the awesome I left with after that weekend, the thing that stuck with me most was that when it comes to building products and/or applications the devil really is in the detail. Small changes can very often produce huge improvements towards user experience. Personally, I believe designers are responsible for seaking out those details and filling them with the necessary goodness they require. That..." />
+    
+    <link rel="canonical" href="http://www.hey.al/useful-mobile-web-app-snippets" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2014-03-14T06:18:50-04:00" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    
+    <!--Facebook-->
+    <meta property="og:title" content="Useful Mobile Web App User Experience Sprinkles / Al Hertz" />
+    
+    <meta property="og:description" content="Useful Mobile Web App User Experience Sprinkles Before I get down to business, let me preface this post with a quick story. The first real Hackathon I ever attended was only about a year ago and man was I green behind the ears. I had used frontend frameworks before, and played around with version control using git but overall I was completely in the dark. I didn&#39;t know what the hell languages like node, ruby, python, etc were and the only thing I knew of PHP was what I knew from Wordpress. Shit man, at the time, I thought because I knew how to build a wordpress site that I was a PHP developer. I had a lot to learn. Needless to say, the hackathon blew my mind and I learned a lot. Out of all the awesome I left with after that weekend, the thing that stuck with me most was that when it comes to building products and/or applications the devil really is in the detail. Small changes can very often produce huge improvements towards user experience. Personally, I believe designers are responsible for seaking out those details and filling them with the necessary goodness they require. That..." />
+    
+    <meta property="og:url" content="http://www.hey.al/useful-mobile-web-app-snippets" />
+    <meta property="og:site_name" content="Alex Hertz" />
+    <meta property="og:image" content="http://www.hey.al/img/fb.jpg" />
+
+    
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@alhertz"/>
+    <meta name="twitter:domain" content="Alex Hertz"/>
+    <meta name="twitter:creator" content="@alhertz"/>
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/screen.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!---Typekit-->
+    <script type="text/javascript" src="//use.typekit.net/rpn5qcd.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  </head>
+    <body>
+      
+      <!--Header-->
+      <!--Header-->
+<header id="header" class="home">
+  <section class="container">
+    <a class="logo" href="/">
+      <div class="sq sq-letter">A</div>
+      <div class="sq sq-one"></div>
+      <div class="sq sq-two"></div>
+      <div class="sq sq-three"></div>
+    </a>
+    <section class="social">
+  <ul>
+    <li><a href="http://www.linkedin.com/in/alexchertz"><i class="fa fa-linkedin-square"></i></a></li>
+    <li><a href="https://github.com/alhertz"><i class="fa fa-github"></i></a></li>
+    <li><a href="mailto: hey@hey.al"><i class="fa fa-envelope-o"></i></a></li>
+    <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://instagram.com/alhertz"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
+  </ul>
+</section>
+  </section>
+</header>
+
+      <!--Content-->
+      <section id="wrapper">
+        <h1>Useful Mobile Web App User Experience Sprinkles</h1>
+
+<p>Before I get down to business, let me preface this post with a quick story. The first real <a href="http://codemkrs.com/superbowl/">Hackathon</a> I ever attended was only about a year ago and man was I green behind the ears. I had used frontend frameworks before, and played around with version control using git but overall I was completely in the dark. I didn&#39;t know what the hell languages like node, ruby, python, etc were and the only thing I knew of PHP was what I knew from Wordpress. Shit man, at the time, I thought because I knew how to build a wordpress site that I was a PHP developer. I had a lot to learn.</p>
+
+<p>Needless to say, the hackathon blew my mind and I learned a lot. Out of all the awesome I left with after that weekend, the thing that stuck with me most was that when it comes to building products and/or applications the devil really is in the detail. Small changes can very often produce huge improvements towards user experience. Personally, I believe designers are responsible for seaking out those details and filling them with the necessary goodness they require. That being said, here are some super usefull snippets for mobile Apple devices you may want to make sure you&#39;re using if you aren&#39;t already (they take no time at all).</p>
+
+<h2>Remove Toolbars</h2>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-capable&quot;</span> <span class="na">content=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+
+<h2>Change the status bar color</h2>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="na">content=</span><span class="s">&quot;black&quot;</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+
+<h2>Touch Icon </h2>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;apple-touch-icon&quot;</span> <span class="na">href=</span><span class="s">&quot;img/app-icon.png&quot;</span><span class="nt">/&gt;</span>
+</code></pre></div>
+
+<h2>Splash Screen Image</h2>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;apple-touch-startup-image&quot;</span> <span class="na">href=</span><span class="s">&quot;img/splash-screen.png&quot;</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+
+<p><strong>Note:</strong>
+These get a lot more verbose but for simplicitys sake, I&#39;ve included the code a bit abridged. If you want a good example of these snippets en masse, <a href="https://gist.github.com/tfausak/2222823">check out this epic gist</a> by Taylor Fausak. </p>
+
+        <div class="authorship">
+          <cite>by <a href="https://plus.google.com/u/0/105887948912799360412?rel=author">Al Hertz</a></cite>
+        </div>
+      </section>
+      
+      <!--Comments-->
+      <section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'alhertz'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+      
+      <!--Footer-->
+      <!--Footer-->
+<footer>
+  <section class="colophon">
+    <div class="row">
+      <div class="col-6">
+        <p>Built using <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and hosted on <a href="http://pages.github.com/" target="_blank">Github Pages</a>.</p>
+      </div>
+      <div class="col-6">
+        <p class="text-right"><a href="/">Home</a> / <a href="/about">About</a></p>
+      </div>
+    </div>
+  </section>
+</footer>
+    
+    <!--JS-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!--Google Analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-48472563-1', 'hey.al');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>

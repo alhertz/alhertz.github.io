@@ -10,8 +10,11 @@ title: Alex Hertz
 <ul id="posts" class="thoughts">
   <h3>Thoughts</h3>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}"><i class="fa fa-angle-right"></i>  {{ post.title }} <span>{{ post.date | date_to_string }}</span> </a>
+    <li class="post">
+      <a href="{{ post.url }}">
+        <span class="post post--date">{{ post.date | date_to_string }}</span>
+        <span class="post post--title"><i class="fa fa-angle-right"></i> {{ post.title }}</span>
+      </a>
     </li>
   {% endfor %}
 </ul>

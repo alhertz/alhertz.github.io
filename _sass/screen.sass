@@ -1,18 +1,17 @@
+//Imports
 @import compass/reset
 @import compass/css3
 @import blueprint/grid
-@import _syntax
+@import syntax
+@import compass/typography/text/ellipsis
 
+// Variables
 $blueprint_grid_columns: 12
 $blueprint-grid-margin: 0
 $blueprint_grid_width: 50px
+$use-mozilla-ellipsis-binding: true
 
 // Base
-
-html,
-body
-  height: 100%
-
 body
   font: 16px/1 "Adelle",Helvetica,Arial,sans-serif
   color: #777
@@ -129,7 +128,12 @@ ul#posts
     line-height: 1.8
     +transition-property(all)
     +transition-duration(2s)
-    span
+    .post--title
+      width: 70%
+      display: block
+      +ellipsis()
+    .post--date
+      text-align: right
       float: right
       color: #CCC
 
@@ -232,8 +236,6 @@ p
     display: none
   ul#posts
     li
-      span
-        float: none
 
 @media screen and (max-width: 440px)
   header

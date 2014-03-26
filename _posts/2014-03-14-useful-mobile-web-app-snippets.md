@@ -10,9 +10,11 @@ description:
 Useful Mobile Web App User Experience Sprinkles
 ==========
 
-Before I get down to business, let me preface this post with a quick story. The first real [Hackathon] (http://codemkrs.com/superbowl/) I ever attended was only about a year ago and man was I green behind the ears. I had used frontend frameworks before, and played around with version control using git but overall I was completely in the dark. I didn't know what the hell languages like node, ruby, python, etc were and the only thing I knew of PHP was what I knew from Wordpress. Shit man, at the time, I thought because I knew how to build a wordpress site that I was a PHP developer. I had a lot to learn.
+<!-- Before I get down to business, let me preface this post with a quick story. The first real [Hackathon] (http://codemkrs.com/superbowl/) I ever attended was only about a year ago and man was I green behind the ears. I had used frontend frameworks before, and played around with version control using git but overall I was completely in the dark. I didn't know what the hell languages like node, ruby, python, etc were and the only thing I knew of PHP was what I knew from Wordpress. Shit man, at the time, I thought because I knew how to build a wordpress site that I was a PHP developer. I had a lot to learn.
 
-Needless to say, the hackathon blew my mind and I learned a lot. Out of all the awesome I left with after that weekend, the thing that stuck with me most was that when it comes to building products and/or applications the devil really is in the detail. Small changes can very often produce huge improvements towards user experience. Personally, I believe designers are responsible for seaking out those details and filling them with the necessary goodness they require. That being said, here are some super usefull snippets for mobile Apple devices you may want to make sure you're using if you aren't already (they take no time at all).
+Needless to say, the hackathon blew my mind and I learned a lot. Out of all the awesome I left with after that weekend, the thing that stuck with me most was that when it comes to building products and/or applications the devil really is in the detail. -->
+
+ It's the little things that very often produce the best results. That being said, here are some super usefull snippets for mobile Apple devices you may want to make sure you're using if you aren't already when building web applications.
 
 
 Remove Toolbars

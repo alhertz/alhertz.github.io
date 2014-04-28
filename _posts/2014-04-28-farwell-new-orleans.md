@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Farwell New Orleans"
+title:  "Farewell New Orleans"
 date:   2014-04-18 10:41:50
 categories: Thoughts
-permalink: farwell-new-orleans
+permalink: farewell-new-orleans
 description: 
 ---
 

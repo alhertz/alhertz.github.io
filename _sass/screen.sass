@@ -12,23 +12,31 @@ $blueprint_grid_width: 50px
 $use-mozilla-ellipsis-binding: true
 $primary-color: #5694f1
 
+*, *:before, *:after
+  +box-sizing(border-box)
+
 // Base
 body
-  font: 16px/1 "Adelle", Helvetica, Arial, sans-serif
+  background:
+    size: 100%
+    repeat: no-repeat
   color: #777
-  -webkit-font-smoothing: antialiased
+  font:
+    family: "Adelle", Helvetica, Arial, sans-serif
+    size: 16px/1
+    weight: 400
+  padding: 1em
   text-rendering: optimizeLegibility
-  font-weight: 400
-  // background: url(../img/bg.jpg)
-  // border-top: 5px solid #666
-  background-size: 100%
-  background-repeat: no-repeat
+  -webkit-font-smoothing: antialiased
 
 input
-  border: 1px solid #CCC
-  height: 50px
   +border-radius(2px)
-  font: 16px "Adelle",Helvetica,Arial,sans-serif
+  border: 1px solid #CCC
+  font:
+    family: "Adelle", Helvetica, Arial, sans-serif
+    size: 16px
+    weight: 400
+  height: 50px
   line-height: 50px
   width: 100%
 
@@ -41,8 +49,8 @@ input[type="file"]
   &:before
     color: #999
     content: 'Upload Image'
-    position: absolute
     left: 20px
+    position: absolute
   &:after
     color: #999
     content: "\f030"
@@ -50,48 +58,47 @@ input[type="file"]
     position: absolute
     right: 20px
   &:hover
-    cursor: pointer
     border: 1px solid #999
+    cursor: pointer
     &:before
       color: #999
   &:focus
     outline: 0
 
 header
-  height: 60px
   border-bottom: 1px solid #f5f5f5
-  padding: 40px 0
+  height: 140px
+  margin: 40px auto
   max-width: 600px
-  margin: 40px auto 0 auto
+  padding: 40px 0
   .social
     float: right
     li
       +inline-block
 
 .highlight
-  background: #f9f9f9
-  padding: 20px
   +border-radius(3px)
+  background: #f9f9f9
   margin-bottom: 30px
   overflow: scroll
+  padding: 20px
 
 #wrapper
-  padding: 40px
+  background: #FFF
   max-width: 600px
   margin: 0 auto
-  background: #FFF
 
 #comments
-  max-width: 600px
   margin: 0 auto
   margin-bottom: 80px
+  max-width: 600px
 
 footer
   border-top: 1px solid #eee
-  margin-top: 40px
+  margin: 40px auto 0 auto
   max-width: 600px
-  margin: 0 auto
   padding: 2.0em 0
+  +ellipsis()
   .colophon
     color: #CCC
     a
@@ -102,32 +109,31 @@ footer
       font-size: 14px
       margin-bottom: 0
 
-// Hide authorship
+// Authorship
 .authorship
   display: none
 
+// Social Navigation
 .social
   padding-top: 20px
   a
     color: #CECECE
     font-size: 21px
     margin-right: 10px
-    +transition-property(all)
-    +transition-duration(1s)
     &:hover
       color: #999
 
+// Homepage
 .home
   .bio
     a
+      border-bottom: 1px solid #FFF
       color: #999
       font-weight: bold
-      border-bottom: 1px solid
       &:hover
-        color: #666
-
-.text-right
-  text-align: right
+        border-color: #EEE
+        color: #888
+        padding-bottom: 5px
 
 img
   max-width: 600px
@@ -155,36 +161,36 @@ ul#posts
 
 // Type
 a
+  +transition-property(all)
+  +transition-duration(.5s)
   text-decoration: none
   color: $primary-color
   &:hover
     color: #4079d0
 
+.text-right
+  text-align: right
+
 h1
-  font-weight: 400
-  font-size: 20px
   color: #222
-  margin-bottom: 30px
-  &.title
-    margin-bottom: 0
-    background: url("../img/a.png")
-    height: 100px
-    width: 100px
-    background-size: cover
-    text-indent: -9999px
+  font:
+    weight: 400
+    size: 21px
+  line-height: 1.5
+  margin: 0 0 30px 0px
 
 h2
-  font-size: 20px
-  font-weight: 300
   color: #aaa
-  margin-top: 10px
-  margin-bottom: 30px
+  font:
+    weight: 300
+    size: 21px
+  margin: 10px 0 30px 0
 
 h3
-  font-weight: bold
-  margin-top: 30px
-  font-size: 16px
-  margin-bottom: 10px
+  font:
+    size: 16px
+    weight: 600
+  margin: 10px 0 30px 0
   span
     font-weight: 400
 
@@ -194,20 +200,18 @@ strong
 p, blockquote
   line-height: 1.8
   margin-bottom: 30px
-  font-size: 16px
 
 blockquote
   +opacity(.6) 
   border-left: 3px solid $primary-color
-  padding-left: 30px
   font-weight: 200
-  font-size: 21px !Important
   margin-left: -30px
+  padding-left: 30px
   &:hover
     +opacity(1)
-    cursor: pointer
     +transition-property(all)
     +transition-duration(2s)
+    cursor: pointer
 
 // Logo
 .logo
@@ -215,16 +219,16 @@ blockquote
   font-weight: 600
   font-size: 30px
   .sq
-    height: 60px
-    width: 60px
-    border: 1px solid #EEE
-    position: absolute
     +transition-property(all)
     +transition-duration(2s)
+    border: 1px solid #EEE
+    height: 60px
+    position: absolute
+    width: 60px
   .sq-letter
+    border: none
     line-height: 60px
     text-align: center
-    border: none
   .sq-one
     +rotate(0deg)
   .sq-two
@@ -233,6 +237,7 @@ blockquote
     +rotate(60deg)
   &:hover
     cursor: pointer
+    color: #999
     .sq-one
       +rotate(15deg)
     .sq-two
@@ -242,28 +247,21 @@ blockquote
 
 // Grid
 .row
-  +container
+  width: 100%
   .col-6
     +column(6)
 
-// Media 
 @media screen and (max-width: 540px)
-  body
-    padding: 20px
   header, footer, #wrapper
     padding-left: 0
     padding-right: 0
   footer
     display: none
-  ul#posts
-    li
 
 @media screen and (max-width: 440px)
   header
     padding-top: 0
-    
+    height: 100px
   header, footer, #wrapper
     padding-left: 0
     padding-right: 0
-  img 
-    max-width: 100%

@@ -14,7 +14,7 @@ Useful Mobile Web App User Experience Sprinkles
 
 Needless to say, the hackathon blew my mind and I learned a lot. Out of all the awesome I left with after that weekend, the thing that stuck with me most was that when it comes to building products and/or applications the devil really is in the detail. -->
 
- It's the little things that very often produce the best results. That being said, here are some super usefull snippets for mobile Apple devices you may want to make sure you're using if you aren't already when building web applications.
+ It's the little things that make the biggest differences. That being said, here are some usefull snippets for mobile Apple devices you may want to make sure you're using if you aren't already when building web applications.
 
 
 Remove Toolbars

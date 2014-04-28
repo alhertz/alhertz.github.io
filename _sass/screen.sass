@@ -10,6 +10,7 @@ $blueprint_grid_columns: 12
 $blueprint-grid-margin: 0
 $blueprint_grid_width: 50px
 $use-mozilla-ellipsis-binding: true
+$primary-color: #5694f1
 
 // Base
 body
@@ -17,6 +18,7 @@ body
   color: #777
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
+  font-weight: 400
   // background: url(../img/bg.jpg)
   // border-top: 5px solid #666
   background-size: 100%
@@ -128,9 +130,7 @@ footer
   text-align: right
 
 img
-  width: 120%
-  max-width: 640px
-  margin-left: -20px
+  max-width: 600px
 
 ul#posts
   li
@@ -156,8 +156,7 @@ ul#posts
 // Type
 a
   text-decoration: none
-  color: #5694f1
-  font-weight: 400
+  color: $primary-color
   &:hover
     color: #4079d0
 
@@ -192,10 +191,23 @@ h3
 strong
   font-weight: 600
 
-p
+p, blockquote
   line-height: 1.8
   margin-bottom: 30px
   font-size: 16px
+
+blockquote
+  +opacity(.6) 
+  border-left: 3px solid $primary-color
+  padding-left: 30px
+  font-weight: 200
+  font-size: 21px !Important
+  margin-left: -30px
+  &:hover
+    +opacity(1)
+    cursor: pointer
+    +transition-property(all)
+    +transition-duration(2s)
 
 // Logo
 .logo
@@ -254,4 +266,4 @@ p
     padding-left: 0
     padding-right: 0
   img 
-    width: 120%
+    max-width: 100%

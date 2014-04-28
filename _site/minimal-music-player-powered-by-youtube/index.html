@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <!--General Meta-->
-    <title>On Designing In Browser / Al Hertz</title>
+    <title>A Minimal Music Player Powered by YouTube / Al Hertz</title>
     <meta name="viewport" content="width=device-width">
     
-    <meta name="description" content="A couple of weeks ago, I was asked to give a talk at Front End Party and because I was working on a project being designed entirely in the browser at the time, I figured it only would make sense to go over some of my thoughts on just that." />
+    <meta name="description" content="A Minimal Music Player Powered by YouTubeCopy and Paste the Existing Embed Code Provided by YouTube &amp; Edit the width and height so that they are the same values&lt;iframe width=&quot;600&quot; height=&quot;600&quot; src=&quot;//www.youtube-nocookie.com/embed/_-Qpj-bNidA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;Remove toolbars, related content, and progress bar by appending the following snippet just after the end of the src link.?rel=0;3&amp;amp;autohide=1&amp;amp;showinfo=0" />
     
-    <link rel="canonical" href="http://www.hey.al/on-design-in-browser" />
+    <link rel="canonical" href="http://www.hey.al/minimal-music-player-powered-by-youtube" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2014-02-24T04:41:50-06:00" />
+    <meta property="article:published_time" content="2014-04-18T05:41:50-05:00" />
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
     
     <!--Facebook-->
-    <meta property="og:title" content="On Designing In Browser / Al Hertz" />
+    <meta property="og:title" content="A Minimal Music Player Powered by YouTube / Al Hertz" />
     
-    <meta property="og:description" content="A couple of weeks ago, I was asked to give a talk at Front End Party and because I was working on a project being designed entirely in the browser at the time, I figured it only would make sense to go over some of my thoughts on just that." />
+    <meta property="og:description" content="A Minimal Music Player Powered by YouTubeCopy and Paste the Existing Embed Code Provided by YouTube &amp; Edit the width and height so that they are the same values&lt;iframe width=&quot;600&quot; height=&quot;600&quot; src=&quot;//www.youtube-nocookie.com/embed/_-Qpj-bNidA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;Remove toolbars, related content, and progress bar by appending the following snippet just after the end of the src link.?rel=0;3&amp;amp;autohide=1&amp;amp;showinfo=0" />
     
-    <meta property="og:url" content="http://www.hey.al/on-design-in-browser" />
+    <meta property="og:url" content="http://www.hey.al/minimal-music-player-powered-by-youtube" />
     <meta property="og:site_name" content="Alex Hertz" />
     <meta property="og:image" content="http://www.hey.al/img/fb.jpg" />
 
@@ -68,15 +68,23 @@
 
       <!--Content-->
       <section id="wrapper">
-        <h1>On designing in browser</h1>
+        <h1>A Minimal Music Player Powered by YouTube</h1>
 
-<p>A couple of weeks ago, I was asked to give a talk at <a href="http://frontendparty.com">Front End Party</a> (<a href="https://dl.dropboxusercontent.com/u/19527741/party.pdf">here&#39;s a link to the deck I was working with</a>) and because I was working on a project being designed entirely in the browser at the time, I figured it only would make sense to go over some of my thoughts on just that. </p>
+<iframe width="600" height="600" src="//www.youtube-nocookie.com/embed/_-Qpj-bNidA" frameborder="0" allowfullscreen></iframe>
 
-<p>The first time I designed something in browser was about six months ago and ever since then I now know <strong>mocking something up can very often be a huge waste of time.</strong> </p>
+<ol>
+<li>Copy and Paste the Existing Embed Code Provided by YouTube &amp; Edit the width and height so that they are the same values</h3></li>
+</ol>
 
-<p>I&#39;m not saying that we should stop mocking things up all together. Mockups do have the ability to serve as an incredibly valuable communication tool but sometimes it may make more sense to go straight from a sketch to your text editor. The days of pixel perfect execution from PSD to HTML/CSS/JS are over and we as designers should begin re-assessing our workflow.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">&quot;600&quot;</span> <span class="na">height=</span><span class="s">&quot;600&quot;</span> <span class="na">src=</span><span class="s">&quot;//www.youtube-nocookie.com/embed/_-Qpj-bNidA&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div>
 
-<p>Is being able to create perfectly stylized elements in a PSD what being a web designer is? Or is that only one cavet? In my opinion, web designers design systems for solving problems related to experience, aesthetic, <a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density">device sizes</a>, and performance.</p>
+<ol>
+<li>Remove toolbars, related content, and progress bar by appending the following snippet just after the end of the src link.</li>
+</ol>
+
+<div class="highlight"><pre><code class="html">?rel=0;3<span class="ni">&amp;amp;</span>autohide=1<span class="ni">&amp;amp;</span>showinfo=0
+</code></pre></div>
 
         <div class="authorship">
           <cite>by <a href="https://plus.google.com/u/0/105887948912799360412?rel=author">Al Hertz</a></cite>

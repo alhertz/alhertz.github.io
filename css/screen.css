@@ -484,7 +484,6 @@ body {
   color: #777777;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  border-top: 5px solid #666666;
   background-size: 100%;
   background-repeat: no-repeat;
 }

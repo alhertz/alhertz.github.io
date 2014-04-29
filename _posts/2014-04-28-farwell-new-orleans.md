@@ -7,7 +7,7 @@ permalink: farewell-new-orleans
 description: 
 ---
 
-Farewell New Orleans
+Farewell New Orleans 
 ==========
 
 After five amazing years of living in New Orleans I will be leaving this fair city next month. I have recently accepted an offer from [Gumroad](https://www.gumroad.com) to become their new Product Designer and couldn't be more excited. They are helping creatives make a living online in a big way and I cannot wait begin to contribute. 

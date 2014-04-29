@@ -28,9 +28,9 @@ layout: post
     {% else %}
     <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}" />
     {% endif %}
-    <meta property="og:url" content="http://www.hey.al{{ page.url }}" />
+    <meta property="og:url" content="http://hey.al{{ page.url }}" />
     <meta property="og:site_name" content="Alex Hertz" />
-    <meta property="og:image" content="http://www.hey.al/img/fb.jpg" />
+    <meta property="og:image" content="http://hey.al/img/fb.jpg" />
 
     
     <!--Twitter-->
@@ -60,7 +60,7 @@ layout: post
           <cite>by <a href="https://plus.google.com/u/0/105887948912799360412?rel=author">Al Hertz</a></cite>
         </div>
       </section>
-      
+
       <!--Comments-->
       {% include _disqus.html %}
       

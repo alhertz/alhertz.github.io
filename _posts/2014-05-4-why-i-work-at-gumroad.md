@@ -24,7 +24,7 @@ This was a fair question but it made me realize that not enough people know why 
 
 ### Early Years ###
 
-Ever since I was quite young I have wanted to make music. That, and be a cartoonist. While my third-grade classmates dreamed of being firemen, doctors, & police officers I geared up for a long fruitful life of hardcore doodling and shreading (you have no idea how many times I have drawn a Fender Stratocaster on my trapper keeper with a bic pen).
+Ever since I was quite young I have wanted to make music. That, and be a cartoonist. While my third-grade classmates dreamed of being firemen, doctors, & police officers I geared up for a long fruitful life of hardcore doodling and shreading (you have no idea how many times I have drawn a Fender Stratocaster on my binder with a bic pen).
 By the time I was in middle school, I had picked up the guitar and had become decent enough to start a band just before entering high school.
 
 Throughout every band I was in, I was convinced that we would hit it big and that people just needed to hear us. We used to call random phone numbers from the basement we practiced in and when a human picked up, we played our hearts out. Looking back, it was hilarious but at the time, it seemed like a pretty good strategy. 

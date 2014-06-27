@@ -12,6 +12,7 @@ title: Alex Hertz
   {% for post in site.posts %}
     <li class="post">
       <a href="{{ post.url }}">
+        <span class="post post--date">{{ post.date | date_to_string }}</span>
         <span class="post post--title"><i class="fa fa-angle-right"></i> {{ post.title }}</span>
       </a>
     </li>

@@ -44,7 +44,7 @@ Everything I learned about design whether it be for web or print I would apply t
 
 ### After College ###
 
-As time pressed on, I was still playing but I began to focus more on being behind the scenes and less on the stage. Along with some friends, I started a [musicians co-op](http://www.chinquapinrecords.com) (now dormant) focused on sharing the music we made and the music we loved. We released about 20 or so records and/or compilations, threw a ton of events, and a lot of bands from out of state play in New Orleans to a new crowd and get heard. It was incredibly empowering and enjoyable for me to try and help other musicians and artists I cared about.
+As time pressed on, I was still playing but I began to focus more on being behind the scenes and less on the stage. Along with some friends, I started a [musicians co-op](http://www.chinquapinrecords.com) (now dormant) focused on sharing the music we made and the music we loved. We released about 20 or so records and/or compilations, threw a ton of events, and helped a lot of awesome bands from out of state play in New Orleans to a new crowd and get heard. It was incredibly empowering and enjoyable for me to try and help other musicians and artists I cared about.
 
 As you might imagine, a few more years had passed and I began to dedicate even more time to working behind the scenes. I was still playing in Sun Hotel but I had found that working to improve the digital world for artists through design and code was something I was very passionate about and somewhat good at. When Gumroad came calling, it made sense to see what difference I could make building a product focused on the same thing I have been focused on much of my life.
 

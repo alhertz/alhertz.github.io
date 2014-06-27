@@ -40,7 +40,7 @@ As you might imagine, I realized pretty quickly that if I was going to be a rock
 
 When I got into design, I didn't do it because I necessarily wanted to. I did it because it was necessary to better promote the art I deeply cared about. But as word got out that I had a bit of a knack for it I started doing it for my friends' bands too. Eventually, friends of friends' came calling and ultimately, people I had never met before. By the time I was in college, I was working as a freelance designer exclusively for musicians while I got a degree in music industry studies in New Orleans. Things we're going pretty well.
 
-Everything I learned about design whether it be for web or print I would apply to my band at the time [Sun Hotel](http://wwww.sunhotelsounds). All we ever wanted to do was to be able to pay the rent with our music and in a short while I became intimately familiar how hard that was to do independently. 
+Everything I learned about design whether it be for web or print I would apply to my band at the time [Sun Hotel](http://wwww.sunhotelsounds.com). All we ever wanted to do was to be able to pay the rent with our music and in a short while I became intimately familiar how hard that was to do independently. 
 
 ### After College ###
 

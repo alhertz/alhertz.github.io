@@ -718,7 +718,7 @@ img {
 }
 
 /* line 174, ../_sass/screen.sass */
-ul#posts li {
+.thoughts li {
   line-height: 1.8;
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -730,18 +730,18 @@ ul#posts li {
   transition-duration: 2s;
 }
 /* line 178, ../_sass/screen.sass */
-ul#posts li .post--title {
-  width: 70%;
-  display: block;
+.thoughts li .post--title {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   -moz-binding: url('xml/ellipsis.xml#ellipsis');
+  width: 70%;
+  float: left;
 }
 /* line 182, ../_sass/screen.sass */
-ul#posts li .post--date {
+.thoughts li .post--date {
   text-align: right;
   float: right;
   color: #cccccc;

@@ -10,13 +10,15 @@ description:
 Why I work at Gumroad
 ==========
 
-<div class="alert info">
+<aside>
   <p>This thought is a work in progress but I don't think that is reason enough not to share what I have written so far. Enjoy.</p>
-</div>
+</aside>
 
 When I decided to move to San Francisco from New Orleans to work at Gumroad as a Product Designer, some people wanted to know why. 
 
 This was a fair question but it made me realize that not enough people know why the hell I do what I do. Some people see me as more of a musician while some people don't even know I make music. Generally, I don't think I have been very clear over the years so here's an attempt to change that (for now). In short, it goes something like this:
+
+* * *
 
 > Making a living as a musician or any other creative person is damn hard.
 
@@ -38,7 +40,7 @@ As you might imagine, I realized pretty quickly that if I was going to be a rock
   <figcaption>Sun Hotel in Lafayette, LA - June 2012 </figcaption>
 </figure>
 
-When I got into design, I didn't do it because I necessarily wanted to. I did it because it was necessary to better promote the art I deeply cared about. But as word got out that I had a bit of a knack for it I started doing it for my friends' bands too. Eventually, friends of friends' came calling and ultimately, people I had never met before. By the time I was in college, I was working as a freelance designer exclusively for musicians while I got a degree in music industry studies in New Orleans. Things we're going pretty well.
+When I got into design, I didn't do it because I necessarily wanted to. I did it because it was necessary to better promote the art I deeply cared about. But as word got out that I had a bit of a knack for it I started doing it for my friends' bands too. Eventually, friends of friends' came calling and ultimately, people I had never met before. By the time I was in college, I was working as a freelance designer exclusively for musicians while I got a degree in music industry studies in New Orleans. Things were going pretty well.
 
 Everything I learned about design whether it be for web or print I would apply to my band at the time [Sun Hotel](http://wwww.sunhotelsounds.com). All we ever wanted to do was to be able to pay the rent with our music and in a short while I became intimately familiar how hard that was to do independently. 
 

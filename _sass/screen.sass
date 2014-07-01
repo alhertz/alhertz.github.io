@@ -6,9 +6,7 @@
 @import compass/typography/text/ellipsis
 
 // Variables
-$blueprint_grid_columns: 12
-$blueprint-grid-margin: 0
-$blueprint_grid_width: 50px
+$content-width: 700px
 $use-mozilla-ellipsis-binding: true
 $primary-color: #5694f1
 
@@ -23,8 +21,8 @@ body
   color: #777
   font:
     family: "Adelle", "Helvetica Neue", Arial, sans-serif
-    size: 16px/1
-    weight: 400
+    size: 21px
+    weight: 300
   padding: 30px
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
@@ -35,16 +33,77 @@ input
   font:
     family: "Adelle", "Helvetica Neue", Arial, sans-serif
     size: 16px
-    weight: 400
+    weight: 300
   height: 50px
   line-height: 50px
   width: 100%
 
+// Typography
 h1, h2, h3, h4
   font: 
     family: "Adelle", "Helvetica Neue", Helvetica, Arial, Sans-serif
     weight: 400
 
+a:link,
+a:visited
+  +transition-property(color)
+  +transition-duration(.5s)
+  text-decoration: none
+  color: $primary-color
+  &:hover
+    color: darken($primary-color, 10%)
+
+.text-right
+  text-align: right
+
+h1
+  color: #222
+  font:
+    weight: 400
+    size: 1.5em
+  line-height: 1.5
+  margin: 0 0 1em 0
+
+h2
+  color: #aaa
+  font:
+    weight: 400
+    size: 1.25em
+  margin: .5em 0 1em 0
+
+h3
+  font:
+    size: 1em
+    weight: 600
+  margin: .5em 0 1em 0
+  span
+    font-weight: 400
+
+strong
+  font-weight: 600
+
+p, blockquote, ul
+  line-height: 2.0
+  margin-bottom: 1.5em
+
+// Pull dem quotes out!
+blockquote
+  +opacity(.6) 
+  border-left: 3px solid $primary-color
+  font:
+    weight: 400
+    size: 1.2em
+  margin-left: -30px
+  padding-left: 30px
+
+  &:hover
+    +opacity(1)
+    +transition-property(all)
+    +transition-duration(2s)
+    cursor: pointer
+
+
+// File input duh
 input[type="file"]
   color: transparent
   position: relative
@@ -70,235 +129,129 @@ input[type="file"]
   &:focus
     outline: 0
 
-figure 
-  figcaption
-    margin: 15px 0 30px 0
-    font:
-      weight: 200
-      size: 18px
-.alert
-  +border-radius(4px)
-  border: 1px solid #EEE
-  color: #C9C9C9
-  margin-bottom: 30px
-  padding: 30px 30px 30px 70px
-  position: relative
-  p
-    margin-bottom: 0
-    &:before
-      content: '\f129'
-      font:
-        family: 'FontAwesome'
-        size: 45px
-      left: 30px
-      position: absolute
-      top: 20px
-
+// All the necessarys about yours truly
 header
-  border-bottom: 1px solid #f5f5f5
-  height: 140px
-  margin: 40px auto
-  max-width: 600px
-  padding: 40px 0
-  .social
-    float: right
-    li
-      +inline-block
-
-.highlight
-  +border-radius(3px)
-  background: #f9f9f9
-  margin-bottom: 30px
-  overflow: scroll
-  padding: 20px
-
-#wrapper
-  background: #FFF
-  max-width: 600px
-  margin: 0 auto
-
-#comments
-  margin: 0 auto
-  margin-bottom: 80px
-  max-width: 600px
-
-footer
-  border-top: 1px solid #eee
-  margin: 40px auto 0 auto
-  max-width: 600px
-  padding: 2.0em 0
-  +ellipsis()
-  .colophon
-    color: #CCC
-    a
-      color: #999
-      &:hover
-        color: #666
-    p
-      font-size: 14px
-      margin-bottom: 0
-
-// Authorship
-.authorship
-  display: none
-
-// Social Navigation
-.social
-  padding-top: 20px
-  a
-    color: #CECECE
-    font-size: 21px
-    margin-right: 10px
-    &:hover
-      color: #999
-
-// Homepage
-.home
-  .bio
-    a
-      border-bottom: 1px solid #FFF
-      color: #999
-      font-weight: bold
-      &:hover
-        border-color: #EEE
-        color: #888
-        padding-bottom: 5px
-
-img
-  +border-radius(4px)
-  margin-left: -40px
-  max-width: 680px
-
-
-.thoughts
-  li
-    line-height: 1.8
-    +transition-property(all)
-    +transition-duration(2s)
-    .post--title
-      +ellipsis()
-      width: 70%
-      float: left
-    .post--date
-      text-align: right
-      float: right
-      color: #CCC
-
-.button
-  background: #5694f1
-  color: #fff
-  padding: 10px 20px
-  +border-radius(2px)
-  font-weight: 600
-
-// Type
-a
-  +transition-property(all)
-  +transition-duration(.5s)
-  text-decoration: none
-  color: $primary-color
-  &:hover
-    color: #4079d0
-
-.text-right
-  text-align: right
-
-h1
-  color: #222
-  font:
-    weight: 400
-    size: 21px
-  line-height: 1.5
-  margin: 0 0 30px 0px
-
-h2
-  color: #aaa
-  font:
-    weight: 300
-    size: 21px
-  margin: 10px 0 30px 0
-
-h3
-  font:
-    size: 16px
-    weight: 600
-  margin: 10px 0 30px 0
-  span
-    font-weight: 400
-
-strong
-  font-weight: 600
-
-p, blockquote
-  line-height: 1.8
-  margin-bottom: 30px
-
-blockquote
-  // +opacity(.6) 
-  border-left: 3px solid $primary-color
-  font:
-    weight: 400
-    size: 21px
-  margin-left: -30px
-  padding-left: 30px
-
+  +opacity(.5)
+  +transition-property(opacity)
+  +transition-duration(1s)
+  height: 75px
+  max-width: 100%
   &:hover
     +opacity(1)
-    +transition-property(all)
-    +transition-duration(2s)
-    cursor: pointer
+  // I swear I know CSS – just look at this!
+  .logo
+    color: #999
+    font-weight: 600
+    font-size: 30px
+    .sq
+      +transition-property(all)
+      +transition-duration(2s)
+      border: 1px solid #EEE
+      height: 60px
+      position: absolute
+      width: 60px
+    .sq-letter
+      border: none
+      line-height: 60px
+      text-align: center
+    .sq-one
+      +rotate(0deg)
+    .sq-two
+      +rotate(30deg)
+    .sq-three
+      +rotate(60deg)
+    &:hover
+      cursor: pointer
+      color: #999
+      .sq-one
+        +rotate(15deg)
+      .sq-two
+        +rotate(45deg)
+      .sq-three
+        +rotate(75deg)
+  nav
+    float: right
+    padding-top: 20px
+    li
+      +inline-block
+    a:link,
+    a:visited
+      color: #CECECE
+      font-size: 21px
+      margin-right: 10px
+      &:hover
+        color: #999
+
+// Where the magic happens
+.main
+  background: #FFF
+  max-width: $content-width
+  margin: 2em auto
+
+// A bet ya no body ever uses this
+.comments
+  margin: 0 auto
+  margin-bottom: 0em
+  max-width: $content-width
+
+// Lil code-blocks s'all
+.highlight
+  +border-radius(4px)
+  background: #f9f9f9
+  margin-bottom: 2em
+  overflow: scroll
+  padding: 1.5em
+
+// Photos and the like ya heard?
+figure 
+  figcaption
+    margin-top: 1em
+  img
+    +border-radius(4px)
+    margin-left: -40px
+    width: $content-width + 80px
+
+// Sometimes I got lil quips/images
+aside,
+figure
+  color: #CCC
+  margin-bottom: 1.5em
+
+// Try and guess
+.thoughts
+  .thought
+    +transition-property(color)
+    +transition-duration(1s)
+    line-height: 1.8
+    margin-bottom: .5em
+    .thought-title
+      +ellipsis()
+      float: left
+      width: 70%
+    .thought-date
+      text-align: right
+      color: #CCC
+      float: right
+
+// Lil border splashes here and there
 hr 
   border: 0
   height: 0
   border-top: 1px solid #f9f9f9
   margin-bottom: 30px
 
-// Logo
-.logo
-  color: #999
-  font-weight: 600
-  font-size: 30px
-  .sq
-    +transition-property(all)
-    +transition-duration(2s)
-    border: 1px solid #EEE
-    height: 60px
-    position: absolute
-    width: 60px
-  .sq-letter
-    border: none
-    line-height: 60px
-    text-align: center
-  .sq-one
-    +rotate(0deg)
-  .sq-two
-    +rotate(30deg)
-  .sq-three
-    +rotate(60deg)
-  &:hover
-    cursor: pointer
-    color: #999
-    .sq-one
-      +rotate(15deg)
-    .sq-two
-      +rotate(45deg)
-    .sq-three
-      +rotate(75deg)
+@media screen and (max-width: 790px)
+  body
+    font-size: 18px
+  figure 
+    img
+      margin-left: 0
+      width: 100%
 
-@media screen and (max-width: 680px)
-  header, footer, #wrapper
-    padding-left: 0
-    padding-right: 0
-  img
-    margin-left: 0
-    max-width: 100%
-  footer
-    display: none
-
-@media screen and (max-width: 440px)
-  header
-    padding-top: 0
-    height: 100px
-  header, footer, #wrapper
-    padding-left: 0
-    padding-right: 0
+@media screen and (max-width: 420px)
+  body
+    font-size: 16px
+  .thoughts
+    .thought
+      .thought-title
+        width: 65%

@@ -64,4 +64,4 @@ Result
 
 I'm using [Font Awesome](http://fontawesome.io) for the camera icon if you couldn't tell by looking at the code and I'm not sure how well it will work with other icon fonts but I have a feeling the approach should be similar for other ones like [Entypo](http://www.entypo.com/). [Symbol Set](http://symbolset.com/) I know is a bit different but not much. It actually requires a bit less code which is nice. The only important thing to remember is the power of the :before and :after pseudo-selectors. They dope.
 
-Feel free to post any thoughts, questions, critique, etc. Thanks for reading.
+Feel free to <a href="http://twitter.com/alhertz">share any thoughts, questions, critique, etc</a>. Thanks for reading.

@@ -9,7 +9,10 @@
 $content-width: 700px
 $use-mozilla-ellipsis-binding: true
 $primary-color: #5694f1
+$header-height: 75px
+$logo-height: $header-height - 15px
 
+// Global border-box box-sizing
 *, *:before, *:after
   +box-sizing(border-box)
 
@@ -23,7 +26,7 @@ body
     family: "Adelle", "Helvetica Neue", Arial, sans-serif
     size: 21px
     weight: 300
-  padding: 30px
+  padding: 20px
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
 
@@ -51,7 +54,7 @@ a:visited
   text-decoration: none
   color: $primary-color
   &:hover
-    color: darken($primary-color, 10%)
+    color: darken($primary-color, 15%)
 
 .text-right
   text-align: right
@@ -134,7 +137,9 @@ header
   +opacity(.5)
   +transition-property(opacity)
   +transition-duration(1s)
-  height: 75px
+  height: $header-height
+  margin-top: 15px
+  padding-left: 15px
   max-width: 100%
   &:hover
     +opacity(1)
@@ -144,15 +149,15 @@ header
     font-weight: 600
     font-size: 30px
     .sq
-      +transition-property(all)
+      +transition-property(rotate)
       +transition-duration(2s)
       border: 1px solid #EEE
-      height: 60px
+      height: $logo-height
       position: absolute
-      width: 60px
+      width: $logo-height
     .sq-letter
       border: none
-      line-height: 60px
+      line-height: $logo-height
       text-align: center
     .sq-one
       +rotate(0deg)
@@ -171,9 +176,11 @@ header
         +rotate(75deg)
   nav
     float: right
-    padding-top: 20px
-    li
-      +inline-block
+    ul
+      margin-bottom: 0
+      li
+        +inline-block
+        line-height: $header-height
     a:link,
     a:visited
       color: #CECECE
@@ -187,6 +194,10 @@ header
   background: #FFF
   max-width: $content-width
   margin: 2em auto
+  &:after
+    content: ""
+    display: table
+    clear: both
 
 // A bet ya no body ever uses this
 .comments
@@ -243,12 +254,27 @@ hr
 @media screen and (max-width: 790px)
   body
     font-size: 18px
+  header
+    padding-left: 10px
   figure 
     img
       margin-left: 0
       width: 100%
 
 @media screen and (max-width: 420px)
+  header
+    +opacity(1)
+    height: 40px
+    margin-top: 10px
+    .logo
+      font-size: 18px
+      .sq
+        height: 40px
+        width: 40px
+      .sq-letter
+        line-height: 40px
+    nav ul li
+      line-height: 40px
   body
     font-size: 16px
   .thoughts

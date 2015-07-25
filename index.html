@@ -5,7 +5,7 @@ title: Alex Hertz – Designer
 
 <section class="bio">
   <h1>Hey.</h1>
-  <p>My name is Alex but feel free to <a href="https://www.youtube.com/watch?v=ULjCSK0oOlI">call me Al</a>. I design &amp; develop the part of the internet you see and interact with. I'm always trying to find new ways to make the web a more exciting place for creatives – <a href="/about">learn more</a>.</p>
+  <p>My name is Alex but feel free to <a href="https://www.youtube.com/watch?v=ULjCSK0oOlI">call me Al</a>. I'm a product designer at Gumroad who's always trying to find new ways to make the web a more exciting place for creatives (notably musicians) – <a href="/about#more">learn more</a>.</p>
 </section>
 
 <hr>
@@ -14,8 +14,8 @@ title: Alex Hertz – Designer
   {% for post in site.posts %}
     <a href="{{ post.url }}">
       <article class="thought">
-        <span class="thought thought-title">{{ post.title }}</span>
-        <span class="thought thought-date">{{ post.date | date_to_string }}</span>
+        <span class="thought__title">{{ post.title }}</span>
+        <span class="thought__date">{{ post.date | date_to_string }}</span>
       </article>
     </a>
   {% endfor %}

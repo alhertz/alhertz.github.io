@@ -14,15 +14,11 @@ Why I work at Gumroad
   <p>This thought is a work in progress but I don't think that is reason enough not to share what I have written so far. Enjoy.</p>
 </aside>
 
-When I decided to move to San Francisco from New Orleans to work at Gumroad as a Product Designer, some people wanted to know why. 
+When I decided to move to San Francisco from New Orleans to work at Gumroad as a Product Designer, some people wanted to know why.
 
 This was a fair question but it made me realize that not enough people know why the hell I do what I do. Some people see me as more of a musician while some people don't even know I make music. Generally, I don't think I have been very clear over the years so here's an attempt to change that (for now). In short, it goes something like this:
 
-* * *
-
 > Making a living as a musician or any other creative person is damn hard.
-
-* * *
 
 ### Early Years ###
 

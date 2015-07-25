@@ -10,7 +10,7 @@ description:
 Farewell New Orleans 
 ==========
 
-After five amazing years of living in New Orleans I will be leaving this fair city next month. I have recently accepted an offer from [Gumroad](https://www.gumroad.com) to become their new Product Designer and couldn't be more excited. They are helping creatives make a living online in a big way and I cannot wait begin to contribute. 
+After five amazing years of living in New Orleans I will be leaving this fair city next month. I have recently accepted an offer from [Gumroad](https://www.gumroad.com) to join the team as a Product Designer and couldn't be more excited. They are helping creatives make a living online in a big way and I cannot wait begin to contribute. 
 
 This is most certainly a bittersweet goodbye and is coming somewhat unexpectedly but it is time to explore San Francisco and the tech culture there. I cannot thank enough all the wonderful friends & co-workers I have met here over the past years for their support and general awesome-ness. I wouldn't be who I am today without you all. 
 

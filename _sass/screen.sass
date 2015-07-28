@@ -124,6 +124,8 @@ hr
 // Pull dem quotes out!
 blockquote
   +opacity(.6)
+  +transition-property(opacity)
+  +transition-duration(1s)
   border-left: 3px solid $primary-color
   font:
     weight: 400
@@ -135,8 +137,6 @@ blockquote
 
   &:hover
     +opacity(1)
-    +transition-property(opacity)
-    +transition-duration(1s)
     cursor: pointer
 
 
@@ -212,6 +212,8 @@ header
     content: ""
     display: table
     clear: both
+  .bio
+    margin-bottom: 1em
 
 // Lil code-blocks s'all
 .highlight
@@ -236,6 +238,15 @@ figure
   margin-bottom: 1.5em
   &:last-child
     margin-bottom: 0
+
+aside
+  border: 1px solid #eee
+  border-width: 1px 0
+  margin-left: -2em
+  margin-right: -2em
+  padding: 1em 2em
+  .fa-bell-o
+    margin-right: 10px
 
 // Try and guess
 .thoughts

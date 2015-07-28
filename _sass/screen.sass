@@ -15,6 +15,16 @@ $logo-height: $header-height - 15px
 *, *:before, *:after
   +box-sizing(border-box)
 
+#main
+  +animation-name(fadeIn)
+  +animation-duration(.3s)
+
++keyframes(fadeIn)
+  0%
+    +opacity(0)
+  100%
+    +opacity(1)
+
 // Base
 body
   background:
@@ -178,15 +188,6 @@ header
       +rotate(30deg)
     .sq-three
       +rotate(60deg)
-    &:hover
-      cursor: pointer
-      color: #999
-      .sq-one
-        +rotate(15deg)
-      .sq-two
-        +rotate(45deg)
-      .sq-three
-        +rotate(75deg)
 
 // Where the magic happens
 .main

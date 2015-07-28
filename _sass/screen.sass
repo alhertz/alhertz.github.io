@@ -92,13 +92,18 @@ h1
   margin: 0 0 1em 0
 
 h2
-  color: #aaa
+  color: #222
   font:
     weight: 400
     size: 1.25em
   margin: .5em 0 1em 0
+  a
+    color: #222
+    &:hover
+      color: #000
 
 h3
+  color: #222
   font:
     size: 1em
     weight: 600
@@ -124,6 +129,8 @@ hr
 // Pull dem quotes out!
 blockquote
   +opacity(.6)
+  +transition-property(opacity)
+  +transition-duration(1s)
   border-left: 3px solid $primary-color
   font:
     weight: 400
@@ -135,8 +142,6 @@ blockquote
 
   &:hover
     +opacity(1)
-    +transition-property(opacity)
-    +transition-duration(1s)
     cursor: pointer
 
 
@@ -236,6 +241,8 @@ figure
   margin-bottom: 1.5em
   &:last-child
     margin-bottom: 0
+  i
+    margin-right: .5em
 
 // Try and guess
 .thoughts

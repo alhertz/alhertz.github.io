@@ -16,8 +16,10 @@ $logo-height: $header-height - 15px
   +box-sizing(border-box)
 
 #main
+  position: relative
   +animation-name(fadeIn)
   +animation-duration(.3s)
+  +animation-timing-function(ease-in-out)
 
 #main.is-exiting
   +animation-name(fadeOut)
@@ -25,15 +27,15 @@ $logo-height: $header-height - 15px
 
 +keyframes(fadeIn)
   0%
-    +opacity(0)
+    +transform(translateX(-1000px))
   100%
-    +opacity(1)
+    +transform(translateX(0))
 
 +keyframes(fadeOut)
   0%
-    +opacity(1)
+    +transform(translateX(0))
   100%
-    +opacity(0)
+    +transform(translateX(1000px))
 
 // Base
 body
@@ -213,6 +215,7 @@ header
   max-width: $content-width
   margin: 2em auto
   width: 100%
+  overflow: hidden
   &:after
     content: ""
     display: table

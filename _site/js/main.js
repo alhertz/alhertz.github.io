@@ -5,14 +5,11 @@ $(function(){
     prefetch: true,
     cacheLength: 2,
     onStart: {
-      duration: 250, // Duration of our animation
+      duration: 300,
       render: function ($container) {
-        // Add your CSS animation reversing class
         $container.addClass('is-exiting');
-
-        // Restart your animation
         smoothState.restartCSSAnimations();
-        $body.animate({ 'scrollTop': 0 });
+        // $body.animate({ 'scrollTop': 0 });
       }
     },
     onReady: {

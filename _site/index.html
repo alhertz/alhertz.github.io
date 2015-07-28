@@ -35,7 +35,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   </head>
-  <body class="home">
+  <body>
     <!--Header-->
 <div class="container">
   <header class="header">
@@ -48,9 +48,11 @@
   </header>
 </div>
 
+
     <!--Content-->
     <section class="main" role="main">
-      <section class="bio">
+      <div id="main">
+        <section class="bio">
   <h1>Hey.</h1>
   <p>My name is Alex but feel free to <a href="https://www.youtube.com/watch?v=ULjCSK0oOlI">call me Al</a>. I'm a product designer at Gumroad who's always trying to find new ways to make the web a more exciting place for creatives (notably musicians) – <a href="/about#more">learn more</a>.</p>
 </section>
@@ -95,9 +97,13 @@
     </a>
   
 </section>
+      </div>
     </section>
 
-    <footer>
+    </div>
+<!--End #smooth-state-wrapper-->
+
+<footer>
   <ul>
     <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
     <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
@@ -108,9 +114,10 @@
   </ul>
 </footer>
 
+
     <!--JS-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/plugins.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/vendor/jquery.smoothState.js"></script>
     <script src="js/main.js"></script>
 
     <!--Google Analytics-->

@@ -40,7 +40,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   </head>
-  <body class="thought">
+  <body>
 
     <!--Header-->
     <!--Header-->
@@ -55,9 +55,11 @@
   </header>
 </div>
 
+
     <!--Content-->
     <article class="main" role="main">
-      <h1>On designing in browser </h1>
+      <div id="main">
+        <h1>On designing in browser </h1>
 
 <p>A couple of weeks ago, I was asked to give a talk at <a href="http://frontendparty.com">Front End Party</a> (<a href="https://dl.dropboxusercontent.com/u/19527741/party.pdf">here&#39;s a link to the deck I was working with</a>) and because I was working on a project being designed entirely in the browser at the time, I figured it only would make sense to go over some of my thoughts on just that. </p>
 
@@ -67,9 +69,13 @@
 
 <p>Is being able to create perfectly stylized elements in a PSD what being a web designer is? Or is that only one cavet? In my opinion, web designers design systems for solving problems related to experience, aesthetic, <a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density">device sizes</a>, and performance.</p>
 
+      </div>
     </article>
 
-    <footer>
+    </div>
+<!--End #smooth-state-wrapper-->
+
+<footer>
   <ul>
     <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
     <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
@@ -80,10 +86,11 @@
   </ul>
 </footer>
 
+
     <!--JS-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../js/vendor/jquery.smoothState.js"></script>
+    <script src="../js/main.js"></script>
 
     <!--Google Analytics-->
     <script>

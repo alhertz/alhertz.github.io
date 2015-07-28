@@ -35,7 +35,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   </head>
-  <body class="page">
+  <body>
 
     <!--Header-->
 <div class="container">
@@ -49,9 +49,11 @@
   </header>
 </div>
 
+
     <!--Content-->
     <article class="main" role="main">
-      <h1>About</h1>
+      <div id="main">
+        <h1>About</h1>
 
 <p>My name is Alex Hertz but feel free to call me Al. I design and develop the part of the internet you see and interact with. I'm always trying to find new ways to make the internet a more exciting place for creatives.</p>
 
@@ -70,9 +72,13 @@
   </ul>
 </aside>
 
+      </div>
     </article>
 
-    <footer>
+    </div>
+<!--End #smooth-state-wrapper-->
+
+<footer>
   <ul>
     <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
     <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
@@ -83,10 +89,11 @@
   </ul>
 </footer>
 
+
     <!--JS-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../js/vendor/jquery.smoothState.js"></script>
+    <script src="../js/main.js"></script>
 
     <!--Google Analytics-->
     <script>

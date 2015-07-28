@@ -18,7 +18,7 @@ Applications aren’t built from scratch. At the very least, there’s some sket
 
 We’re proud to say that a lot of what we put into the Gumroad iPhone app came from products created and sold by Gumroad creators. From what Maxwell used to build it, to what I used to design it, and more, here’s what our community put in to our new app.
 
-###[Achieving Zen with Auto Layout](https://gumroad.com/l/autolayout)
+##[Achieving Zen with Auto Layout](https://gumroad.com/l/autolayout)
 
 <figure>
   <img src="http://36.media.tumblr.com/c208a05bb396bb2de49c3c39c7052ede/tumblr_nfevjvWEEk1thmahmo1_540.jpg">
@@ -29,8 +29,8 @@ There’s a massive learning curve for laying out user interfaces for OS X and i
 >It really cut through the scariness of using nslayoutconstraint. Before, I would always use Interface Builder or Storyboard. Now I can go either way and get a great result.
 
 What I personally enjoyed is that Justin’s book gave us flexibility. Any time a boundary is broken down, that’s one less constraint to work within, which makes designing and building the app more fun.
-### Mockuuups
 
+## [Mockuuups](https://www.mockuuups.com/)
 
 <figure>
   <a href="https://www.mockuuups.com/"><img src="http://40.media.tumblr.com/9e3deaae1e30e1a70d99cdfcdcb3452f/tumblr_nfevjvWEEk1thmahmo2_1280.jpg"></a>
@@ -40,13 +40,21 @@ When everything was coming together, I went to Mockuuups.com and bought their iP
 
 If you’re in need of iPhone templates, I highly recommend these guys. They’ve even got a free sample available on their site you can check out.
 
-### Symbolicons
+## [Symbolicons](http://symbolicons.com/)
+
+<figure>
+  <a href="http://symbolicons.com/"><img src="http://41.media.tumblr.com/940ad53ab86aa97ffb3ddd7dc5f3bf21/tumblr_nfevjvWEEk1thmahmo3_1280.png"></a>
+</figure>
 
 We’ve been using Symbolicons since before I started at Gumroad. You’ve seen them around our site. Their massive sets of perfect little vector graphics contain everything from scissors to rockets to speech bubbles to skulls… and, well, every single thing in the world. We used some of their line icons to denote file types (files for reading, files for listening to, files for viewing) in the app. They’re perfect and clear even at around ⅛”.
 
 And a similar side note to earlier: They’ve got a great site and use overlay beautifully. Respect.
 
-## Kyle T Webster’s brushes
+## [Kyle T Webster’s brushes](https://gumroad.com/kyletwebster)
+
+<figure>
+  <a href="https://gumroad.com/kyletwebster"><img src="http://41.media.tumblr.com/29bb105c7195fbc5c98225d1f385eb56/tumblr_nfevjvWEEk1thmahmo4_1280.jpg"></a>
+</figure>
 
 Kyle’s brushes are without equal. Travis drew and colored an illustration of the White Rabbit for an ebook version of Alice in Wonderland that we included in the new build of the app using a couple of Runny Inkers and a watercolor brush. From Travis:
 

@@ -30,20 +30,30 @@
     <link rel="stylesheet" href="/css/screen.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <!---Typekit-->
-    <script type="text/javascript" src="//use.typekit.net/rpn5qcd.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!---Pusher-->
+    <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+    <script>
+      // Enable pusher logging - don't include this in production
+      Pusher.log = function(message) {
+        if (window.console && window.console.log) {
+          window.console.log(message);
+        }
+      };
+
+      var pusher = new Pusher('82c06557b43367b7d156', {
+        encrypted: true
+      });
+      var channel = pusher.subscribe('test_channel');
+      channel.bind('my_event', function(data) {
+        alert(data.message);
+      });
+    </script>
 
   </head>
   <body>
     {% include _header.html %}
 
-    <!--Content-->
-    <section class="main" role="main">
-      <div id="main">
-        {{ content }}
-      </div>
-    </section>
+    {{ content }}
 
     {% include _footer.html %}
 

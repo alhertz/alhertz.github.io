@@ -30,96 +30,80 @@
     <link rel="stylesheet" href="/css/screen.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <!---Typekit-->
-    <script type="text/javascript" src="//use.typekit.net/rpn5qcd.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!---Pusher-->
+    <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+    <script>
+      // Enable pusher logging - don't include this in production
+      Pusher.log = function(message) {
+        if (window.console && window.console.log) {
+          window.console.log(message);
+        }
+      };
+
+      var pusher = new Pusher('82c06557b43367b7d156', {
+        encrypted: true
+      });
+      var channel = pusher.subscribe('test_channel');
+      channel.bind('my_event', function(data) {
+        alert(data.message);
+      });
+    </script>
 
   </head>
   <body>
-    <!--Header-->
-<div class="container">
-  <header class="header">
-    <a class="logo" href="/">
-      <div class="sq sq-letter">A</div>
-      <div class="sq sq-one"></div>
-      <div class="sq sq-two"></div>
-      <div class="sq sq-three"></div>
-    </a>
-  </header>
-</div>
-
-
-    <!--Content-->
-    <section class="main" role="main">
-      <div id="main">
-        <section class="bio">
-  <h1>Hello, it's nice to meet you.</h1>
-  <p>My name is Alex but you can call me Al. I’m a designer based in San Francisco, CA dedicated to building useful technology for creative people. Currently, I’m a product designer at <a href="https://gumroad.com">Gumroad</a>, a company designing a better commerce experience for the creative economy.</p>
-
-  <p>At the moment, this site is undergoing some significant changes to better feature my work &amp; writing. In the meantime, feel free to follow me on <a href="https://twitter.com/alhertz">Twitter</a>, <a href="http://dribbble.com/alhertz">Dribbble</a>, or <a href="https://instagram.com/alhertz">Instagram</a> if you'd like to keep tabs.</p>
-</section>
-
-<hr>
-
-<section class="thoughts">
-  
-    <a href="/how-you-helped-us-build-our-app">
-      <article class="thought">
-        <span class="thought__title">How You Helped Us Build Our App</span>
-        <span class="thought__date">31 Dec 2014</span>
-      </article>
-    </a>
-  
-    <a href="/why-i-work-at-gumroad">
-      <article class="thought">
-        <span class="thought__title">Why I work at Gumroad</span>
-        <span class="thought__date">16 Jun 2014</span>
-      </article>
-    </a>
-  
-    <a href="/farewell-new-orleans">
-      <article class="thought">
-        <span class="thought__title">Farewell New Orleans</span>
-        <span class="thought__date">18 Apr 2014</span>
-      </article>
-    </a>
-  
-    <a href="/useful-mobile-web-app-snippets">
-      <article class="thought">
-        <span class="thought__title">Useful Mobile Web App User Experience Sprinkles</span>
-        <span class="thought__date">14 Mar 2014</span>
-      </article>
-    </a>
-  
-    <a href="/styling-file-inputs-with-out-going-insane">
-      <article class="thought">
-        <span class="thought__title">Styling File Inputs Without Going Insane</span>
-        <span class="thought__date">25 Feb 2014</span>
-      </article>
-    </a>
-  
-    <a href="/on-design-in-browser">
-      <article class="thought">
-        <span class="thought__title">On Designing In Browser</span>
-        <span class="thought__date">24 Feb 2014</span>
-      </article>
-    </a>
-  
-</section>
-      </div>
-    </section>
-
-    </div>
-<!--End #smooth-state-wrapper-->
-
-<footer>
-  <ul>
-    <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
-    <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
-    <li><a href="http://www.linkedin.com/in/alexchertz"><i class="fa fa-linkedin-square"></i></a></li>
-    <li><a href="https://github.com/alhertz"><i class="fa fa-github"></i></a></li>
-    <li><a href="https://instagram.com/alhertz"><i class="fa fa-instagram"></i></a></li>
+    <main id="main">
+  <nav class="primary-navigation js-primary-navigation">
+  <ul class="container">
+    <li class="primary-navigation__logo"><a href="/">A</a></li>
+    <li class="primary-navigation__contact"><a href="#contact">Say hey</a></li>
   </ul>
+</nav>
+
+
+    <section class="greeter-section introduction">
+  <div class="container">
+    <i class="icon-hand"></i>
+    <h1>Hello, it's nice to <br /> meet you.</h1>
+    <p class="lead">
+      My name is Alex but you can call me Al. I’m a <br /> designer based in San Francisco, CA dedicated to building useful technology for creative people.
+    </p>
+    <p>Currently, I’m a product designer at Gumroad, a company designing a better commerce experience for the creative economy.</p>
+    <a href="/about" class="greeter-section__cta">Read full bio</a>
+
+  </div>
+</section>
+
+<section class="greeter-section portfolio">
+  <div class="container">
+    <h1>Selections from my portfolio.</h1>
+
+    <div class="portfolio-gallery">
+      <div class="portfolio-gallery__item">
+        <h2 class="portfolio-gallery__title">Gumroad</h2>
+        <p class="portfolio-gallery__description">An overview of the part I’m playing in building a company, a product, and a team that helps creatives of all types make a living doing what they love.</p>
+        <button class="greeter-section__cta js-expand-gallery-item">View</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+<footer class="greeter-section contact">
+  <div class="container">
+    <i class="icon-email"></i>
+    <h1>Get in touch</h1>
+    <p>I'm available for hire at the moment. If you'd like to work together, <a href="#contact">give me a shout</a>.</p>
+
+    <ul>
+      <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
+      <li><a href="http://www.linkedin.com/in/alexchertz"><i class="fa fa-linkedin-square"></i></a></li>
+      <li><a href="https://github.com/alhertz"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://instagram.com/alhertz"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+  </div>
 </footer>
 
 

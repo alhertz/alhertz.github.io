@@ -3,22 +3,29 @@ layout: home
 title: Alex Hertz – Designer
 ---
 
-<section class="bio">
-  <h1>Hello, it's nice to meet you.</h1>
-  <p>My name is Alex but you can call me Al. I’m a designer based in San Francisco, CA dedicated to building useful technology for creative people. Currently, I’m a product designer at <a href="https://gumroad.com">Gumroad</a>, a company designing a better commerce experience for the creative economy.</p>
+<section class="greeter-section introduction">
+  <div class="container">
+    <i class="icon-hand"></i>
+    <h1>Hello, it's nice to <br /> meet you.</h1>
+    <p class="lead">
+      My name is Alex but you can call me Al. I’m a <br /> designer based in San Francisco, CA dedicated to building useful technology for creative people.
+    </p>
+    <p>Currently, I’m a product designer at Gumroad, a company designing a better commerce experience for the creative economy.</p>
+    <a href="/about" class="greeter-section__cta">Read full bio</a>
 
-  <p>At the moment, this site is undergoing some significant changes to better feature my work &amp; writing. In the meantime, feel free to follow me on <a href="https://twitter.com/alhertz">Twitter</a>, <a href="http://dribbble.com/alhertz">Dribbble</a>, or <a href="https://instagram.com/alhertz">Instagram</a> if you'd like to keep tabs.</p>
+  </div>
 </section>
 
-<hr>
+<section class="greeter-section portfolio">
+  <div class="container">
+    <h1>Selections from my portfolio.</h1>
 
-<section class="thoughts">
-  {% for post in site.posts %}
-    <a href="{{ post.url }}">
-      <article class="thought">
-        <span class="thought__title">{{ post.title }}</span>
-        <span class="thought__date">{{ post.date | date_to_string }}</span>
-      </article>
-    </a>
-  {% endfor %}
+    <div class="portfolio-gallery">
+      <div class="portfolio-gallery__item">
+        <h2 class="portfolio-gallery__title">Gumroad</h2>
+        <p class="portfolio-gallery__description">An overview of the part I’m playing in building a company, a product, and a team that helps creatives of all types make a living doing what they love.</p>
+        <button class="greeter-section__cta js-expand-gallery-item">View</button>
+      </div>
+    </div>
+  </div>
 </section>

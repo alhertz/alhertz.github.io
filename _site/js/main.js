@@ -1,15 +1,16 @@
 $(function(){
   'use strict';
+
   var $body   = $('html, body'),
       options = {
     prefetch: true,
     cacheLength: 2,
     onStart: {
-      duration: 300,
+      duration: 1000,
       render: function ($container) {
         $container.addClass('is-exiting');
         smoothState.restartCSSAnimations();
-        // $body.animate({ 'scrollTop': 0 });
+        $body.animate({ 'scrollTop': 0 });
       }
     },
     onReady: {
@@ -21,4 +22,9 @@ $(function(){
     }
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
+
+  $(window).load(function() {
+    $('.greeter-section').delay(350).fadeIn();
+    $('.js-primary-navigation').addClass('showing');
+  });
 });

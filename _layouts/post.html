@@ -1,81 +1,17 @@
 ---
 layout: post
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <!--General Meta-->
-    <title>{{ page.title }} – Alex Hertz</title>
-    <meta name="viewport" content="width=device-width">
-    {% if page.description %}
-    <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}" />
-    {% else %}
-    <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}" />
-    {% endif %}
-    <link rel="canonical" href="http://www.hey.al{{ page.url }}" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+  {% include _head.html %}
+  {% include _header.html %}
 
-    <!--Facebook-->
-    <meta property="og:title" content="{{ page.title }} / Al Hertz" />
-    {% if page.description %}
-    <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}" />
-    {% else %}
-    <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}" />
-    {% endif %}
-    <meta property="og:url" content="http://hey.al{{ page.url }}" />
-    <meta property="og:site_name" content="Alex Hertz" />
-    <meta property="og:image" content="http://hey.al/img/hey-there.jpg" />
+  <article class="article">
+    {{ content }}
+  </article>
 
-    <!--Twitter-->
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@alhertz"/>
-    <meta name="twitter:domain" content="Alex Hertz"/>
-    <meta name="twitter:creator" content="@alhertz"/>
+  {% include _footer.html %}
+  {% include _foot.html %}
 
-    <!--CSS-->
-    <link rel="stylesheet" href="/css/screen.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-    <!---Typekit-->
-    <script type="text/javascript" src="//use.typekit.net/rpn5qcd.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-  </head>
-  <body>
-
-    <!--Header-->
-    {% include _header.html %}
-
-    <!--Content-->
-    <article class="main" role="main">
-      <div id="main">
-        {{ content }}
-      </div>
-    </article>
-
-    {% include _footer.html %}
-
-    <!--JS-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="../js/vendor/jquery.smoothState.js"></script>
-    <script src="../js/main.js"></script>
-
-    <!--Google Analytics-->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-48472563-1', 'hey.al');
-      ga('send', 'pageview');
-
-    </script>
-  </body>
-</html>
+  <!-- <div class="construction-heads-up">
+    <p>Heads up: This case study is under construction. To stay tuned in to future work, sign up for my email list. I'll treat your email with sweet sacred care it deserves (and definitely not spam you).</p>
+  </div> -->

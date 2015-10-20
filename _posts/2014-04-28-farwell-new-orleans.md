@@ -2,7 +2,7 @@
 layout: post
 title:  "Farewell New Orleans"
 date:   2014-04-18 10:41:50
-categories: Thoughts
+categories: blog
 permalink: farewell-new-orleans
 description: 
 ---

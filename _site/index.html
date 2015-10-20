@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,15 +7,15 @@
     <!--General Meta-->
     <title>Alex Hertz – Designer</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="My name is Alex Hertz but feel free to call me Al. I design and develop the part of the internet you see and interact with."/>
+    <meta name="description" content="San Francisco based designer dedicated to building useful technology for creative people"/>
     <link rel="canonical" href="http://hey.al" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
 
     <!--Facebook-->
-    <meta property="og:title" content="Alex Hertz – Design / Code" />
-    <meta property="og:description" content="My name is Alex but feel free to call me Al. I design &and; develop the part of the internet you see and interact with. I'm always trying to find new ways to make the web a more exciting place for creatives." />
+    <meta property="og:title" content="Alex Hertz – Designer" />
+    <meta property="og:description" content="San Francisco based designer dedicated to building useful technology for creative people." />
     <meta property="og:url" content="http://hey.al" />
     <meta property="og:site_name" content="Alex Hertz " />
     <meta property="og:image" content="http://hey.al/img/hey-there.jpg" />
@@ -30,72 +30,63 @@
     <link rel="stylesheet" href="/css/screen.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <!---Pusher-->
-    <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
-    <script>
-      // Enable pusher logging - don't include this in production
-      Pusher.log = function(message) {
-        if (window.console && window.console.log) {
-          window.console.log(message);
-        }
-      };
-
-      var pusher = new Pusher('82c06557b43367b7d156', {
-        encrypted: true
-      });
-      var channel = pusher.subscribe('test_channel');
-      channel.bind('my_event', function(data) {
-        alert(data.message);
-      });
-    </script>
-
   </head>
   <body>
-    <main id="main">
-  <nav class="primary-navigation js-primary-navigation">
-  <ul class="container">
-    <li class="primary-navigation__logo"><a href="/">A</a></li>
-    <li class="primary-navigation__contact"><a href="#contact">Say hey</a></li>
-  </ul>
-</nav>
+  <main id="main" class="main">
+  <header>
+    <a href="/"><i class="icon-hand"></i></a>
+  </header>
 
 
-    <section class="greeter-section introduction">
+  <section class="greeter-section introduction">
   <div class="container">
-    <i class="icon-hand"></i>
     <h1>Hello, it's nice to <br /> meet you.</h1>
-    <p class="lead">
-      My name is Alex but you can call me Al. I’m a <br /> designer based in San Francisco, CA dedicated to building useful technology for creative people.
-    </p>
+    <p class="lead">My name is Alex but you can call me Al. I’m a <br /> designer based in San Francisco, CA dedicated to building useful technology for creative people.</p>
     <p>Currently, I’m a product designer at Gumroad, a company designing a better commerce experience for the creative economy.</p>
-    <a href="/about" class="greeter-section__cta">Read full bio</a>
-
   </div>
 </section>
 
 <section class="greeter-section portfolio">
   <div class="container">
-    <h1>Selections from my portfolio.</h1>
-
+    <!-- <i class="icon-browser"></i> -->
+    <h2>Selections from my portfolio.</h2>
     <div class="portfolio-gallery">
-      <div class="portfolio-gallery__item">
-        <h2 class="portfolio-gallery__title">Gumroad</h2>
-        <p class="portfolio-gallery__description">An overview of the part I’m playing in building a company, a product, and a team that helps creatives of all types make a living doing what they love.</p>
-        <button class="greeter-section__cta js-expand-gallery-item">View</button>
-      </div>
+      
+        
+          <div class="portfolio-gallery__item">
+            <h3 class="portfolio-gallery__title">Gumroad</h2>
+            <p class="portfolio-gallery__description">An overview of the part I’m playing in building a company, a product, and a team that helps creatives of all types make a living doing what they love.</p>
+            <a href="/work/gumroad" class="greeter-section__cta js-expand-gallery-item">View</a>
+          </div>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
   </div>
 </section>
 
-
-    </main>
-
-<footer class="greeter-section contact">
+<section class="greeter-section contact">
   <div class="container">
     <i class="icon-email"></i>
     <h1>Get in touch</h1>
-    <p>I'm available for hire at the moment. If you'd like to work together, <a href="#contact">give me a shout</a>.</p>
+    <p>I'm available for hire at the moment. If you'd like to work together or just  <a class="bordered" href="mailto:hey@hey.al">give me a shout</a>.</p>
+  </div>
+</section>
 
+
+  
+  <footer>
     <ul>
       <li><a href="https://twitter.com/alhertz"><i class="fa fa-twitter"></i></a></li>
       <li><a href="https://dribbble.com/alhertz"><i class="fa fa-dribbble"></i></a></li>
@@ -103,11 +94,10 @@
       <li><a href="https://github.com/alhertz"><i class="fa fa-github"></i></a></li>
       <li><a href="https://instagram.com/alhertz"><i class="fa fa-instagram"></i></a></li>
     </ul>
-  </div>
-</footer>
+  </footer>
+</main>
 
-
-    <!--JS-->
+      <!--JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/vendor/jquery.smoothState.js"></script>
     <script src="js/main.js"></script>

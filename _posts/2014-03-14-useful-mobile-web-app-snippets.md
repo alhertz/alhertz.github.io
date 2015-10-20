@@ -2,9 +2,9 @@
 layout: post
 title:  "Useful Mobile Web App User Experience Sprinkles"
 date:   2014-03-14 10:18:50
-categories: Thoughts
+categories: blog
 permalink: useful-mobile-web-app-snippets
-description: 
+description:
 ---
 
 Useful Mobile Web App User Experience Sprinkles 

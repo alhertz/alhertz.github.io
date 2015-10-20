@@ -6,7 +6,7 @@ $(function(){
     prefetch: true,
     cacheLength: 2,
     onStart: {
-      duration: 1000,
+      duration: 1500,
       render: function ($container) {
         $container.addClass('is-exiting');
         smoothState.restartCSSAnimations();
@@ -23,8 +23,8 @@ $(function(){
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
 
-  $(window).load(function() {
-    $('.greeter-section').delay(350).fadeIn();
-    $('.js-primary-navigation').addClass('showing');
-  });
+  // $(window).load(function() {
+  //   $('.greeter-section').delay(350).fadeIn();
+  //   $('.js-primary-navigation').addClass('showing');
+  // });
 });

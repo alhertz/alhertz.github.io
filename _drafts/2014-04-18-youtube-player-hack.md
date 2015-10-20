@@ -4,14 +4,13 @@ title:  "A Minimal Music Player Powered by YouTube"
 date:   2014-04-18 10:41:50
 categories: Hacks
 permalink: minimal-music-player-powered-by-youtube
-description: 
+description:
 ---
 
 A Minimal Music Player Powered by YouTube
 ==========
 
 <iframe width="600" height="600" src="//www.youtube-nocookie.com/embed/_-Qpj-bNidA" frameborder="0" allowfullscreen></iframe>
-
 
 1. Copy and Paste the Existing Embed Code Provided by YouTube & Edit the width and height so that they are the same values</h3>
 

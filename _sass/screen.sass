@@ -1,319 +1,371 @@
-//Imports
+
+//
+// Imports
+//
+
 @import compass/reset
 @import compass/css3
+@import compass/css3/animation
 @import syntax
-@import compass/typography/text/ellipsis
 
+//
 // Variables
-$content-width: 760px
-$use-mozilla-ellipsis-binding: true
+//
+
+$white-color: #ffffff
 $primary-color: #5694f1
-$header-height: 75px
-$logo-height: $header-height - 15px
+$secondary-color: #666
+$primary-easing: cubic-bezier(0.23, 1.3, 0.32, 1)
 
-// Global border-box box-sizing
-*, *:before, *:after
-  +box-sizing(border-box)
+//
+// Base
+//
 
-#main
-  position: relative
-  +animation-name(fadeIn)
-  +animation-duration(.3s)
-  +animation-timing-function(ease-in-out)
+*, *:after, *:before
+  box-sizing: border-box
 
-#main.is-exiting
-  +animation-name(fadeOut)
-  +animation-duration(.3s)
+html
+  font-size: 62.5%
+
+body
+  font-family: "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: $secondary-color
+  font-weight: 300
+  font-size: 2.4rem
+  background: $white-color
+  border-top: 10px solid $primary-color
+
+h1, h2
+  font:
+    size: 7.2rem
+    weight: 700
+  color: $primary-color
+  margin-bottom: 10rem
+  text-align: center
+
+p
+  font-size: 2.4rem
+  max-width: 80%
+  margin: 0 auto 4rem
+  line-height: 1.8
+
+  &.lead
+    color: $white-color
+    font-size: 3.2rem
+    line-height: 1.5
+    background: $primary-color
+    border-radius: 4px
+    padding: 8rem
+    line-height: 1.8
+    margin-bottom: 8rem
+    max-width: 100%
+    text-align: center
+
+
+  &:last-child
+    margin-bottom: 0
+
+a
+  +transition-property(all)
+  +transition-timing-function($primary-easing)
+  +transition-duration(350ms)
+  color: $primary-color
+  text-decoration: none
+  font-weight: 500
+
+  &.bordered
+    padding-bottom: 5px
+    border-bottom: 2px solid
+
+    &:hover
+      padding-bottom: 10px
+
+//
+// Animations
+//
 
 +keyframes(fadeIn)
   0%
-    +transform(translateX(-1000px))
+    opacity: 0
   100%
-    +transform(translateX(0))
+    opacity: 1
 
-+keyframes(fadeOut)
++keyframes(wobble)
   0%
-    +transform(translateX(0))
+    +transform(rotate(0deg))
+
+  50%
+    +transform(rotate(10deg))
+
   100%
-    +transform(translateX(1000px))
+    +transform(rotate(0deg))
 
-// Base
-body
-  background:
-    color: #f9f9f9
-    size: 100%
-    repeat: no-repeat
-  color: #777
-  font:
-    family: "Adelle", "Helvetica Neue", Arial, sans-serif
-    size: 21px
-    weight: 300
-  text-rendering: optimizeLegibility
-  -webkit-font-smoothing: antialiased
-
-input
-  +border-radius(2px)
-  border: 1px solid #CCC
-  font:
-    family: "Adelle", "Helvetica Neue", Arial, sans-serif
-    size: 16px
-    weight: 300
-  height: 50px
-  line-height: 50px
-  width: 100%
-
-// Typography
-h1, h2, h3, h4
-  font:
-    family: "Adelle", "Helvetica Neue", Helvetica, Arial, Sans-serif
-    weight: 400
-
+//
 // Layout
-.container
-  max-width: $content-width
-  margin: 2em auto
-  width: 100%
+//
 
-a
-  +transition-property(color)
-  +transition-duration(.5s)
-  text-decoration: none
-  color: $primary-color
-  &:hover
-    color: darken($primary-color, 15%)
-
-.text-right
-  text-align: right
-
-h1
-  color: #222
-  font:
-    weight: 400
-    size: 1.5em
-  line-height: 1.5
-  margin: 0 0 1em 0
-
-h2
-  color: #222
-  font:
-    weight: 400
-    size: 1.25em
-  margin: .5em 0 1em 0
-  a
-    color: #222
-    &:hover
-      color: #000
-
-h3
-  color: #222
-  font:
-    size: 1em
-    weight: 600
-  margin: .5em 0 1em 0
-  span
-    font-weight: 400
-
-strong
-  font-weight: 600
-
-p, blockquote, ul
-  line-height: 2.0
-  margin-bottom: 1.5em
-  &:last-child
-    margin-bottom: 0
-
-hr
-  border: 0
-  height: 0
-  border-top: 1px solid #f5f5f5
-  margin: 30px auto 45px
-
-// Pull dem quotes out!
-blockquote
-  +opacity(.6)
-  +transition-property(opacity)
-  +transition-duration(1s)
-  border-left: 3px solid $primary-color
-  font:
-    weight: 400
-    size: 1.2em
-  margin-left: -1.65em
-  padding-left: 1.65em
-  p
-    margin: 0
-
-  &:hover
-    +opacity(1)
-    cursor: pointer
-
-
-// File input duh
-input[type="file"]
-  color: transparent
-  position: relative
-  -webkit-user-select: none
-  &::-webkit-file-upload-button
-    visibility: hidden
-  &:before
-    color: #999
-    content: 'Upload Image'
-    left: 20px
-    position: absolute
-  &:after
-    color: #999
-    content: "\f030"
-    font-family: 'FontAwesome'
-    position: absolute
-    right: 20px
-  &:hover
-    border: 1px solid #999
-    cursor: pointer
-    &:before
-      color: #999
-  &:focus
-    outline: 0
-
-// All the necessarys about yours truly
-header
-  +transition-property(opacity)
-  +transition-duration(1s)
-  height: $header-height
-  width: $header-height
-  margin: 0 auto
-  &:hover
-    +opacity(1)
-  // I swear I know CSS – just look at this!
-  .logo
-    color: #999
-    font-weight: 600
-    font-size: 30px
-    margin: 0 auto
-    .sq
-      +transition-property(all)
-      +transition-duration(2s)
-      border: 1px solid #EEE
-      height: $logo-height
-      position: absolute
-      width: $logo-height
-    .sq-letter
-      border: none
-      line-height: $logo-height
-      text-align: center
-    .sq-one
-      +rotate(0deg)
-    .sq-two
-      +rotate(30deg)
-    .sq-three
-      +rotate(60deg)
-
-// Where the magic happens
 .main
-  +box-shadow(0 1px 2px rgba(0, 0, 0, .1))
-  +border-radius(4px)
-  background: #FFF
-  padding: 2em
-  max-width: $content-width
-  margin: 2em auto
+  background: $white-color
+
+  .greeter-section, .article
+    +transition-property(all)
+    +animation-duration(1000ms)
+    +animation-timing-function($primary-easing)
+    +animation-name(fadeIn)
+    animation-fill-mode: both
+
+  &.is-exiting
+    .greeter-section, .article
+      +animation-direction(alternate-reverse)
+
+    .icon-hand
+      +animation-name(none)
+
+.container
   width: 100%
-  overflow: hidden
-  &:after
-    content: ""
-    display: table
-    clear: both
+  max-width: 1000px
+  margin: 0 auto
 
-// Lil code-blocks s'all
-.highlight
-  +border-radius(4px)
-  background: #f9f9f9
-  margin-bottom: 2em
-  overflow: scroll
-  padding: 1.5em
 
-// Photos and the like ya heard?
-figure
-  figcaption
-    margin-top: 1em
-  img
-    margin-left: -2em
-    width: $content-width
+//
+// Header
+//
 
-// Sometimes I got lil quips/images
-aside,
-figure
-  color: #CCC
-  margin-bottom: 1.5em
-  &:last-child
-    margin-bottom: 0
-  i
-    margin-right: .5em
+header
+  text-align: center
+  padding: 8rem 0 0
 
-// Try and guess
-.thoughts
-  a
-    display: block
-  .thought
-    +transition-property(color)
-    +transition-duration(1s)
+//
+// Sections
+//
+
+.greeter-section
+  padding: 10rem 0
+  width: 100%
+  margin: 0 auto
+  color: $primary-color
+  position: relative
+  text-align: center
+
+  p
+    text-align: center
+    font-size: 3.2rem 
+
+  &.introduction
+    padding-top: 0
+
+  &.portfolio
+    color: $white-color
+    background: $primary-color
+
+    h2
+      color: $white-color
+
+    .portfolio-gallery__item
+      background: white
+      border-radius: 4px
+      font-size: 1rem
+      padding: 10rem 3rem
+      box-shadow: 0 1px .5rem rgba(0, 0, 0, .2)
+      width: 100%
+
+  &.contact
+    text-align: center
+    font-size: 2rem
+    border-top: 1px solid #eee
+    width: 100%
+
+    h1
+      margin-bottom: 2rem
+
+  .greeter-section__cta
+    +transition-property(all)
+    +transition-duration(350ms)
+    +transition-timing-function($primary-easing)
+    border: 1px solid $primary-color
+    background: $primary-color
+    border-radius: 50px
+    color: $white-color
+    font-weight: 600
+    font-size: 1.5rem
+    height: 5rem
+    line-height: 5rem
+    min-width: 20rem
+    text-transform: uppercase
+    letter-spacing: 1px
+    position: relative
+    display: inline-block
+    text-decoration: none
+
+    &:hover
+      +transform(translatey(-2px))
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+      cursor: pointer
+
+    &:focus
+      outline: 0
+
+    &:active
+      +transform(translatey(2px))
+
+//
+// Articles
+//
+
+.article
+  padding: 0 0 5rem
+
+  h1, h2, p, ol, ul, h3
+    width: 100%
+    max-width: 800px
+    margin: 0 auto 8rem
     line-height: 1.8
-    margin-bottom: .5em
-    &:after
-      content: ""
-      display: table
-      clear: both
-    .thought__title
-      +ellipsis()
-      float: left
-      width: 70%
-    .thought__date
-      text-align: right
-      color: #CCC
-      float: right
+
+  figure, .lead
+    width: 100%
+    max-width: 1000px
+    margin: 0 auto 8rem
+    line-height: 1.8
+
+  h1
+    text-align: center
+    margin-bottom: 3rem
+
+  h2
+    font-size: 3.2rem
+    text-align: left
+    margin-bottom: 3rem
+    color: $secondary-color
+
+  h3
+    font-size: 2.4rem
+    font-weight: 600
+    margin-bottom: 1rem
+    margin-top: 8rem
+
+  p
+    margin-bottom: 1.5rem
+
+  .subheader
+    text-align: center
+    color: lighten($secondary-color, 40%)
+    text-transform: uppercase
+    letter-spacing: 2px
+    font-size: 1.85rem
+    margin-bottom: 8rem
+
+    span
+      font-family: "Baskerville", "Georgia", serif
+      font-size: 14px
+      letter-spacing: 0
+      text-transform: lowercase
+      font-style: italic
+      position: relative
+      top: -3px
+
+  figure
+
+    img
+      max-width: 100%
+
+  .portfolio-gallery
+    background: #f5f5f5
+    border: 1px solid #eee
+    border-width: 1px 0
+    padding: 8rem
+
+    img
+      max-width: 1000px
+
+//
+// Footer
+//
 
 footer
   text-align: center
-  margin-bottom: 2em
+  padding: 3rem 0
+  border-top: 2px dashed lighten($secondary-color, 55%)
+
   ul
-    margin-bottom: 0
+    padding: 2rem
+    font-size: 3rem
+
     li
-      +inline-block
-  a
-    color: #CECECE
-    font-size: 21px
-    margin-right: 15px
-    &:hover
-      color: #999
+      display: inline-block
+      margin-right: 2rem
 
-@media screen and (max-width: 790px)
-  body
-    font-size: 18px
-  figure
-    img
-      margin-left: 0
-      width: 100%
+      a
+        color: lighten($secondary-color, 40%)
+        border: 0
 
-@media screen and (max-width: 420px)
-  header
-    +opacity(1)
-    height: 40px
-    margin-top: 10px
-    .logo
-      font-size: 18px
-      .sq
-        height: 40px
-        width: 40px
-      .sq-letter
-        line-height: 40px
-    nav ul li
-      line-height: 40px
-  body
-    font-size: 16px
-  .main
-    padding: 1em
-    border-radius: 0
-    margin-bottom: 1em
-  .thoughts
-    .thought
-      .thought-title
-        width: 65%
-  footer
-    margin-bottom: .5em
+        &:hover
+          color: $primary-color
+//
+// Icons
+//
+
+.icon-hand
+  background:
+    image: url('../img/hand.png')
+    size: cover
+  display: inline-block
+  height: 86px
+  width: 80px
+  margin-bottom: 4rem
+  +animation-name(wobble)
+  +animation-iteration-count(infinite)
+  +animation-duration(2s)
+  +animation-timing-function($primary-easing)
+
+.icon-email
+  background:
+    image: url('../img/email.png')
+    size: cover
+  display: inline-block
+  height: 126px
+  width: 85px
+  margin-bottom: 4rem
+
+.icon-browser
+  background:
+    image: url('../img/browser.png')
+    size: cover
+  display: inline-block
+  height: 125px
+  width: 145px
+  margin-bottom: 4rem
+
+//
+// Gallery
+//
+
+.portfolio-gallery
+  width: 100%
+  white-space: nowrap
+  vertical-align: top
+  overflow-x: scroll
+  overflow-y: hidden
+
+  .portfolio-gallery__item
+    display: inline-block
+    white-space: normal
+    color: $primary-color
+    vertical-align: top
+
+  .portfolio-gallery__title
+    font-size: 4.2rem
+    font-weight: 600
+    width: 100%
+    max-width: 760px
+    margin: 0 auto 2rem
+
+  .portfolio-gallery__description
+    font-size: 2.4rem
+    width: 100%
+    max-width: 760px
+    margin: 0 auto 2.5rem
+
+
+@media screen and (max-width: 700px)
+  html
+    font-size: 42.5%

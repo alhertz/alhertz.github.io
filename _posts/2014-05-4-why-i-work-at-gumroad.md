@@ -2,7 +2,7 @@
 layout: post
 title:  "Why I work at Gumroad"
 date:   2014-06-16 10:41:50
-categories: Thoughts
+categories: blog
 permalink: why-i-work-at-gumroad
 description: 
 ---

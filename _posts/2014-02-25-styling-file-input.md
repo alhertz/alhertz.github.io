@@ -2,7 +2,7 @@
 layout: post
 title:  "Styling File Inputs Without Going Insane"
 date:   2014-02-25 17:10:00
-categories: Code
+categories: blog
 permalink: styling-file-inputs-with-out-going-insane
 description: I know there are many examples of how to do this so please feel free express your undying hatred if you so desire. I just need to get this ingrained in my head after feeling quite nagged by it on a recent project. Writing a quick little tutorial is the best way to do that for me. Additionally, share any thoughts on how this could be improved or done differently too. I would love that.
 ---

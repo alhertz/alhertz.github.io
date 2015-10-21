@@ -421,14 +421,14 @@ h1, h2 {
   font-size: 7.2rem;
   font-weight: 700;
   color: #5694f1;
-  margin-bottom: 10rem;
+  margin-bottom: 1em;
   text-align: center;
 }
 
 p {
   font-size: 2.4rem;
   max-width: 80%;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2em;
   line-height: 1.8;
 }
 p.lead {
@@ -437,9 +437,9 @@ p.lead {
   line-height: 1.5;
   background: #5694f1;
   border-radius: 4px;
-  padding: 8rem;
+  padding: 3em;
   line-height: 1.8;
-  margin-bottom: 8rem;
+  margin-bottom: 3em;
   max-width: 100%;
   text-align: center;
 }
@@ -472,6 +472,18 @@ a.bordered:hover {
   padding-bottom: 10px;
 }
 
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 28%;
+  }
+
+  p {
+    max-width: 100%;
+  }
+  p.lead {
+    padding: 2em;
+  }
+}
 @-moz-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -582,11 +594,11 @@ a.bordered:hover {
 
 header {
   text-align: center;
-  padding: 8rem 0 0;
+  padding: 4em 0 0;
 }
 
 .greeter-section {
-  padding: 10rem 0;
+  padding: 4em 0;
   width: 100%;
   margin: 0 auto;
   color: #5694f1;
@@ -611,8 +623,8 @@ header {
   background: white;
   border-radius: 4px;
   font-size: 1rem;
-  padding: 10rem 3rem;
-  box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 7em 1em;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 .greeter-section.contact {
@@ -622,7 +634,7 @@ header {
   width: 100%;
 }
 .greeter-section.contact h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 0.25em;
 }
 .greeter-section .greeter-section__cta {
   -moz-transition-property: all;
@@ -643,16 +655,21 @@ header {
   color: #ffffff;
   font-weight: 600;
   font-size: 1.5rem;
-  height: 5rem;
-  line-height: 5rem;
-  min-width: 20rem;
+  height: 3em;
+  line-height: 3em;
+  min-width: 15em;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
   text-decoration: none;
 }
-.greeter-section .greeter-section__cta:hover {
+.greeter-section .greeter-section__cta.disabled {
+  border: 1px dashed #cccccc;
+  background: white;
+  color: #cccccc;
+}
+.greeter-section .greeter-section__cta:not(.disabled):hover {
   -moz-transform: translatey(-2px);
   -ms-transform: translatey(-2px);
   -webkit-transform: translatey(-2px);
@@ -660,18 +677,27 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.greeter-section .greeter-section__cta:focus {
+.greeter-section .greeter-section__cta:not(.disabled):focus {
   outline: 0;
 }
-.greeter-section .greeter-section__cta:active {
+.greeter-section .greeter-section__cta:not(.disabled):active {
   -moz-transform: translatey(2px);
   -ms-transform: translatey(2px);
   -webkit-transform: translatey(2px);
   transform: translatey(2px);
 }
 
+@media screen and (max-width: 700px) {
+  .greeter-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .greeter-section.portfolio .portfolio-gallery__item {
+    padding: 5em 3em;
+  }
+}
 .article {
-  padding: 0 0 5rem;
+  padding: 0 0 2em;
 }
 .article h1, .article h2, .article p, .article ol, .article ul, .article h3 {
   width: 100%;
@@ -728,7 +754,7 @@ header {
   background: #f5f5f5;
   border: 1px solid #eee;
   border-width: 1px 0;
-  padding: 8rem;
+  padding: 4em;
 }
 .article .portfolio-gallery img {
   max-width: 1000px;
@@ -736,16 +762,16 @@ header {
 
 footer {
   text-align: center;
-  padding: 3rem 0;
+  padding: 1em 0;
   border-top: 2px dashed #f2f2f2;
 }
 footer ul {
-  padding: 2rem;
+  padding: 1em;
   font-size: 3rem;
 }
 footer ul li {
   display: inline-block;
-  margin-right: 2rem;
+  margin-right: 1em;
 }
 footer ul li a {
   color: #cccccc;
@@ -761,7 +787,7 @@ footer ul li a:hover {
   display: inline-block;
   height: 86px;
   width: 80px;
-  margin-bottom: 4rem;
+  margin-bottom: 2em;
   -moz-animation-name: wobble;
   -webkit-animation-name: wobble;
   animation-name: wobble;
@@ -782,7 +808,7 @@ footer ul li a:hover {
   display: inline-block;
   height: 126px;
   width: 85px;
-  margin-bottom: 4rem;
+  margin-bottom: 2em;
 }
 
 .icon-browser {
@@ -791,9 +817,31 @@ footer ul li a:hover {
   display: inline-block;
   height: 125px;
   width: 145px;
-  margin-bottom: 4rem;
+  margin-bottom: 2em;
 }
 
+@media screen and (max-width: 700px) {
+  .icon-hand {
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  .icon-email {
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  .icon-browser {
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
 .portfolio-gallery {
   width: 100%;
   white-space: nowrap;
@@ -812,17 +860,11 @@ footer ul li a:hover {
   font-weight: 600;
   width: 100%;
   max-width: 760px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 0.5em;
 }
 .portfolio-gallery .portfolio-gallery__description {
   font-size: 2.4rem;
   width: 100%;
   max-width: 760px;
-  margin: 0 auto 2.5rem;
-}
-
-@media screen and (max-width: 700px) {
-  html {
-    font-size: 42.5%;
-  }
+  margin: 0 auto 1em;
 }

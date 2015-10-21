@@ -40,13 +40,13 @@ h1, h2
     size: 7.2rem
     weight: 700
   color: $primary-color
-  margin-bottom: 10rem
+  margin-bottom: 1em
   text-align: center
 
 p
   font-size: 2.4rem
   max-width: 80%
-  margin: 0 auto 4rem
+  margin: 0 auto 2em
   line-height: 1.8
 
   &.lead
@@ -55,9 +55,9 @@ p
     line-height: 1.5
     background: $primary-color
     border-radius: 4px
-    padding: 8rem
+    padding: 3em
     line-height: 1.8
-    margin-bottom: 8rem
+    margin-bottom: 3em
     max-width: 100%
     text-align: center
 
@@ -79,6 +79,15 @@ a
 
     &:hover
       padding-bottom: 10px
+
+@media screen and (max-width: 700px)
+  html
+    font-size: 28%
+  p
+    max-width: 100%
+
+    &.lead
+      padding: 2em
 
 //
 // Animations
@@ -133,14 +142,14 @@ a
 
 header
   text-align: center
-  padding: 8rem 0 0
+  padding: 4em 0 0
 
 //
 // Sections
 //
 
 .greeter-section
-  padding: 10rem 0
+  padding: 4em 0
   width: 100%
   margin: 0 auto
   color: $primary-color
@@ -149,7 +158,7 @@ header
 
   p
     text-align: center
-    font-size: 3.2rem 
+    font-size: 3.2rem
 
   &.introduction
     padding-top: 0
@@ -165,8 +174,8 @@ header
       background: white
       border-radius: 4px
       font-size: 1rem
-      padding: 10rem 3rem
-      box-shadow: 0 1px .5rem rgba(0, 0, 0, .2)
+      padding: 7em 1em
+      box-shadow: 0 1px 10px rgba(0, 0, 0, .2)
       width: 100%
 
   &.contact
@@ -176,7 +185,7 @@ header
     width: 100%
 
     h1
-      margin-bottom: 2rem
+      margin-bottom: .25em
 
   .greeter-section__cta
     +transition-property(all)
@@ -188,32 +197,44 @@ header
     color: $white-color
     font-weight: 600
     font-size: 1.5rem
-    height: 5rem
-    line-height: 5rem
-    min-width: 20rem
+    height: 3em
+    line-height: 3em
+    min-width: 15em
     text-transform: uppercase
     letter-spacing: 1px
     position: relative
     display: inline-block
     text-decoration: none
 
-    &:hover
+    &.disabled
+      border: 1px dashed lighten($secondary-color, 40%)
+      background: white
+      color: lighten($secondary-color, 40%)
+
+    &:not(.disabled):hover
       +transform(translatey(-2px))
       box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
       cursor: pointer
 
-    &:focus
+    &:not(.disabled):focus
       outline: 0
 
-    &:active
+    &:not(.disabled):active
       +transform(translatey(2px))
 
+@media screen and (max-width: 700px)
+  .greeter-section
+    padding-left: 15px
+    padding-right: 15px
+
+    &.portfolio .portfolio-gallery__item
+      padding: 5em 3em
 //
 // Articles
 //
 
 .article
-  padding: 0 0 5rem
+  padding: 0 0 2em
 
   h1, h2, p, ol, ul, h3
     width: 100%
@@ -272,7 +293,7 @@ header
     background: #f5f5f5
     border: 1px solid #eee
     border-width: 1px 0
-    padding: 8rem
+    padding: 4em
 
     img
       max-width: 1000px
@@ -283,16 +304,16 @@ header
 
 footer
   text-align: center
-  padding: 3rem 0
+  padding: 1em 0
   border-top: 2px dashed lighten($secondary-color, 55%)
 
   ul
-    padding: 2rem
+    padding: 1em
     font-size: 3rem
 
     li
       display: inline-block
-      margin-right: 2rem
+      margin-right: 1em
 
       a
         color: lighten($secondary-color, 40%)
@@ -311,7 +332,7 @@ footer
   display: inline-block
   height: 86px
   width: 80px
-  margin-bottom: 4rem
+  margin-bottom: 2em
   +animation-name(wobble)
   +animation-iteration-count(infinite)
   +animation-duration(2s)
@@ -324,7 +345,7 @@ footer
   display: inline-block
   height: 126px
   width: 85px
-  margin-bottom: 4rem
+  margin-bottom: 2em
 
 .icon-browser
   background:
@@ -333,7 +354,15 @@ footer
   display: inline-block
   height: 125px
   width: 145px
-  margin-bottom: 4rem
+  margin-bottom: 2em
+
+@media screen and (max-width: 700px)
+  .icon-hand
+    +transform(scale(.5))
+  .icon-email
+    +transform(scale(.5))
+  .icon-browser
+    +transform(scale(.5))
 
 //
 // Gallery
@@ -357,15 +386,10 @@ footer
     font-weight: 600
     width: 100%
     max-width: 760px
-    margin: 0 auto 2rem
+    margin: 0 auto .5em
 
   .portfolio-gallery__description
     font-size: 2.4rem
     width: 100%
     max-width: 760px
-    margin: 0 auto 2.5rem
-
-
-@media screen and (max-width: 700px)
-  html
-    font-size: 42.5%
+    margin: 0 auto 1em

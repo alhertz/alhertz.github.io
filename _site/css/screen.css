@@ -713,7 +713,7 @@ header {
 }
 .article h1 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 0.15em;
 }
 .article h2 {
   font-size: 3.2rem;
@@ -736,7 +736,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.85rem;
-  margin-bottom: 8rem;
+  margin-bottom: 6em;
 }
 .article .subheader span {
   font-family: "Baskerville", "Georgia", serif;

@@ -242,7 +242,7 @@ header
     margin: 0 auto 8rem
     line-height: 1.8
 
-  figure, .lead
+  .lead
     width: 100%
     max-width: 1000px
     margin: 0 auto 8rem
@@ -264,9 +264,6 @@ header
     margin-bottom: 1rem
     margin-top: 8rem
 
-  p
-    margin-bottom: 1.5rem
-
   .subheader
     text-align: center
     color: lighten($secondary-color, 40%)
@@ -285,9 +282,62 @@ header
       top: -3px
 
   figure
+    background: $primary-color
+    padding: 3em 0
+    position: relative
+
+    .figure-container
+      max-width: 1000px
+      margin: 0 auto
+      width: 100%
+      position: relative
+
+    figcaption
+      margin-top: 2em
+      color: $white-color
+
+      .icon-upward-arrow
+        position: absolute
+        top: -20px
+      p
+        +opacity(.6)
+        // font-size: 1.5rem
+        // max-width: 600px
+        margin: 0 auto
+
+    .browser
+      border-radius: 4px
+      overflow: hidden
+      box-shadow: 10px 30px 60px rgba(0, 0, 0, .2)
+
+      .bar
+        padding: 15px
+        line-height: 0
+        background: $white-color
+
+        span
+          height: 10px
+          width: 10px
+          display: inline-block
+          background: #ddd
+          border-radius: 50%
+          margin-right: 5px
 
     img
-      max-width: 100%
+      width: 100%
+      margin-bottom: -4px
+
+      &.detail
+        border-radius: 4px
+        background: white
+        box-shadow: 10px 10px 90px rgba(0, 0, 0, .3)
+
+        &.detail--welcome-greeter
+          width: 212px
+          right: -100px
+          margin-top: -50px
+          position: absolute
+
 
   .portfolio-gallery
     background: #f5f5f5
@@ -355,6 +405,14 @@ footer
   height: 125px
   width: 145px
   margin-bottom: 2em
+
+.icon-upward-arrow
+  background:
+    image: url('../img/upward-arrow.svg')
+    size: cover
+  display: inline-block
+  height: 128px
+  width: 35px
 
 @media screen and (max-width: 700px)
   .icon-hand

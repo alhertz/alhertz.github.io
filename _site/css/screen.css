@@ -472,7 +472,7 @@ a.bordered:hover {
   padding-bottom: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   html {
     font-size: 28%;
   }
@@ -482,6 +482,15 @@ a.bordered:hover {
   }
   p.lead {
     padding: 2em;
+  }
+}
+.line-break--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .line-break--desktop {
+    display: block;
   }
 }
 @-moz-keyframes fadeIn {
@@ -688,7 +697,7 @@ header {
   transform: translatey(2px);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .greeter-section {
     padding-left: 15px;
     padding-right: 15px;
@@ -880,7 +889,7 @@ footer ul li a:hover {
   width: 35px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .icon-hand {
     -moz-transform: scale(0.5);
     -ms-transform: scale(0.5);

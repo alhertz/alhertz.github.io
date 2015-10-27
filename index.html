@@ -21,7 +21,7 @@ title: Alex Hertz – Designer
           <div class="portfolio-gallery__item">
             <h3 class="portfolio-gallery__title">{{ post.title }}</h2>
             <p class="portfolio-gallery__description">{{ post.description }}</p>
-            <a class="disabled greeter-section__cta js-expand-gallery-item">Case Study Coming Soon</a>
+            <a href="{{ post.url }}" class="disabled greeter-section__cta js-expand-gallery-item">Case Study Coming Soon</a>
           </div>
         {% endif %}
       {% endfor %}

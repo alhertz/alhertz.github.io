@@ -16,8 +16,13 @@ $white-color: #ffffff
 $primary-color: #5694f1
 $secondary-color: #666
 $primary-easing: cubic-bezier(0.23, 1.3, 0.32, 1)
+$secondary-easing: cubic-bezier(0.23, 1, 0.32, 1)
 $breakpoint-small: 415px
 $breakpoint-medium: 800px
+$table-of-contents-item-width: 380px
+$table-of-contents-item-height: 250px
+$table-of-contents-container-height: 600px
+
 
 //
 // Basics
@@ -44,6 +49,7 @@ h1, h2
   color: $primary-color
   margin-bottom: 1em
   text-align: center
+  letter-spacing: -.2rem
 
 p
   font-size: 2.4rem
@@ -51,21 +57,21 @@ p
   margin: 0 auto 2em
   line-height: 1.8
 
-  &.lead
-    color: $white-color
-    font-size: 3.2rem
-    line-height: 1.5
-    background: $primary-color
-    border-radius: 4px
-    padding: 3em
-    line-height: 1.8
-    margin-bottom: 3em
-    max-width: 100%
-    text-align: center
-
-
   &:last-child
     margin-bottom: 0
+
+.lead-in
+  color: $white-color
+  font-size: 3.2rem
+  line-height: 1.5
+  background: $primary-color
+  border-radius: 4px
+  padding: 3em
+  line-height: 1.8
+  margin-bottom: 3em
+  max-width: 1000px
+  width: 100%
+  text-align: center
 
 a
   +transition-property(all)
@@ -88,7 +94,7 @@ a
   p
     max-width: 100%
 
-    &.lead
+    &.lead-in
       padding: 2em
 
 //
@@ -147,7 +153,7 @@ a
   width: 100%
   max-width: 1000px
   margin: 0 auto
-
+  position: relative
 
 //
 // Header
@@ -249,22 +255,120 @@ header
 
 .article
   padding: 0 0 2em
+  background: $white-color
 
-  h1, h2, p, ol, ul, h3
+  .tags
+    margin-bottom: 2em
+
+    li
+      +inline-block()
+      border: 1px solid $primary-color
+      font-size: 2rem
+      padding: 0 10px
+      color: $primary-color
+      border-radius: 4px
+
+  .table-of-contents
+    +transition-property(min-height)
+    +transition-timing-function($secondary-easing)
+    +transition-duration(750ms)
+    +background(linear-gradient($primary-color #000))
+    background: $primary-color
+    position: relative
+    min-height: $table-of-contents-container-height
+    max-width: 100%
+    padding: 5em 0
+
+    &.expanded
+      min-height: $table-of-contents-container-height + 175px
+
+      .table-of-contents__items
+        min-height: $table-of-contents-item-height * 1.65
+
+      .table-of-contents__items li.first
+        +transform(translate(-($table-of-contents-item-width + 85), 100px) rotate(0deg))
+        width: $table-of-contents-item-width
+
+      .table-of-contents__items li.second
+        +transform(translate(-($table-of-contents-item-width - $table-of-contents-item-height) / 2, 100px) rotate(0deg))
+        +transform-origin(center)
+        width: $table-of-contents-item-width
+
+      .table-of-contents__items li.third
+        +transform(translate($table-of-contents-item-width - 45, 100px) rotate(0deg))
+        width: $table-of-contents-item-width
+
+    .table-of-contents__items
+      +transition-property(min-height)
+      +transition-timing-function($secondary-easing)
+      +transition-duration(750ms)
+      position: relative
+      min-height: $table-of-contents-item-height
+      width: $table-of-contents-item-height
+      margin: 0 auto
+
+      &:hover
+        cursor: pointer
+
+      li
+        +transform(translate(0, 100px))
+        +transition-property(all)
+        +transition-timing-function($primary-easing)
+        +transition-duration(750ms)
+        border-radius: 8px
+        background: $white-color
+        height: $table-of-contents-item-height
+        width: $table-of-contents-item-height
+        box-shadow: 0 2px 80px rgba(0, 0, 0, .1)
+        position: absolute
+
+        &.first
+          +transform(translate(0, 0) rotate(-5deg) scale(.5)) // scale of .5 = 125px squares
+          opacity: .8
+          z-index: 11
+
+        &.second
+          +transform(translate(0, 0) rotate(0deg) scale(.5))
+          z-index: 111
+
+        &.third
+          +transform(translate(0, 0) rotate(5deg) scale(.5))
+          opacity: .6
+          z-index: 11
+
+    .table-of-contents__abstract
+      color: $white-color
+      text-align: center
+      padding: 0 3em
+
+      h3
+        color: $white-color
+        margin-top: 0
+        font-size: 5.2rem
+        line-height: 1.2
+        margin-bottom: 1em
+
+      hr
+        background: rgba(0, 0, 0, .1)
+        border: 0
+        height: 6px
+        max-width: 140px
+        margin-bottom: 2em
+
+      p
+        font-size: 3.2rem
+        max-width: 1000px
+
+  h1, h2, p:not(.lead-in), ol, ul, h3
     width: 100%
     max-width: 800px
     margin: 0 auto 8rem
     line-height: 1.8
 
-  .lead
-    width: 100%
-    max-width: 1000px
-    margin: 0 auto 8rem
-    line-height: 1.8
-
   h1
     text-align: center
-    margin-bottom: .15em
+    margin-bottom: .25em
+    line-height: 1.2
 
   h2
     font-size: 3.2rem
@@ -351,16 +455,6 @@ header
           right: -100px
           margin-top: -50px
           position: absolute
-
-
-  .portfolio-gallery
-    background: #f5f5f5
-    border: 1px solid #eee
-    border-width: 1px 0
-    padding: 4em
-
-    img
-      max-width: 1000px
 
 //
 // Footer

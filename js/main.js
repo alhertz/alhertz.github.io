@@ -22,9 +22,4 @@ $(function(){
     }
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
-
-  // $(window).load(function() {
-  //   $('.greeter-section').delay(350).fadeIn();
-  //   $('.js-primary-navigation').addClass('showing');
-  // });
 });

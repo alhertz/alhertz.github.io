@@ -1,0 +1,13 @@
+// Example for Tags
+//
+
+<ul class="article__tags">
+  <li>Research</li>
+  <li>Strategy</li>
+  <li>Design</li>
+  <li>Illustration</li>
+  <li>Copy</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>Javascript</li>
+</ul>

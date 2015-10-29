@@ -1,12 +1,16 @@
     <!--JS-->
     {% if page.path contains '_posts' %}
-      <script src="../../js/vendor/jquery/dist/jquery.min.js"></script>
-      <script src="../../js/vendor/jquery.smoothState.js"></script>
+      <script src="../../bower/jquery/dist/jquery.min.js"></script>
+      <script src="../../bower/smoothstate/jquery.smoothState.min.js"></script>
+      <script src="../../bower/waypoints/lib/jquery.waypoints.min.js"></script>
+      <script src="../../bower/waypoints/lib/shortcuts/inview.min.js"></script>
+      <script src="../../bower/waypoints/lib/shortcuts/sticky.min.js"></script>
       <script src="../../js/main.js"></script>
       <script src="../../js/article.js"></script>
+
     {% else %}
-      <script src="/js/vendor/jquery/dist/jquery.min.js"></script>
-      <script src="/js/vendor/jquery.smoothState.js"></script>
+      <script src="/bower/jquery/dist/jquery.min.js"></script>
+      <script src="/bower/smoothstate/jquery.smoothState.min.js"></script>
       <script src="/js/main.js"></script>
     {% endif %}
 

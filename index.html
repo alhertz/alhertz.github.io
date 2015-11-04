@@ -13,15 +13,14 @@ title: Alex Hertz – Designer
 
 <section class="greeter-section portfolio">
   <div class="container">
-    <!-- <i class="icon-browser"></i> -->
-    <h2>Selections from my portfolio.</h2>
+    <h2>Selections from my <span class="line-break--desktop"></span> portfolio.</h2>
     <div class="portfolio-gallery">
       {% for post in site.posts %}
         {% if post.categories contains 'work' %}
           <div class="portfolio-gallery__item">
             <h3 class="portfolio-gallery__title">{{ post.title }}</h2>
             <p class="portfolio-gallery__description">{{ post.description }}</p>
-            <a class="disabled greeter-section__cta js-expand-gallery-item">Case Study Coming Soon</a>
+            <a href="" class="disabled greeter-section__cta">Case study coming soon</a>
           </div>
         {% endif %}
       {% endfor %}

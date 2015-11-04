@@ -7,12 +7,11 @@ permalink: work/gumroad
 description: An overview of the part I’m playing in building a company, a product, and a team that helps creatives of all types make a living doing what they love.
 ---
 
-<h1>Designing Gumroad</h1>
+<h1 class="article__title">Designing Gumroad</h1>
 <p class="article__subheader">Product Designer – May 2014 <span>to</span> October 2015</p>
+<p class="article__lead-in lead-in">A breakdown of my approach to three <span class="line-break--desktop"></span> core features focused on helping creatives of all types make a living online while leading product design at Gumroad.</p>
 
-<p class="lead-in">A breakdown of my approach to three <span class="line-break--desktop"></span> core features focused on helping creatives of all types make a living online while leading product design at Gumroad.</p>
-
-<ul class="table-of-contents js-table-of-contents">
+<!-- <ul class="table-of-contents js-table-of-contents">
   <div class="table-of-contents__items js-table-of-contents-cards">
     <li class="first"></li>
     <li class="second"><img src="/img/posts/gumroad/gumroad_logo.png"></li>
@@ -24,16 +23,35 @@ description: An overview of the part I’m playing in building a company, a prod
     <p> A breakdown of my approach to three <span class="line-break--desktop"></span> core features focused on doing exactly that while leading product design at Gumroad.</p>
   </div>
 </ul>
+ -->
 
+<header class="article-navigation js-article-navigation">
+  <ul>
+    <li class="article-navigation__manipulator">
+      <a href="#" class="expand js-expand-navigation-trigger"><i class="fa fa-bars"></i>
+      <a href="#" class="condense js-condense-navigation-trigger"><i class="fa fa-times"></i></a>
+    </li>
+    <li class="article-navigation__anchor"><a href="#onboarding">Onboarding</a></li>
+    <li class="article-navigation__anchor"><a href="#audience">Audience</a></li>
+    <li class="article-navigation__anchor"><a href="#discover">Discover</a></li>
+  </ul>
+</header>
 
-<section class="article-section" id="greeters">
-  <header class="article-section__header js-article-section-header">
-    <h2>Onboarding</h2>
+<svg class="article-section__divider white flipped" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <path d="M0 100 C40 0 60 0 100 100 Z"></path>
+</svg>
+
+<section class="article-section" id="onboarding">
+  <header class="article-section__introduction">
+    <h2>Onboarding for new <span>users</span> Creators</h2>
+    <p>Since it's <a href="https://news.ycombinator.com/item?id=2406614">inception in 2011</a>, Gumroad's <a href="https://gumroad.com/features">feature set</a> had grown extensively beyond <a href="http://techcrunch.com/2011/12/14/gumroad-lets-you-sell-anything-you-make/">"a way to ask folks to pay for downloads"</a> and in early 2015 we began exposing more of the awesome things we had built for our creators. One of the ways this was accomplished, was via a system of interstitial views designed by myself and built in collaboration with <a href="https://twitter.com/amiruci">@amiruci</a> and <a href="https://twitter.com/shl">@shl</a> aptly named "Greeters". From gathering information, to generating understanding and excitement for a given feature, Greeters were a simple &amp; straight-forward method for making new creators more successful, faster. Here's a look at what that experience was like.</p>
   </header>
 
-  <p>Since it's <a href="https://news.ycombinator.com/item?id=2406614">inception in 2011</a>, Gumroad's <a href="https://gumroad.com/features">feature set</a> had grown extensively beyond <a href="http://techcrunch.com/2011/12/14/gumroad-lets-you-sell-anything-you-make/">"a way to ask folks to pay for downloads"</a> and in early 2015 we began exposing more of the awesome things we had built for the ever-diversifying needs of new creators signing up. To accomplish this, I built a system of interstitial views designed to guide new creators through their first experience using Gumroad while exposing pertinent features and educational content all along the way.</p>
+  <svg class="article-section__divider white" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 100 C40 0 60 0 100 100 Z"></path>
+  </svg>
 
-  <figure class="article-figure">
+  <figure class="article-figure first">
     <div class="article-figure__container">
       <div class="article-figure__browser">
         <div class="bar">
@@ -46,9 +64,12 @@ description: An overview of the part I’m playing in building a company, a prod
         </div>
         <img class="article-figure__image" src="/img/posts/gumroad/welcome_greeter_browser.jpg" alt="Welcome greeter">
       </div>
+
+      <img class="article-figure__image detail detail--welcome-greeter" src="/img/posts/gumroad/welcome_greeter_animation.gif" alt="Welcome greeter">
+
       <figcaption class="article-figure__caption">
         <h3>Welcome Greeter</h3>
-        <p>As the first greeter seen by new creators after creating an account, the information collected here, most importantly, allows us to begin processing payments. After completing these three fields, a creator is free to publish products and start making sales immediately.</p>
+        <p>As the inaugural greeter seen by new creators after creating an account, the information collected here, most importantly, allows us to begin processing payments. After completing these three fields, a creator is free to publish products and start making sales immediately.</p>
       </figcaption>
     </div>
   </figure>
@@ -69,7 +90,7 @@ description: An overview of the part I’m playing in building a company, a prod
     </div>
     <figcaption class="article-figure__caption">
       <h3>Dashboard Greeter</h3>
-      <p>Once the fields in the Welcome Greeter are completed, we're able to immediately began doing some light hand holding to expose some real value for our creators with the dashboard greeter. Here, new creators are shown two possible paths with a recommendation on which to choose depending on whether or not they have experience selling things online.</p>
+      <p>Once the fields in the Welcome Greeter are completed, we're able to begin doing some light hand holding that exposes some substantial value for our creators with the Dashboard Greeter. Here, new creators are shown two possible paths with a recommendation on which to choose depending on whether or not they have experience selling things online.</p>
     </figcaption>
   </figure>
 
@@ -89,7 +110,7 @@ description: An overview of the part I’m playing in building a company, a prod
     </div>
     <figcaption class="article-figure__caption">
       <h3>Product Greeter</h3>
-      <p>Should a new Gumroad creator be ready to start selling their work the moment they sign up, they'll quickly end up at the product greeter where, for the first time, they're shown the interface used for product creation. This is the first time new creators are shown the UI they'll continue to interact with for the remainder of their lifespan using the product. </p>
+      <p>Should a new Gumroad creator be ready to start selling their work the moment they sign up, they'll quickly end up at the product greeter where, for the first time, they're able to add a product to sell on Gumroad. At this point, we're also able include links to <a href="https://help.gumroad.com/11162-Getting-Started/adding-a-product">pertinent help center content</a> for new creators less sure of how to proceed creating their first product.</p>
     </figcaption>
   </figure>
 
@@ -129,9 +150,98 @@ description: An overview of the part I’m playing in building a company, a prod
     </div>
     <figcaption class="article-figure__caption">
       <h3>Payout Greeter</h3>
-      <p>In this greeter, we gather the info needed to get creators paid. It was important to us that we direct creators to this greeter after a they had made a few sales so we could show real <strong>quantifiable</strong> value before forcing the creator to hand over sensitive information. This allowed us to establish a great deal of trust from the creator in Gumroad which made providing things like Social Security Number &amp; Date of Birth a less ominous experience.</p>
+      <p>In this greeter, we gather the info needed to get creators paid. It was important to us that we direct creators to this greeter after a they had made a few sales so we could show real <strong>quantifiable</strong> value before forcing the creator to hand over some pretty sensitive information. Because of this decision, we were able to establish a great deal of trust from the creator in Gumroad, which made providing things like Social Security Number &amp; Date of Birth a less ominous experience.</p>
     </figcaption>
   </figure>
+
+  <svg class="article-section__divider flipped" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 100 C40 0 60 0 100 100 Z"></path>
+  </svg>
 </section>
 
-## Audience
+<section class="article-section" id="audience">
+  <header class="article-section__introduction">
+    <h2>Growing an audience with Gumroad</h2>
+    <p>Gumroad since it's begining has been an excellent e-commerce tool for those that already have an audience but for those who don't, our creators were largely left to their own devices. Begining in July of 2015, I worked on a suite of improvements designed to make profiles simple, high-converting pages where new creators could collect email addresses while they worked on their publishing their first product on Gumroad, and in turn, make their first dollar using the service.</p>
+  </header>
+
+  <svg class="article-section__divider" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 100 C40 0 60 0 100 100 Z"></path>
+  </svg>
+
+  <figure class="article-figure first">
+    <div class="article-figure__container">
+      <div class="article-figure__browser has-phone">
+        <div class="bar">
+          <div class="actions">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="url">http://gumroad.com/alhertz</div>
+        </div>
+
+        <img class="article-figure__image" src="/img/posts/gumroad/empty_profile.jpg">
+      </div>
+
+      <div class="article-figure__phone">
+        <img src="/img/posts/gumroad/empty_profile_mobile.jpg">
+      </div>
+    </div>
+    <figcaption class="article-figure__caption">
+      <h3>Sans-product profiles</h3>
+      <p>A Gumroad profile with no products is the seed that starts a creative career.  It's here that creators are given a stage to introduce themselves, describe what they're working on, and capture email addresses so that when they launch their first product, they have an audience ready and waiting for it.</p>
+    </figcaption>
+  </figure>
+
+
+ <figure class="article-figure">
+    <div class="article-figure__container">
+      <div class="article-figure__browser has-video js-video-figure">
+        <div class="bar">
+          <div class="actions">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="url">http://gumroad.com/profile</div>
+        </div>
+
+        <video class="article-figure__image" loop>
+          <source src="/img/posts/gumroad/add_username.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <figcaption class="article-figure__caption">
+      <h3>Profile set-up</h3>
+      <p>In an effort to make the experience of creating and customizing profiles as light-weight as possible, all that's needed to create a profile is a username. From there, creators can do the remainder of their customizations directly on the profile itself.</p>
+    </figcaption>
+  </figure>
+
+  <figure class="article-figure">
+    <div class="article-figure__container">
+      <div class="article-figure__browser">
+        <div class="bar">
+          <div class="actions">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="url">http://gumroad.com/alhertz</div>
+        </div>
+
+        <video class="article-figure__image" controls autoplay loop>
+          <source src="/img/posts/gumroad/add_username.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <figcaption class="article-figure__caption">
+      <h3>Shipping strategy</h3>
+      <p>In this greeter, we gather the info needed to get creators paid. It was important to us that we direct creators to this greeter after a they had made a few sales so we could show real <strong>quantifiable</strong> value before forcing the creator to hand over some pretty sensitive information. Because of this decision, we were able to establish a great deal of trust from the creator in Gumroad, which made providing things like Social Security Number &amp; Date of Birth a less ominous experience.</p>
+    </figcaption>
+  </figure>
+
+</section>
+

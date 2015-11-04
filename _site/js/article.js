@@ -1,16 +1,33 @@
-$('.js-table-of-contents-cards').hover(
-  function() {
-    $('.js-table-of-contents').addClass('expanded');
-    console.log('in');
-  }, function() {
-    $('.js-table-of-contents').removeClass('expanded');
-    console.log('out');
-  }
-);
+// $('.js-table-of-contents-cards').hover(
+//   function() {
+//     $('.js-table-of-contents').addClass('expanded');
+//     console.log('in');
+//   }, function() {
+//     $('.js-table-of-contents').removeClass('expanded');
+//     console.log('out');
+//   }
+// );
 
 var sticky = new Waypoint.Sticky({
-  element: $('.js-article-section-header')[0]
-})
+  element: $('.js-article-navigation')[0]
+});
+
+var figure = $(".js-video-figure").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) { $('video', this).get(0).play(); }
+function hideVideo(e) { $('video', this).get(0).pause(); }
+
+$('.js-expand-navigation-trigger').click(function() {
+  event.preventDefault();
+
+  $('.js-article-navigation').addClass('expanded');
+});
+
+$('.js-condense-navigation-trigger').click(function() {
+  event.preventDefault();
+
+  $('.js-article-navigation').removeClass('expanded');
+});
 
 // $('.greeter-section-header').waypoint(function() {
 //   $( '.greeter-section-header' ).addClass('fixed').wrap('<div class="fixed-navigation-wrapper"></div>');

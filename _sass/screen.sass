@@ -272,7 +272,7 @@ a
   padding: 0 0 2em
   background: $white-color
 
-  h1, h2, h3, p, ol, ul
+  h1, h2, h3, h4, p, ol, ul
     width: 100%
     max-width: 800px
     margin: 0 auto 3.75em
@@ -284,21 +284,20 @@ a
     font-weight: 700
 
   h2
-    // font-size: 3.2rem
-    // text-align: left
     margin-bottom: 1em
 
   h3
     font-size: 3.2rem
     color: $secondary-color
     font-weight: 700
-    // color: $primary-color
     margin-bottom: 1em
     margin-top: 3em
 
-  p:not(.lead-in)
+  h4
+    font-weight: 700
+
+  p:not(.article__lead-in)
     color: #999
-    // color: $primary-color
 
   .article__subheader
     text-align: center
@@ -321,6 +320,16 @@ a
     margin: 0 auto -60px
     max-width: 1000px
     width: 100%
+    color: $white-color
+    font-size: 3.2rem
+    line-height: 1.5
+    background: $primary-color
+    border-radius: 4px
+    padding: 3em
+    line-height: 1.8
+    max-width: 1000px
+    width: 100%
+    text-align: center
 
 .article-navigation
   +transition-timing-function($secondary-easing)
@@ -474,10 +483,22 @@ a
   padding: 0 0 3em 0
   position: relative
 
+  p
+    margin-bottom: 1.5em
+
+  h4
+    text-align: center
+    color: $primary-color
+
   &.first
     .article-figure__browser
       margin-bottom: -175px
       top: -175px
+
+  &.alternative
+    background: $lightest-gray-color
+    background: #E3EEFF
+    padding: 3em 0
 
   .article-figure__container
     max-width: 1000px
@@ -607,6 +628,14 @@ a
   .article-figure__image
     width: 100%
     margin-bottom: -4px
+
+    &.full
+      width: 100%
+      margin-bottom: 2em
+
+    &.half
+      +inline-block()
+      width: 50%
 
     &.detail
       border-radius: 4px

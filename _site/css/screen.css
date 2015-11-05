@@ -722,7 +722,7 @@ a.bordered:hover {
   padding: 0 0 2em;
   background: #ffffff;
 }
-.article h1, .article h2, .article h3, .article p, .article ol, .article ul {
+.article h1, .article h2, .article h3, .article h4, .article p, .article ol, .article ul {
   width: 100%;
   max-width: 800px;
   margin: 0 auto 3.75em;
@@ -743,7 +743,10 @@ a.bordered:hover {
   margin-bottom: 1em;
   margin-top: 3em;
 }
-.article p:not(.lead-in) {
+.article h4 {
+  font-weight: 700;
+}
+.article p:not(.article__lead-in) {
   color: #999;
 }
 .article .article__subheader {
@@ -767,6 +770,16 @@ a.bordered:hover {
   margin: 0 auto -60px;
   max-width: 1000px;
   width: 100%;
+  color: #ffffff;
+  font-size: 3.2rem;
+  line-height: 1.5;
+  background: #5694f1;
+  border-radius: 4px;
+  padding: 3em;
+  line-height: 1.8;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
 }
 
 .article-navigation {
@@ -996,9 +1009,21 @@ a.bordered:hover {
   padding: 0 0 3em 0;
   position: relative;
 }
+.article-figure p {
+  margin-bottom: 1.5em;
+}
+.article-figure h4 {
+  text-align: center;
+  color: #5694f1;
+}
 .article-figure.first .article-figure__browser {
   margin-bottom: -175px;
   top: -175px;
+}
+.article-figure.alternative {
+  background: #f5f5f5;
+  background: #E3EEFF;
+  padding: 3em 0;
 }
 .article-figure .article-figure__container {
   max-width: 1000px;
@@ -1156,6 +1181,18 @@ a.bordered:hover {
 .article-figure .article-figure__image {
   width: 100%;
   margin-bottom: -4px;
+}
+.article-figure .article-figure__image.full {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.article-figure .article-figure__image.half {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
 }
 .article-figure .article-figure__image.detail {
   border-radius: 4px;

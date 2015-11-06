@@ -34,7 +34,7 @@ $table-of-contents-item-height: 250px
 $table-of-contents-container-height: 600px
 
 $serif-typeface: "Chaparral-pro", "Helvetica", serif
-$sans-serif-typeface: "SF UI Display", "Helvetica Neue", "Helvetica", sans-serif
+$sans-serif-typeface: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif
 
 //
 // Basics
@@ -59,7 +59,7 @@ body
 h1, h2
   font:
     size: 7.2rem
-    weight: 700
+    weight: 800
   color: $primary-color
   font-family: $sans-serif-typeface
   line-height: 1
@@ -72,7 +72,6 @@ p
   max-width: 80%
   margin: 0 auto 2em
   line-height: 1.6
-  letter-spacing: -.005em
 
   &:last-child
     margin-bottom: 0
@@ -307,6 +306,7 @@ a
 
   p:not(.article__lead-in)
     font-family: $serif-typeface
+    letter-spacing: -.005em
 
   .article__subheader
     text-align: center

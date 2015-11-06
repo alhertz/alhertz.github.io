@@ -409,7 +409,7 @@ html {
 }
 
 body {
-  font-family: "SF UI Display", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
   color: #666666;
   font-weight: 400;
   font-size: 2.4rem;
@@ -421,9 +421,9 @@ body {
 
 h1, h2 {
   font-size: 7.2rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #5694f1;
-  font-family: "SF UI Display", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
   line-height: 1;
   margin-bottom: 1em;
   text-align: center;
@@ -435,7 +435,6 @@ p {
   max-width: 80%;
   margin: 0 auto 2em;
   line-height: 1.6;
-  letter-spacing: -0.005em;
 }
 p:last-child {
   margin-bottom: 0;
@@ -453,7 +452,7 @@ p:last-child {
   max-width: 1000px;
   width: 100%;
   text-align: center;
-  font-family: "SF UI Display", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 a {
@@ -752,6 +751,7 @@ a.bordered:hover {
 }
 .article p:not(.article__lead-in) {
   font-family: "Chaparral-pro", "Helvetica", serif;
+  letter-spacing: -0.005em;
 }
 .article .article__subheader {
   text-align: center;
@@ -782,7 +782,7 @@ a.bordered:hover {
   max-width: 1000px;
   width: 100%;
   text-align: center;
-  font-family: "SF UI Display", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 .article-navigation {

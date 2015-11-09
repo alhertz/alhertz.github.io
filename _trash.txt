@@ -1,5 +1,20 @@
-// Example for Tags
 //
+// Tags
+//
+
+.article-section__tags {
+  margin-bottom: 1.5em;
+
+  li {
+    @include inline-block;
+    border: 1px solid #eeeeee;
+    font-size: 2rem;
+    padding: 0 10px;
+    color: lighten($secondary-color, 30%);
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+}
 
 <ul class="article__tags">
   <li>Research</li>
@@ -12,20 +27,21 @@
   <li>Javascript</li>
 </ul>
 
+//
 // Table of contents UI
 //
 
-// $('.js-table-of-contents-cards').hover(
-//   function() {
-//     $('.js-table-of-contents').addClass('expanded');
-//     console.log('in');
-//   }, function() {
-//     $('.js-table-of-contents').removeClass('expanded');
-//     console.log('out');
-//   }
-// );
+$('.js-table-of-contents-cards').hover(
+  function() {
+    $('.js-table-of-contents').addClass('expanded');
+    console.log('in');
+  }, function() {
+    $('.js-table-of-contents').removeClass('expanded');
+    console.log('out');
+  }
+);
 
-<!-- <ul class="table-of-contents js-table-of-contents">
+<ul class="table-of-contents js-table-of-contents">
   <div class="table-of-contents__items js-table-of-contents-cards">
     <li class="first"></li>
     <li class="second"><img src="/img/posts/gumroad/gumroad_logo.png"></li>
@@ -37,7 +53,6 @@
     <p> A breakdown of my approach to three <span class="line-break--desktop"></span> core features focused on doing exactly that while leading product design at Gumroad.</p>
   </div>
 </ul>
- -->
 
 //
 // Table of contents

@@ -793,8 +793,12 @@ a.bordered:hover {
 
 @media screen and (max-width: 800px) {
   .article .article__header {
-    padding: 15px;
     font-size: 18px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+  .article .article__subheader {
+    margin-bottom: 2em;
   }
   .article .article__subheader span {
     top: 0;
@@ -1015,10 +1019,17 @@ a.bordered:hover {
 }
 
 @media screen and (max-width: 800px) {
+  .sticky-wrapper {
+    height: 0 !important;
+  }
+
   .article-navigation {
+    bottom: 15px;
     left: 15px;
     line-height: 60px;
-    margin-left: 15px;
+    margin-bottom: 0;
+    position: fixed;
+    top: auto;
     width: calc(100% - 30px);
   }
   .article-navigation .article-navigation__manipulator a.condense,

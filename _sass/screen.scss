@@ -405,11 +405,14 @@ a {
 @media screen and (max-width: $breakpoint-medium) {
   .article {
     .article__header {
-      padding: 15px;
       font-size: 18px;
+      margin-bottom: 15px;
+      padding: 0 15px;
     }
 
     .article__subheader {
+      margin-bottom: 2em;
+
       span {
         top: 0;
         font-size: 100%;
@@ -573,10 +576,17 @@ a {
 }
 
 @media screen and (max-width: $breakpoint-medium) {
+  .sticky-wrapper {
+    height: 0 !important;
+  }
+
   .article-navigation {
+    bottom: 15px;
     left: 15px;
     line-height: 60px;
-    margin-left: 15px;
+    margin-bottom: 0;
+    position: fixed;
+    top: auto;
     width: calc(100% - 30px);
 
     .article-navigation__manipulator a.condense,

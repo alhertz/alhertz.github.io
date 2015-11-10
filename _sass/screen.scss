@@ -376,12 +376,12 @@ a {
 
     span {
       font-family: "Baskerville", Georgia, sans-serif;
-      font-size: 60%;
+      font-size: 90%;
       font-style: italic;
       letter-spacing: 0;
       position: relative;
       text-transform: lowercase;
-      top: -3px;
+      top: -2px;
     }
   }
 
@@ -956,6 +956,12 @@ a {
   }
 }
 
+.article-footer {
+  p {
+    margin-bottom: 0;
+  }
+}
+
 //
 // Footer
 //
@@ -1025,14 +1031,14 @@ footer {
   width: 145px;
 }
 
-.icon-upward-arrow {
+.icon-heart {
   background: {
-    image: url("../img/upward-arrow.svg");
+    image: url("../img/heart.png");
     size: cover;
   };
   display: inline-block;
-  height: 128px;
-  width: 35px;
+  height: 126px;
+  width: 95px;
 }
 
 @media screen and (max-width: $breakpoint-medium) {

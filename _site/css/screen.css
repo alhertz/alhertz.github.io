@@ -768,12 +768,12 @@ a.bordered:hover {
 }
 .article .article__subheader span {
   font-family: "Baskerville", Georgia, sans-serif;
-  font-size: 60%;
+  font-size: 90%;
   font-style: italic;
   letter-spacing: 0;
   position: relative;
   text-transform: lowercase;
-  top: -3px;
+  top: -2px;
 }
 .article .article__lead-in {
   margin: 0 auto -60px;
@@ -1366,6 +1366,10 @@ a.bordered:hover {
     display: none;
   }
 }
+.article-footer p {
+  margin-bottom: 0;
+}
+
 footer {
   border-top: 1px solid #eeeeee;
   background: #f9f9f9;
@@ -1427,12 +1431,12 @@ footer ul li a:hover {
   width: 145px;
 }
 
-.icon-upward-arrow {
-  background-image: url("../img/upward-arrow.svg");
+.icon-heart {
+  background-image: url("../img/heart.png");
   background-size: cover;
   display: inline-block;
-  height: 128px;
-  width: 35px;
+  height: 126px;
+  width: 95px;
 }
 
 @media screen and (max-width: 800px) {

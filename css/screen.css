@@ -820,6 +820,9 @@ a.bordered:hover {
 .greeter-section.introduction {
   padding-top: 0;
 }
+.greeter-section.introduction p:not(.lead-in) {
+  margin-bottom: 1em;
+}
 .greeter-section.portfolio {
   background: #5694f1;
   color: white;
@@ -897,10 +900,6 @@ a.bordered:hover {
 }
 
 @media screen and (max-width: 800px) {
-  .greeter-section {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   .greeter-section.portfolio .portfolio-gallery__item {
     padding: 5em 3em;
   }
@@ -1698,9 +1697,6 @@ footer ul li a:hover {
   margin: 0 auto 1em;
 }
 
-.instagram-feed {
-  margin-top: 1em;
-}
 .instagram-feed h4 {
   margin-bottom: 1em;
   font-size: 2rem;
@@ -1730,12 +1726,16 @@ footer ul li a:hover {
   margin-right: 0;
 }
 
-.biography {
+.about-p {
   padding-top: 20px;
 }
 
+.about-img {
+  margin-bottom: 1em;
+}
+
 @media screen and (max-width: 800px) {
-  .biography {
+  .about-p {
     padding-top: 0;
   }
 }

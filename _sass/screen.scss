@@ -341,6 +341,10 @@ a {
 
   &.introduction {
     padding-top: 0;
+
+    p:not(.lead-in) {
+      margin-bottom: 1em;
+    }
   }
 
   &.portfolio {
@@ -413,8 +417,7 @@ a {
 
 @media screen and (max-width: $breakpoint-medium) {
   .greeter-section {
-    padding-left: 15px;
-    padding-right: 15px;
+
     &.portfolio .portfolio-gallery__item {
       padding: 5em 3em;
     }
@@ -1202,8 +1205,6 @@ footer {
 }
 
 .instagram-feed {
-  margin-top: 1em;
-
   h4 {
     margin-bottom: 1em;
     font-size: 2rem;
@@ -1236,12 +1237,16 @@ footer {
   }
 }
 
-.biography {
+.about-p {
   padding-top: 20px;
 }
 
+.about-img {
+  margin-bottom: 1em;
+}
+
 @media screen and (max-width: $breakpoint-medium) {
-  .biography {
+  .about-p {
     padding-top: 0;
   }
 }

@@ -470,6 +470,7 @@ a {
 
     img {
       max-width: 100%;
+      border-radius: 4px;
     }
   }
 
@@ -1219,6 +1220,14 @@ footer {
       width: 100%;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
+      border-radius: 2px;
+    }
+
+    &:hover {
+      img {
+        -webkit-filter: none;
+        filter: none;
+      }
     }
 
     &:nth-child(3n) {
@@ -1228,7 +1237,7 @@ footer {
 }
 
 .biography {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 @media screen and (max-width: $breakpoint-medium) {

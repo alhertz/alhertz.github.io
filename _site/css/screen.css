@@ -944,6 +944,7 @@ a.bordered:hover {
 }
 .article figure img {
   max-width: 100%;
+  border-radius: 4px;
 }
 .article .article__subtitle {
   color: #cccccc;
@@ -1719,13 +1720,18 @@ footer ul li a:hover {
   width: 100%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  border-radius: 2px;
+}
+.instagram-feed a:hover img {
+  -webkit-filter: none;
+  filter: none;
 }
 .instagram-feed a:nth-child(3n) {
   margin-right: 0;
 }
 
 .biography {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 @media screen and (max-width: 800px) {

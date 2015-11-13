@@ -37,6 +37,12 @@ $sans-serif-typeface: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
 // Basics
 //
 
+.portfolio-page.about img {
+  width: 400px;
+  float: left;
+  margin-right: 30px;
+}
+
 *,
 *:after,
 *:before {
@@ -202,9 +208,9 @@ a {
       @include animation-direction(alternate-reverse);
     }
 
-    .icon-hand {
-      @include animation-name(none);
-    }
+    // .icon-hand {
+    //   @include animation-name(none);
+    // }
   }
 }
 
@@ -503,14 +509,23 @@ a {
 
       &.condense,
       &.top {
-        @include transition-duration(0.3s);
-        @include transition-property(all);
-        @include transition-timing-function($secondary-easing);
-        @include transition-delay(0.5s);
+        // @include transition-duration(0.3s);
+        // @include transition-property(all);
+        // @include transition-timing-function($secondary-easing);
+        // @include transition-delay(0.5s);
         opacity: 0;
         pointer-events: none;
         color: $white-color;
       }
+    }
+  }
+
+  @include keyframes(fadeIn) {
+    0% {
+      @include opacity(0);
+    }
+    100% {
+      @include opacity(1);
     }
   }
 
@@ -558,7 +573,7 @@ a {
 
       .top,
       .condense {
-        opacity: 1;
+        @include opacity(1);
         pointer-events: all;
         color: $primary-color;
 

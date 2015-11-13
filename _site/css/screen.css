@@ -1723,3 +1723,13 @@ footer ul li a:hover {
 .instagram-feed a:nth-child(3n) {
   margin-right: 0;
 }
+
+.biography {
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .biography {
+    padding-top: 0;
+  }
+}

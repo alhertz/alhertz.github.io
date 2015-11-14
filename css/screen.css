@@ -867,8 +867,8 @@ a.bordered:hover {
   display: inline-block;
   font-weight: 700;
   font-size: 1.5rem;
-  height: 3em;
-  line-height: 3em;
+  height: 4.25em;
+  line-height: 4.25em;
   min-width: 15em;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1146,25 +1146,41 @@ a.bordered:hover {
 @-moz-keyframes fadeIn {
   0% {
     opacity: 0;
+    -moz-transform: translate(transformY(200px), 1em);
+    transform: translate(transformY(200px), 1em);
   }
   100% {
     opacity: 1;
+    -moz-transform: translate(transformY(0), 1em);
+    transform: translate(transformY(0), 1em);
   }
 }
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
+    -webkit-transform: translate(transformY(200px), 1em);
+    transform: translate(transformY(200px), 1em);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(transformY(0), 1em);
+    transform: translate(transformY(0), 1em);
   }
 }
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    -moz-transform: translate(transformY(200px), 1em);
+    -ms-transform: translate(transformY(200px), 1em);
+    -webkit-transform: translate(transformY(200px), 1em);
+    transform: translate(transformY(200px), 1em);
   }
   100% {
     opacity: 1;
+    -moz-transform: translate(transformY(0), 1em);
+    -ms-transform: translate(transformY(0), 1em);
+    -webkit-transform: translate(transformY(0), 1em);
+    transform: translate(transformY(0), 1em);
   }
 }
 .article-navigation.stuck {
@@ -1610,9 +1626,6 @@ footer ul li a:hover {
 }
 
 .icon-hand {
-  -moz-animation-name: wobble;
-  -webkit-animation-name: wobble;
-  animation-name: wobble;
   -moz-animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;

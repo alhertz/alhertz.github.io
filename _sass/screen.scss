@@ -387,8 +387,8 @@ a {
     display: inline-block;
     font-weight: 700;
     font-size: 1.5rem;
-    height: 3em;
-    line-height: 3em;
+    height: 4.25em;
+    line-height: 4.25em;
     min-width: 15em;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -636,9 +636,11 @@ a {
   @include keyframes(fadeIn) {
     0% {
       @include opacity(0);
+      @include translate(transformY(200px));
     }
     100% {
       @include opacity(1);
+      @include translate(transformY(0));
     }
   }
 
@@ -1123,7 +1125,7 @@ footer {
 //
 
 .icon-hand {
-  @include animation-name(wobble);
+  // @include animation-name(wobble);
   @include animation-iteration-count(infinite);
   @include animation-duration(2s);
   @include animation-timing-function($primary-easing);

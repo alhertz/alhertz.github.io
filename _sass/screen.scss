@@ -428,10 +428,6 @@ a {
 // Articles
 //
 
-.article.about p {
-  font-size: 2rem;
-}
-
 .article {
   background: $white-color;
   padding: 0 0 2em;
@@ -465,11 +461,22 @@ a {
 
   p {
     font-family: $serif-typeface;
-    margin-bottom: 1em;
+
+    &.about-p {
+      margin-bottom: 1em;
+
+      &:first-child {
+        padding-top: 20px;
+      }
+    }
   }
 
   figure {
     width: 100%;
+
+    &.about-img {
+      margin-bottom: 1em;
+    }
 
     img {
       max-width: 100%;
@@ -1237,16 +1244,8 @@ footer {
   }
 }
 
-.about-p {
-  padding-top: 20px;
-}
-
-.about-img {
-  margin-bottom: 1em;
-}
-
 @media screen and (max-width: $breakpoint-medium) {
-  .about-p {
+  .about-p:first-child {
     padding-top: 0;
   }
 }

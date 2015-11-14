@@ -904,10 +904,6 @@ a.bordered:hover {
     padding: 5em 3em;
   }
 }
-.article.about p {
-  font-size: 2rem;
-}
-
 .article {
   background: white;
   padding: 0 0 2em;
@@ -936,10 +932,18 @@ a.bordered:hover {
 }
 .article p {
   font-family: "Chaparral-pro", "Helvetica", serif;
+}
+.article p.about-p {
   margin-bottom: 1em;
+}
+.article p.about-p:first-child {
+  padding-top: 20px;
 }
 .article figure {
   width: 100%;
+}
+.article figure.about-img {
+  margin-bottom: 1em;
 }
 .article figure img {
   max-width: 100%;
@@ -1726,16 +1730,8 @@ footer ul li a:hover {
   margin-right: 0;
 }
 
-.about-p {
-  padding-top: 20px;
-}
-
-.about-img {
-  margin-bottom: 1em;
-}
-
 @media screen and (max-width: 800px) {
-  .about-p {
+  .about-p:first-child {
     padding-top: 0;
   }
 }

@@ -5,6 +5,7 @@ $(function(){
       options = {
     prefetch: true,
     cacheLength: 2,
+    pageCacheSize: 4,
     onStart: {
       duration: 1500,
       render: function ($container) {

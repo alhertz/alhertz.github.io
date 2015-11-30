@@ -11,10 +11,12 @@ $('.js-expand-navigation-trigger').click(function(event) {
   event.preventDefault();
 
   $('.js-article-navigation').addClass('expanded');
+  mixpanel.track("Navigation expanded");
 });
 
 $('.js-condense-navigation-trigger').click(function(event) {
   event.preventDefault();
 
   $('.js-article-navigation').removeClass('expanded');
+  mixpanel.track("Navigation compressed");
 });

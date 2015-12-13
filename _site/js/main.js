@@ -22,5 +22,19 @@ $(function(){
       }
     }
   },
+
   smoothState = $('#main').smoothState(options).data('smoothState');
+
+  function setGreeterDimensions() {
+    $('.js-alternative-greeter').css({
+      'height': (($(window).height())-60) + 'px',
+      'width': (($(window).width())-60) + 'px'
+    });
+  }
+
+  setGreeterDimensions();
+
+  $(window).resize(function(){
+    setGreeterDimensions();
+  });
 });

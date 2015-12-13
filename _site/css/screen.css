@@ -427,6 +427,10 @@ body {
   font-weight: 400;
   text-rendering: optimizeLegibility;
 }
+body.layout-home {
+  background: #57585A;
+  border: 0;
+}
 
 h1,
 h2 {
@@ -1746,5 +1750,118 @@ footer ul li a:hover {
 @media screen and (max-width: 800px) {
   .about-p:first-child {
     padding-top: 0;
+  }
+}
+.alternative-greeter-wrapper {
+  background: #57585A;
+  margin: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 800px) {
+  .alternative-greeter-wrapper {
+    margin: 10px;
+  }
+}
+.alternative-greeter {
+  height: 100vh;
+  width: 100vw;
+  background: red;
+  overflow: hidden;
+  background: #252A2E;
+}
+.alternative-greeter__right-column, .alternative-greeter__left-column {
+  float: left;
+}
+.alternative-greeter__left-column {
+  width: 40%;
+}
+.alternative-greeter__right-column {
+  background: white;
+  padding: 60px;
+  height: 100vh;
+  overflow: scroll;
+  width: 60%;
+}
+.alternative-greeter .content {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.alternative-greeter img {
+  max-width: 100%;
+  opacity: .5;
+}
+.alternative-greeter h1 {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: #090909;
+}
+.alternative-greeter a {
+  color: #090909;
+  border: none;
+}
+.alternative-greeter p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 100%;
+  color: #6F7174;
+  margin-bottom: 30px;
+}
+.alternative-greeter p.first {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+  .alternative-greeter .content {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    top: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .alternative-greeter {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .alternative-greeter__right-column, .alternative-greeter__left-column {
+    float: none;
+    width: 100%;
+  }
+  .alternative-greeter__left-column {
+    height: 400px;
+    overflow: hidden;
+  }
+  .alternative-greeter__right-column {
+    overflow: visible;
+    padding: 60px 30px 30px;
+    height: auto;
+  }
+  .alternative-greeter h1 {
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+  .alternative-greeter p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .alternative-greeter p.first {
+    font-size: 15px;
+  }
+  .alternative-greeter p:last-child {
+    margin-bottom: 0;
   }
 }

@@ -4,14 +4,27 @@ var sticky = new Waypoint.Sticky({
 
 var figure = $(".js-video-figure").hover( hoverVideo, hideVideo );
 
-function hoverVideo(e) { $('video', this).get(0).play(); }
-function hideVideo(e) { $('video', this).get(0).pause(); }
+function hoverVideo(e) {
+  $('video', this).get(0).play();
+  mixpanel.track("Video play");
+}
+
+function hideVideo(e) {
+  $('video', this).get(0).pause();
+  mixpanel.track("Video pause");
+}
 
 $('.js-expand-navigation-trigger').click(function(event) {
   event.preventDefault();
 
   $('.js-article-navigation').addClass('expanded');
   mixpanel.track("Navigation expanded");
+});
+
+$('.js-article-navigation-anchor').click(function(event) {
+  event.preventDefault();
+
+  mixpanel.track("Navigation link click");
 });
 
 $('.js-condense-navigation-trigger').click(function(event) {

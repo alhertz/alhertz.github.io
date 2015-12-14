@@ -30,10 +30,12 @@ $(function(){
   smoothState = $('#main').smoothState(options).data('smoothState');
 
   //
-  // Introduction of greeter
+  // Introduction of greeter once my picture has been loaded :)
   //
 
-  $('.js-alternative-greeter-wrapper').addClass('is-showing');
+  $('.js-alternative-greeter-wrapper').imagesLoaded( function() {
+    $('.js-alternative-greeter-wrapper').addClass('is-showing');
+  });
 
   //
   // Size alternative greeter (homepage)

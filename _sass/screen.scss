@@ -1450,18 +1450,18 @@ footer {
     height: auto !important;
     width: 100% !important;
 
-    &__right-column,
-    &__left-column {
+    &__columns--right,
+    &__column--left {
       float: none;
       width: 100%;
     }
 
-    &__left-column {
+    &__column--left {
       height: 400px;
       overflow: hidden;
     }
 
-    &__right-column {
+    &__column--right {
       overflow: visible;
       padding: 60px 30px 30px;
       height: auto;

@@ -35,10 +35,6 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
 
-  {% capture layout %}
-    {% if page.layout %}
-        layout-{{ page.layout }}
-    {% endif %}
-  {% endcapture %}
+  {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
-  <body class="{{ layout }}">
+  <body class="{{layout}}">

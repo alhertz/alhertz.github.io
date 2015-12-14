@@ -1,2 +1,3 @@
 name: Alex Hertz
 markdown: redcarpet
+exclude: ['Readme.md']

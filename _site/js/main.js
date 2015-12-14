@@ -1,6 +1,10 @@
 $(function(){
   'use strict';
 
+  //
+  // Smoothstate magic
+  //
+
   var $body   = $('html, body'),
       options = {
     prefetch: true,
@@ -25,6 +29,16 @@ $(function(){
 
   smoothState = $('#main').smoothState(options).data('smoothState');
 
+  //
+  // Introduction of greeter
+  //
+
+  $('.js-alternative-greeter-wrapper').fadeIn();
+
+  //
+  // Size alternative greeter (homepage)
+  //
+
   function setGreeterDimensions() {
     $('.js-alternative-greeter').css({
       'height': (($(window).height())-60) + 'px',
@@ -36,5 +50,19 @@ $(function(){
 
   $(window).resize(function(){
     setGreeterDimensions();
+  });
+
+  //
+  // Nifty greeter hoverstate
+  //
+
+  $('.js-alternative-greeter-anchor').mouseover(function() {
+    $(this).addClass('is-focused');
+    $('.js-alternative-greeter-left-column').addClass('is-blurred');
+  });
+
+  $('.js-alternative-greeter-anchor').mouseout(function() {
+    $(this).removeClass('is-focused');
+    $('.js-alternative-greeter-left-column').removeClass('is-blurred');
   });
 });

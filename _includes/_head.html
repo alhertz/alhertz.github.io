@@ -34,4 +34,11 @@
     <script src="https://use.typekit.net/rpn5qcd.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
-  <body>
+
+  {% capture layout %}
+    {% if page.layout %}
+        layout-{{ page.layout }}
+    {% endif %}
+  {% endcapture %}
+
+  <body class="{{ layout }}">

@@ -413,14 +413,17 @@ a {
       background: white;
       color: lighten($secondary-color, 40%);
     }
+
     &:not(.disabled):hover {
       @include transform(translatey(-2px));
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       cursor: pointer;
     }
+
     &:not(.disabled):focus {
       outline: 0;
     }
+
     &:not(.disabled):active {
       @include transform(translatey(2px));
     }
@@ -1300,7 +1303,7 @@ footer {
     &__column--right {
       @include transition-delay(0);
 
-      *:not(.alternative-greeter__background) {
+      * {
         @include transition(opacity .5s $secondary-easing);
         opacity: 0;
 
@@ -1341,10 +1344,10 @@ footer {
       &__column--left,
       &__column--right {
         opacity: 1;
+      }
 
-        *:not(.alternative-greeter__background) {
-          opacity: 1;
-        }
+      &__column--right * {
+        opacity: 1;
       }
 
       &__anchor {
@@ -1470,16 +1473,11 @@ footer {
       display: inline-block;
       margin-right: 15px;
 
-      a:link,
-      a:visited {
+      a {
         @include transition(all 350ms $secondary-easing);
         border: 0;
         color: $white-color;
         box-shadow: 0 0 5px $primary-shadow;
-
-        &:visited {
-          opacity: .7;
-        }
       }
     }
   }

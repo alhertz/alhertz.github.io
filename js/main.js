@@ -33,7 +33,7 @@ $(function(){
   // Introduction of greeter
   //
 
-  $('.js-alternative-greeter-wrapper').fadeIn();
+  $('.js-alternative-greeter-wrapper').addClass('is-showing');
 
   //
   // Size alternative greeter (homepage)

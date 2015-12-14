@@ -1264,13 +1264,61 @@ footer {
   }
 }
 
+//
+// Alternative greeter wrapper
+// Covers somes styles, the sizing, and entrance transition
+//
+
 .alternative-greeter-wrapper {
-  background: #57585A;
+  @include transition(opacity .3s $secondary-easing);
+  background: $white-color;
   margin: 30px;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .1);
-  display: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  opacity: 0;
+
+  .alternative-greeter {
+    &__column--left,
+    &__column--right {
+      @include transition(opacity .5s $secondary-easing);
+      opacity: 0;
+    }
+
+    &__column--left  { @include transition-delay(.2s); }
+    &__column--right { @include transition-delay(.3s); }
+
+    &__anchor {
+      @include transition(transform .5s $primary-easing, opacity .5s $secondary-easing);
+      @include transform(translateY(200px));
+
+      $transition-delay-margin: 100ms;
+
+      @for $i from 1 to 6 {
+        &:nth-child(#{$i}) {
+          -webkit-transition-delay: $i * $transition-delay-margin + 1;
+          -moz-transition-delay: $i * $transition-delay-margin + 1;
+          -o-transition-delay: $i * $transition-delay-margin + 1;
+          transition-delay: $i * $transition-delay-margin + 1;
+        }
+      }
+    }
+  }
+
+  &.is-showing {
+    opacity: 1;
+
+    .alternative-greeter {
+      &__column--left,
+      &__column--right {
+        opacity: 1;
+      }
+
+      &__anchor {
+        @include transform(translateY(0));
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $breakpoint-medium) {
@@ -1282,9 +1330,7 @@ footer {
 .alternative-greeter {
   height: 100vh;
   width: 100vw;
-  background: red;
   overflow: hidden;
-  background: #252A2E;
 
   &__column--left {
     float: left;
@@ -1316,13 +1362,8 @@ footer {
     }
 
     &.is-blurred {
-      .alternative-greeter__anchor {
-        opacity: .3;
-
-        &.is-focused {
-          opacity: 1;
-        }
-      }
+      .alternative-greeter__anchor a { opacity: .3; }
+      .alternative-greeter__anchor.is-focused a { opacity: 1; }
     }
   }
 
@@ -1370,19 +1411,19 @@ footer {
   &__anchors {
     bottom: 0;
     font-size: 3rem;
-    padding: 30px;
+    padding: 60px 30px;
     position: absolute;
     text-align: center;
     width: 100%;
     z-index: 111;
 
     li {
-      @include transition(all 350ms $secondary-easing);
       display: inline-block;
       margin-right: 15px;
 
       a:link,
       a:visited {
+        @include transition(all 350ms $secondary-easing);
         border: 0;
         color: $white-color;
         box-shadow: 0 0 5px $primary-shadow;

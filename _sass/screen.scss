@@ -1300,7 +1300,7 @@ footer {
     &__column--right {
       @include transition-delay(0);
 
-      * {
+      *:not(.alternative-greeter__background) {
         @include transition(opacity .5s $secondary-easing);
         opacity: 0;
 
@@ -1342,7 +1342,7 @@ footer {
       &__column--right {
         opacity: 1;
 
-        * {
+        *:not(.alternative-greeter__background) {
           opacity: 1;
         }
       }
@@ -1374,23 +1374,13 @@ footer {
     overflow: hidden;
     width: 40%;
 
-    &:after, &:before {
+    &:after {
       height: 100%;
       width: 100%;
       position: absolute;
       top: 0;
       left: 0;
       content: "";
-    }
-
-    &:before {
-      @include transition(all .5s $secondary-easing);
-      background: url("../img/hey-there.jpg") center center;
-      background-size: cover;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      overflow: hidden;
-      z-index: 1;
     }
 
     &:after {
@@ -1444,6 +1434,26 @@ footer {
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  &__background {
+    @include transition(all .5s $secondary-easing);
+    background: url("../img/hey-there.jpg") center center;
+    background-size: cover;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0 !important;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+
+    &.has-finished-loading {
+      opacity: 1 !important;
     }
   }
 

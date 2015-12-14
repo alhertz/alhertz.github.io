@@ -33,9 +33,21 @@ $(function(){
   // Introduction of greeter once my picture has been loaded :)
   //
 
-  $('.js-alternative-greeter-wrapper').imagesLoaded( function() {
-    $('.js-alternative-greeter-wrapper').addClass('is-showing');
-  });
+  $('.js-alternative-greeter-background').imagesLoaded({ background: true })
+    .always( function( instance ) {
+      $('.js-alternative-greeter-wrapper').addClass('is-showing');
+    })
+    .done( function( instance ) {
+      $('.js-alternative-greeter-background').addClass('has-finished-loading');
+    })
+    .fail( function() {
+      // todo – build failure state
+    })
+    .progress( function( instance, image ) {
+      // var result = image.isLoaded ? 'loaded' : 'broken';
+      // console.log( 'image is ' + result + ' for ' + image.img.src );
+      // todo – build progress state
+    });
 
   //
   // Size alternative greeter (homepage)
@@ -53,6 +65,8 @@ $(function(){
   $(window).resize(function(){
     setGreeterDimensions();
   });
+
+  $('.js-alternative-greeter-wrapper').addClass('is-showing');
 
   //
   // Nifty greeter hoverstate

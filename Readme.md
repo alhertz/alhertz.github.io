@@ -1,9 +1,11 @@
 ### Hello, future Alex.
 
-To get going, run `jekyll serve` in your terminal. That should take care of everything you need.
+First, make sure you have [Jekyll](https://jekyllrb.com/docs/installation/) installed.
 
-Dependency managament: no gemfile, sorry (you should probably do that if you have the time, future Alex). For now, I think you have to make sure [compass-style.org](Compass) is installed (`gem install compass`).
+```
+gem install jekyll
+```
 
-For CSS, reference [https://github.com/dropbox/css-style-guide](Dropbox's CSS styleguide).
+Then, run `jekyll serve` in your terminal.
 
-That's about all ... for now.
+Dependency managament: no gemfile, sorry (you should probably do that if you have the time, future Alex). For now, just make sure [compass-style.org](Compass) is installed (`gem install compass`). That _should_ be it.

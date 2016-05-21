@@ -55,8 +55,8 @@ $(function(){
 
   function setGreeterDimensions() {
     $('.js-alternative-greeter').css({
-      'height': (($(window).height())-60) + 'px',
-      'width': (($(window).width())-60) + 'px'
+      'height': (($(window).height())) + 'px',
+      'width': (($(window).width())) + 'px'
     });
   }
 

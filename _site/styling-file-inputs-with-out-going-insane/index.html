@@ -46,15 +46,15 @@
 
 
   <article class="article">
-    <h1>Styling File Inputs Without Going Insane </h1>
+    <h1 id="styling-file-inputs-without-going-insane">Styling File Inputs Without Going Insane</h1>
 
 <p>I know there are many examples of how to do this so please feel free express your undying hatred if you so desire. I just need to get this ingrained in my head after feeling quite nagged by it on a recent project. Writing a quick little tutorial is the best way to do that for me. Additionally, share any thoughts on how this could be improved or done differently too. I would love that.</p>
 
-<h2>HTML</h2>
+<h2 id="html">HTML</h2>
 
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;file&quot;</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
-<h2>SCSS</h2>
+<h2 id="scss">SCSS</h2>
 
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="o">]</span> <span class="p">{</span>
   <span class="na">color</span><span class="o">:</span> <span class="no">transparent</span><span class="p">;</span> 
@@ -88,11 +88,10 @@
   <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
 
-<h2>Result</h2>
+<h2 id="result">Result</h2>
+<p><input name="file" type="file" /></p>
 
-<p><input name="file" type="file"></p>
-
-<p>I&#39;m using <a href="http://fontawesome.io">Font Awesome</a> for the camera icon if you couldn&#39;t tell by looking at the code and I&#39;m not sure how well it will work with other icon fonts but I have a feeling the approach should be similar for other ones like <a href="http://www.entypo.com/">Entypo</a>. <a href="http://symbolset.com/">Symbol Set</a> I know is a bit different but not much. It actually requires a bit less code which is nice. The only important thing to remember is the power of the :before and :after pseudo-selectors. They dope.</p>
+<p>I’m using <a href="http://fontawesome.io">Font Awesome</a> for the camera icon if you couldn’t tell by looking at the code and I’m not sure how well it will work with other icon fonts but I have a feeling the approach should be similar for other ones like <a href="http://www.entypo.com/">Entypo</a>. <a href="http://symbolset.com/">Symbol Set</a> I know is a bit different but not much. It actually requires a bit less code which is nice. The only important thing to remember is the power of the :before and :after pseudo-selectors. They dope.</p>
 
 <p>Feel free to <a href="http://twitter.com/alhertz">share any thoughts, questions, critique, etc</a>. Thanks for reading.</p>
 

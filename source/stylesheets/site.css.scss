@@ -1,0 +1,132 @@
+@import "normalize";
+
+// @import "font-awesome";
+
+$primary-easing: cubic-bezier(0.23, 1.3, 0.32, 1);
+$secondary-easing: ease-in-out;
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 8px;
+  font-family: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+
+// body {
+//   background: $white-color;
+//   border-top: 10px solid $primary-color;
+//   color: $secondary-color;
+//   font-family: $sans-serif-typeface;
+//   font-size: 2.5rem;
+//   font-size: 2.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+//   font-weight: 400;
+//   text-rendering: optimizeLegibility;
+// }
+
+
+//
+// Typography
+//
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+//
+// Utitlities
+//
+
+.u-vertically-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//
+// Greeting component
+//
+
+.greeting {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+
+  &__left-column {
+    background: blue;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 40%;
+  }
+
+  &__right-column {
+    float: left;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    width: 60%;
+    position: relative;
+    height: 100%;
+  }
+}
+
+//
+// Social links component
+//
+
+$transition-delay-margin: 100ms;
+
+
+.social-media {
+  bottom: 0;
+  font-size: 3rem;
+  padding: 10rem 5rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 111;
+
+  &.has-hovered-anchor {
+    .social-media__anchor a             { opacity: 0.5; }
+    .social-media__anchor.is-focused a  { opacity: 1; }
+  }
+
+  &__anchor {
+    display: inline-block;
+    margin-right: 2rem;
+    transition: transform 500ms $primary-easing, opacity 500ms $secondary-easing;
+
+    // @for $i from 1 to 6 {
+    //   &:nth-child(#{$i}) {
+    //     -webkit-transition-delay: $i * $transition-delay-margin + .25s;
+    //     -moz-transition-delay: $i * $transition-delay-margin + .25s;
+    //     -o-transition-delay: $i * $transition-delay-margin + .25s;
+    //     transition-delay: $i * $transition-delay-margin + .25s;
+    //   }
+    // }
+
+    a {
+      transition: all 350ms $secondary-easing;
+      border: 0;
+      color: #ffffff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

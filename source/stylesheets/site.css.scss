@@ -71,6 +71,7 @@ p {
     background: blue;
     float: left;
     height: 100%;
+    overflow: hidden;
     position: relative;
     width: 40%;
   }
@@ -80,9 +81,17 @@ p {
     background-position: center center;
     background-size: cover;
     display: block;
-    opacity: 0.4;
     height: 100%;
+    opacity: 0;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 1000ms $primary-easing, opacity 500ms $secondary-easing;
     width: 100%;
+
+    &--is-finished-loading {
+      opacity: 0.4;
+      transform: scale(1.05);
+    }
   }
 
   &__right-column {

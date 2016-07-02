@@ -18,12 +18,14 @@ page '/*.txt', layout: false
 
 # General configuration
 activate :sprockets
+activate :directory_indexes
 
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
   set :debug_assets, true
 end
+
 
 ###
 # Helpers

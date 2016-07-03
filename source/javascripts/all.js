@@ -1,6 +1,6 @@
-//= require 'vendor/jquery/dist/jquery.js'
-//= require 'vendor/ev-emitter/ev-emitter.js'
-//= require 'vendor/imagesloaded/imagesloaded.js'
+//= require 'vendor/jquery.js'
+//= require 'vendor/ev-emitter.js'
+//= require 'vendor/imagesloaded.js'
 
 $(function(){
   'use strict';

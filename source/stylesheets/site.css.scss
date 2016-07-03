@@ -14,11 +14,17 @@ $secondary-easing: ease-in-out;
 html,
 body {
   -webkit-font-smoothing: antialiased;
+  color: lighten(#252A2E, 25%);
   padding: 0;
   margin: 0;
   font-weight: 400;
   font-size: 8px;
   font-family: "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+a {
+  color: darken(#252A2E, 20%);
+  text-decoration: none;
 }
 
 
@@ -41,11 +47,12 @@ body {
 h2 {
   font-size: 3rem;
   font-weight: 500;
+  color: #252A2E;
 }
 
 p {
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 //
@@ -70,7 +77,7 @@ p {
   // Left column
 
   &__left-column {
-    background: blue;
+    background: #000;
     float: left;
     height: 100%;
     overflow: hidden;
@@ -86,7 +93,7 @@ p {
     &--is-finished-loading {
 
       .greeting__left-column-image {
-        opacity: 0.4;
+        opacity: 1;
         transform: scale(1.05);
       }
 
@@ -97,7 +104,7 @@ p {
   }
 
   &__left-column-loading-indicator {
-    background-color: red;
+    background-color: #252A2E;
     display: block;
     height: 100%;
     left: 0;
@@ -110,6 +117,8 @@ p {
 
   &__left-column-image {
     background-image: image-url("me.jpg");
+    background-color: lighten(#252A2E, 20%);
+    background-blend-mode: multiply;
     background-position: center center;
     background-size: cover;
     display: block;

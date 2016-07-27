@@ -16,6 +16,11 @@
     overflow: hidden;
     position: relative;
     width: 40%;
+
+    @include media-query(palm) {
+      height: 50%;
+      width: 100%;
+    }
   }
 
   &__left-column-image-container {
@@ -74,5 +79,19 @@
     width: 60%;
     position: relative;
     height: 100%;
+
+    @include media-query(palm) {
+      width: 100%;
+      height: auto;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 2rem;
+
+      .u-vertically-center {
+        top: 0;
+        transform: translateY(0);
+      }
+    }
   }
 }

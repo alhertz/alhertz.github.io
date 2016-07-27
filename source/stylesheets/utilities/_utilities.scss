@@ -3,3 +3,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+.u-desktop-line-break {
+  display: block;
+
+  @include media-query(portable) {
+    display: none;
+  }
+}

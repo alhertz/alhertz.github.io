@@ -24,14 +24,14 @@ $transition-delay-margin: 100ms;
     margin-right: 2rem;
     transition: transform 500ms $primary-easing, opacity 500ms $secondary-easing;
 
-    // @for $i from 1 to 6 {
-    //   &:nth-child(#{$i}) {
-    //     -webkit-transition-delay: $i * $transition-delay-margin + .25s;
-    //     -moz-transition-delay: $i * $transition-delay-margin + .25s;
-    //     -o-transition-delay: $i * $transition-delay-margin + .25s;
-    //     transition-delay: $i * $transition-delay-margin + .25s;
-    //   }
-    // }
+    @for $i from 1 to 6 {
+      &:nth-child(#{$i}) {
+        -webkit-transition-delay: $i * $transition-delay-margin + .25s;
+        -moz-transition-delay: $i * $transition-delay-margin + .25s;
+        -o-transition-delay: $i * $transition-delay-margin + .25s;
+        transition-delay: $i * $transition-delay-margin + .25s;
+      }
+    }
 
     a {
       transition: all 350ms $secondary-easing;

@@ -1,5 +1,5 @@
-# Ignore bower
-.bowerrc
+# Ignore bower files
+source/stylesheets/vendor/*
 
 # Ignore bundler config
 *.bundle

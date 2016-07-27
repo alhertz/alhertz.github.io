@@ -1,0 +1,14 @@
+{
+  "name": "alhertz.github.io",
+  "homepage": "http://hey.al",
+  "authors": [
+    "Al Hertz <hey@hey.al>"
+  ],
+  "description": "Al Hertz's personal site, yo",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "inuit-starter-kit": "^0.2.9"
+  }
+}

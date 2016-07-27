@@ -1,7 +1,7 @@
 //
 // Variables
 //
-$greeting-transition-delay-margin: 200ms;
+$greeting-transition-delay-margin: 100ms;
 
 //
 // Greeting component
@@ -114,7 +114,7 @@ $greeting-transition-delay-margin: 200ms;
 
     * {
       transition-property: opacity, transform;
-      transition-duration: 1000ms, 2000ms;
+      transition-duration: 1000ms, 1000ms;
       transition-timing-function: $primary-easing;
       transform: translateY(50px);
       opacity: 0;

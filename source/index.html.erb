@@ -3,7 +3,7 @@ title: Al Hertz – Designer
 ---
 
 <div class="greeting">
-  <div class="greeting__left-column">
+  <div class="greeting__left-column js-greeting-left-column">
     <div class="greeting__left-column-image-container js-greeting-left-column-image-container">
       <span class="greeting__left-column-loading-indicator"></span>
       <span class="greeting__left-column-image"></span>
@@ -50,15 +50,12 @@ title: Al Hertz – Designer
 <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
 <script>
 
-  // Enable pusher logging - don't include this in production
-  Pusher.logToConsole = true;
+  var pusher = new Pusher('2061d898325156be1600');
+  var channel = pusher.subscribe('sms');
 
-  var pusher = new Pusher('2061d898325156be1600', {
-    encrypted: true
+  channel.bind('sms_received', function(data) {
+    console.log('Color changed to ' + data.text  + ' by ' + data.from_number);
+    $('.js-greeting-left-column').css('background-color', data.text);
   });
 
-  var channel = pusher.subscribe('test_channel');
-  channel.bind('my_event', function(data) {
-    alert(data.message);
-  });
 </script>

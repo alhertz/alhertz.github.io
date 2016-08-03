@@ -56,7 +56,6 @@ $greeting-transition-delay-margin: 100ms;
 
   &__left-column-image {
     background-image: image-url("me.jpg");
-    mix-blend-mode: overlay;
     background-position: center center;
     background-size: cover;
     display: block;

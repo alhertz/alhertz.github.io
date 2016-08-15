@@ -46,16 +46,3 @@ title: Al Hertz – Designer
     </div>
   </div>
 </div>
-
-<script src="https://js.pusher.com/3.1/pusher.min.js"></script>
-<script>
-
-  var pusher = new Pusher('2061d898325156be1600');
-  var channel = pusher.subscribe('sms');
-
-  channel.bind('sms_received', function(data) {
-    console.log('Color changed to ' + data.text  + ' by ' + data.from_number);
-    $('.js-greeting-left-column').css('background-color', data.text);
-  });
-
-</script>

@@ -81,10 +81,10 @@ $greeting-transition-delay-margin: 100ms;
     @include media-query(palm) {
       width: 100%;
       height: auto;
-      padding-bottom: 2rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      padding-top: 2rem;
+      padding-bottom: 6rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      padding-top: 6rem;
 
       .u-vertically-center {
         top: 0;

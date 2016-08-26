@@ -8,7 +8,7 @@
 
 ### Deploying this site
 
-1. `bundle exec rake publish BRANCH_NAME=master`
+1. `rake publish BRANCH_NAME=master`
 2. Verify that the [changes are live](http://hey.al) and all is well
 
 _Note: If `bundle exec rake publish BRANCH_NAME=master` fails, `rm -rf build` and try again_

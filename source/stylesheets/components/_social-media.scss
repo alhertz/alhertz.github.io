@@ -1,43 +1,60 @@
 //
-// Social links component
+// Component specific variables
 //
-
 $transition-delay-margin: 100ms;
 
-
-.social-media {
+//
+// Component specific styles
+//
+.social-media-links {
   bottom: 0;
-  font-size: 3rem;
-  padding: 10rem 5rem;
+  font-size: 3.5rem;
+  padding: 3rem 5rem;
   position: absolute;
   text-align: center;
   width: 100%;
   z-index: 111;
 
-  &.has-hovered-anchor {
-    .social-media__anchor a             { opacity: 0.5; }
-    .social-media__anchor.is-focused a  { opacity: 1; }
+  &--has-hovered-anchor {
+    .social-media-links__anchor             { opacity: 0.5; }
+    .social-media-links__anchor--is-focused { opacity: 1; }
   }
 
-  &__anchor {
+  &__item {
     display: inline-block;
     margin-right: 2rem;
-    transition: transform 500ms $primary-easing, opacity 500ms $secondary-easing;
+    opacity: 0;
+    transform: translateY(200px) translateZ(0);
+    transition: transform 500ms $variables-primary-easing, opacity 500ms $variables-secondary-timing-function;
 
     @for $i from 1 to 6 {
       &:nth-child(#{$i}) {
-        -webkit-transition-delay: $i * $transition-delay-margin + .25s;
-        -moz-transition-delay: $i * $transition-delay-margin + .25s;
-        -o-transition-delay: $i * $transition-delay-margin + .25s;
         transition-delay: $i * $transition-delay-margin + .25s;
       }
     }
+  }
 
-    a {
-      transition: all 350ms $secondary-easing;
-      border: 0;
-      color: #ffffff;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  &__anchor {
+    border: 0;
+    color: #ffffff;
+    position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    transition-duration: $variables-primary-transition-duration;
+    transition-property: opacity;
+    transition-timing-function: $variables-secondary-timing-function;
+
+    &:active {
+      top: 1px;
     }
   }
 }
+
+// Use the class Font Awesome appends to the document to show icons once they're
+// loaded
+.fa-events-icons-ready {
+  .social-media-links__item {
+    transform: translateY(0) translateZ(0);
+    opacity: 1;
+  }
+}
+

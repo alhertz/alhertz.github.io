@@ -88,7 +88,15 @@ channel.bind('sms_received', function(data) {
 
   colors.map(function(t) { return t.toHexString(); }); // [ "#ff0000", "#2a0000", "#550000", "#800000", "#aa0000", "#d40000" ]
 
-debugger;
+  function colorArrayToHTML(arr) {
+    return $.map(arr, function(e) {
+      return e.toHexString()
+    }).join('Sup');
+  }
+
+  $('.js-greeting-left-column').html(colorArrayToHTML(colors));
+
+  console.log(colors);
   $('.js-greeting-left-column').css('background-color', colors);
 
 });

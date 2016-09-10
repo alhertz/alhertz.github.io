@@ -74,6 +74,7 @@ $greeting-left-column-background-color:  #252A2E;
     background-size: cover;
     display: block;
     height: 100%;
+    mix-blend-mode: lighten;
     opacity: 0;
     transform-origin: center center;
     transform: scale(1);

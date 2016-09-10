@@ -1,6 +1,7 @@
 //= require 'vendor/jquery.js'
 //= require 'vendor/ev-emitter.js'
 //= require 'vendor/imagesloaded.js'
+//= require 'vendor/tinycolor.min.js'
 
 //
 // Variables
@@ -80,9 +81,16 @@ function saveSmsToDatabase(text, fromNumber) {
 var pusher = new Pusher('2061d898325156be1600');
 var pusherChannel = pusher.subscribe('sms');
 
-pusherChannel.bind('sms_received', function(data) {
-  $greetingLeftColumn.css('background-color', data.text).addClass('h');
+channel.bind('sms_received', function(data) {
   saveSmsToDatabase(data.text, data.from_number);
+
+  var colors = tinycolor(data.text).monochromatic();
+
+  colors.map(function(t) { return t.toHexString(); }); // [ "#ff0000", "#2a0000", "#550000", "#800000", "#aa0000", "#d40000" ]
+
+debugger;
+  $('.js-greeting-left-column').css('background-color', colors);
+
 });
 
 //

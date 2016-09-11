@@ -8,12 +8,13 @@
 $(function(){
   'use strict';
 
+  $('.js-greeting-right-column-content').addClass('greeting__right-column-content--is-visible');
+
   var $leftColumnImage = $('.js-greeting-left-column-image');
   var $leftColumnImageContainer = $('.js-greeting-left-column-image-container');
 
   $leftColumnImage.imagesLoaded({ background: true }, function() {
     $leftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
-    $('.js-greeting-right-column-content').addClass('greeting__right-column-content--is-visible');
   });
 });
 

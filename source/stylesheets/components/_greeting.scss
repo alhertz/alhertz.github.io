@@ -2,6 +2,7 @@
 // Component specific variables
 //
 $greeting-transition-delay-margin: 100ms;
+$greeting-left-column-background-color:  #252A2E;
 
 //
 // Component specific styles
@@ -13,7 +14,7 @@ $greeting-transition-delay-margin: 100ms;
 
   // Left column
   &__left-column {
-    background-color: #252A2E;
+    background-color: $greeting-left-column-background-color;
     float: left;
     height: 100%;
     overflow: hidden;
@@ -43,14 +44,15 @@ $greeting-transition-delay-margin: 100ms;
   }
 
   &__left-column-loading-indicator {
+    color: darken($greeting-left-column-background-color, 5%);
     display: block;
-    height: 100%;
-    left: 0;
+    font-size: 16px;
+    left: 50%;
     opacity: 1;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: opacity 500ms $variables-secondary-timing-function;
-    width: 100%;
   }
 
   &__left-column-image {

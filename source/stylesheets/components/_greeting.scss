@@ -21,6 +21,14 @@ $greeting-left-column-background-color:  #252A2E;
     position: relative;
     width: 40%;
 
+    // Modifier for when the background color of this div has been
+    // customized via SMS
+    &--has-custom-background-color {
+      .greetting__left-column-image {
+        mix-blend-mode: lighten;
+      }
+    }
+
     @include media-query(palm) {
       height: 50%;
       width: 100%;
@@ -35,6 +43,7 @@ $greeting-left-column-background-color:  #252A2E;
     &--is-finished-loading {
       .greeting__left-column-image {
         opacity: 1;
+        transform: scale(1.05);
       }
 
       .greeting__left-column-loading-indicator {
@@ -44,15 +53,19 @@ $greeting-left-column-background-color:  #252A2E;
   }
 
   &__left-column-loading-indicator {
-    color: darken($greeting-left-column-background-color, 5%);
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
     display: block;
-    font-size: 16px;
     left: 50%;
     opacity: 1;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 500ms $variables-secondary-timing-function;
+    height: 24px;
+    width: 24px;
+    content: 'sup';
+    background-color: darken($greeting-left-column-background-color, 2%);
+    border-radius: 50%;
   }
 
   &__left-column-image {
@@ -111,10 +124,10 @@ $greeting-left-column-background-color:  #252A2E;
     max-width: 480px;
 
     * {
-      transition-property: opacity, transform;
-      transition-duration: 1000ms, 1000ms;
-      transition-timing-function: $variables-primary-easing;
       transform: translateY(50px);
+      transition-duration: 1000ms, 1000ms;
+      transition-property: opacity, transform;
+      transition-timing-function: $variables-primary-easing;
       opacity: 0;
 
       @for $i from 1 to 6 {
@@ -128,5 +141,24 @@ $greeting-left-column-background-color:  #252A2E;
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+//
+// Component specific animations
+//
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  70% {
+    box-shadow: 0 0 0 24px rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }

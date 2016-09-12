@@ -3,18 +3,27 @@
 //= require 'vendor/imagesloaded.js'
 
 //
+// Variables
+//
+var $greetingLeftColumn = $('.js-greeting-left-column');
+var $greetingLeftColumnImageContainer = $('.js-greeting-left-column-image-container');
+var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
+var $greetingRightColumnContent = $('.js-greeting-right-column-content');
+var $socialMediaLinks = $('.js-social-media-links');
+var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
+
+//
 // Images loaded
 //
 $(function(){
   'use strict';
 
-  $('.js-greeting-right-column-content').addClass('greeting__right-column-content--is-visible');
-
-  var $leftColumnImage = $('.js-greeting-left-column-image');
-  var $leftColumnImageContainer = $('.js-greeting-left-column-image-container');
-
-  $leftColumnImage.imagesLoaded({ background: true }, function() {
-    $leftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
+  $greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
+    $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
+    $socialMediaLinks.addClass('social-media-links--is-ready');
+    setTimeout( function() {
+      $greetingRightColumnContent.addClass('greeting__right-column-content--is-visible');
+    }, 500);
   });
 });
 
@@ -22,14 +31,14 @@ $(function(){
 // Social media component
 //
 
-$('.js-social-media-links-anchor').mouseover(function() {
+$socialMediaLinkAnchor.mouseover(function() {
   $(this).addClass('social-media-links__anchor--is-focused');
-  $('.js-social-media-links').addClass('social-media-links--has-hovered-anchor');
+  $socialMediaLinks.addClass('social-media-links--has-hovered-anchor');
 });
 
-$('.js-social-media-links-anchor').mouseout(function() {
+$socialMediaLinkAnchor.mouseout(function() {
   $(this).removeClass('social-media-links__anchor--is-focused');
-  $('.js-social-media-links').removeClass('social-media-links--has-hovered-anchor');
+  $socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
 });
 
 //
@@ -69,10 +78,10 @@ function saveSmsToDatabase(text, fromNumber) {
 // Pusher
 //
 var pusher = new Pusher('2061d898325156be1600');
-var channel = pusher.subscribe('sms');
+var pusherChannel = pusher.subscribe('sms');
 
-channel.bind('sms_received', function(data) {
-  $('.js-greeting-left-column').css('background-color', data.text);
+pusherChannel.bind('sms_received', function(data) {
+  $greetingLeftColumn.css('background-color', data.text).addClass('h');
   saveSmsToDatabase(data.text, data.from_number);
 });
 

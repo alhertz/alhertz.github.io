@@ -26,17 +26,8 @@ configure :development do
   set :debug_assets, true
 end
 
-
-###
-# Helpers
-###
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+# Fonts
+set :fonts_dir, 'fonts'
 
 # Build-specific configuration
 configure :build do

@@ -81,7 +81,7 @@ function saveSmsToDatabase(text, fromNumber) {
 var pusher = new Pusher('2061d898325156be1600');
 var pusherChannel = pusher.subscribe('sms');
 
-channel.bind('sms_received', function(data) {
+pusherChannel.bind('sms_received', function(data) {
   // Saves the body and from number of the SMS sent to Firebase
   saveSmsToDatabase(data.text, data.from_number);
 
@@ -105,9 +105,10 @@ channel.bind('sms_received', function(data) {
   // Select a random color from the stored color combination array and apply it
   // as the background of the homepage greeter's left column
   var randomColorFromColorArray = colorArray[Math.floor(Math.random() * colorArray.length)];
-  var backgroundColor = tinycolor(randomColorFromColorArray).lighten().desaturate()
+  var randomlySelectedColor = tinycolor(randomColorFromColorArray).lighten().desaturate();
 
-  $('.js-greeting-left-column').css('background-color', backgroundColor);
+  $('.js-greeting-left-column').css('background-color', randomlySelectedColor);
+  $('.js-greeting-right-column-content a').css('color', randomlySelectedColor);
 });
 
 //

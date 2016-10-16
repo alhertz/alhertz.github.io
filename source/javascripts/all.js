@@ -1,6 +1,7 @@
 //= require 'vendor/jquery.js'
 //= require 'vendor/ev-emitter.js'
 //= require 'vendor/imagesloaded.js'
+//= require 'vendor/tinycolor.min.js'
 
 //
 // Variables
@@ -81,8 +82,33 @@ var pusher = new Pusher('2061d898325156be1600');
 var pusherChannel = pusher.subscribe('sms');
 
 pusherChannel.bind('sms_received', function(data) {
-  $greetingLeftColumn.css('background-color', data.text).addClass('h');
+  // Saves the body and from number of the SMS sent to Firebase
   saveSmsToDatabase(data.text, data.from_number);
+
+  // Create a monochromatic color combination from the body of the SMS sent to
+  // text-hey-al.herokuapp.com/post
+  var colors = tinycolor(data.text).monochromatic();
+
+  // Convert the monochromatic olor combination values to hexidecimal values and
+  // store as array e.g [ "#ff0000", "#2a0000", "#550000", "#800000", "#aa0000",
+  //  "#d40000" ]
+  colors.map(function(t) { return t.toHexString(); });
+
+  function colorArrayToHTML(arr) {
+    return $.map(arr, function(e) {
+      return e.toHexString()
+    });
+  }
+
+  var colorArray = colorArrayToHTML(colors);
+
+  // Select a random color from the stored color combination array and apply it
+  // as the background of the homepage greeter's left column
+  var randomColorFromColorArray = colorArray[Math.floor(Math.random() * colorArray.length)];
+  var randomlySelectedColor = tinycolor(randomColorFromColorArray).lighten().desaturate();
+
+  $('.js-greeting-left-column').css('background-color', randomlySelectedColor);
+  $('.js-greeting-right-column-content a').css('color', randomlySelectedColor);
 });
 
 //

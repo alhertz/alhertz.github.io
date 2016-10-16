@@ -116,6 +116,11 @@ $greeting-left-column-background-color:  #252A2E;
   &__first-paragraph {
     font-size: 3rem;
     line-height: 4rem;
+
+    @include media-query(palm) {
+      font-size: 2.3rem;
+      font-weight: 500;
+    }
   }
 
   // For optimal characters per line, enforce a max-width on the greeter copy

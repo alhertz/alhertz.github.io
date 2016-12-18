@@ -5,13 +5,10 @@ html {
 }
 
 .page {
+  -webkit-font-smoothing: antialiased;
   color: lighten(#252A2E, 25%);
   padding: 0;
   margin: 0;
-
-  &--is-finished-animating {
-    -webkit-font-smoothing: antialiased;
-  }
 
   @include media-query(portable) {
     font-size: 7px;

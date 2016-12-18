@@ -12,38 +12,21 @@ var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
 var $greetingRightColumnContent = $('.js-greeting-right-column-content');
 var $socialMediaLinks = $('.js-social-media-links');
 var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
-var $page = $('.js-page');
 
 //
 // Images loaded
 //
-$(function(){
-  'use strict';
-
-  $greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
-    $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
-    $socialMediaLinks.addClass('social-media-links--is-ready');
-    setTimeout( function() {
-      $greetingRightColumnContent.addClass('greeting__right-column-content--is-visible');
-    }, 500);
-
-    setTimeout( function() {
-      $greetingRightColumnContent.addClass('greeting__right-column-content--is-visible');
-    }, 500);
-
-    // Apply modfier class to the body element once animations have completed (~1900ms)
-    // This is a temporary hack to fix font-smoothing in Chrome
-    // http://stackoverflow.com/questions/40335130/chrome-ignoring-font-smoothing-antialiased
-    setTimeout( function() {
-      $page.addClass('page--is-finished-animating'); // For enabling font antialiasing only once animations have completed
-    }, 1900);
-  });
+$greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
+  $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
+  $socialMediaLinks.addClass('social-media-links--is-ready');
+  setTimeout( function() {
+    $greetingRightColumnContent.addClass('greeting__right-column-content--is-visible');
+  }, 500);
 });
 
 //
 // Social media component
 //
-
 $socialMediaLinkAnchor.mouseover(function() {
   $(this).addClass('social-media-links__anchor--is-focused');
   $socialMediaLinks.addClass('social-media-links--has-hovered-anchor');

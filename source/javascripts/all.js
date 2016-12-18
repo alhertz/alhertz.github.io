@@ -12,6 +12,7 @@ var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
 var $greetingRightColumnContent = $('.js-greeting-right-column-content');
 var $socialMediaLinks = $('.js-social-media-links');
 var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
+var $page = $('.js-page');
 
 //
 // Images loaded
@@ -25,6 +26,17 @@ $(function(){
     setTimeout( function() {
       $greetingRightColumnContent.addClass('greeting__right-column-content--is-visible');
     }, 500);
+
+    setTimeout( function() {
+      $greetingRightColumnContent.addClass('greeting__right-column-content--is-visible');
+    }, 500);
+
+    // Apply modfier class to the body element once animations have completed (~1900ms)
+    // This is a temporary hack to fix font-smoothing in Chrome
+    // http://stackoverflow.com/questions/40335130/chrome-ignoring-font-smoothing-antialiased
+    setTimeout( function() {
+      $page.addClass('page--is-finished-animating'); // For enabling font antialiasing only once animations have completed
+    }, 1900);
   });
 });
 

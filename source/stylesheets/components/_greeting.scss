@@ -85,13 +85,14 @@ $greeting-left-column-background-color:  #252A2E;
   // Right column
   &__right-column {
     float: left;
+    height: 100%;
+    padding-bottom: 10rem;
     padding-left: 10rem;
     padding-right: 10rem;
     padding-top: 10rem;
-    padding-bottom: 10rem;
-    width: 60%;
     position: relative;
-    height: 100%;
+    transform: translateZ(0);
+    width: 60%;
 
     @include media-query(palm) {
       width: 100%;

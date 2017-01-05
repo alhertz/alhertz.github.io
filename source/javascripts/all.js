@@ -6,9 +6,9 @@
 //
 // Variables
 //
-var $greetingLeftColumn = $('.js-greeting-left-column');
 var $greetingLeftColumnImageContainer = $('.js-greeting-left-column-image-container');
 var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
+var $greetingRightColumn = $('.js-greeting-right-column');
 var $greetingRightColumnContent = $('.js-greeting-right-column-content');
 var $socialMediaLinks = $('.js-social-media-links');
 var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
@@ -18,10 +18,8 @@ var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
 //
 $greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
   $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
-  $socialMediaLinks.addClass('social-media-links--is-ready');
-  setTimeout( function() {
-    $greetingRightColumnContent.addClass('greeting__right-column-content--is-visible');
-  }, 500);
+  $greetingRightColumn.addClass('greeting__right-column--is-visible')
+  $socialMediaLinks.addClass('social-media-links--is-visible');
 });
 
 //

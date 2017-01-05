@@ -2,19 +2,21 @@
 // Component specific variables
 //
 $greeting-transition-delay-margin: 100ms;
-$greeting-left-column-background-color:  #252A2E;
+$greeting-background-color:  #252A2E;
+$greeting-right-column-background-animation-duration: 750ms;
 
 //
 // Component specific styles
 //
 .greeting {
+  background-color: $greeting-background-color;
   margin: 0;
   height: 100vh;
   width: 100vw;
 
   // Left column
   &__left-column {
-    background-color: $greeting-left-column-background-color;
+    background-color: $greeting-background-color;
     float: left;
     height: 100%;
     overflow: hidden;
@@ -64,7 +66,7 @@ $greeting-left-column-background-color:  #252A2E;
     height: 24px;
     width: 24px;
     content: 'sup';
-    background-color: darken($greeting-left-column-background-color, 2%);
+    background-color: darken($greeting-background-color, 2%);
     border-radius: 50%;
   }
 
@@ -79,6 +81,7 @@ $greeting-left-column-background-color:  #252A2E;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 1000ms $variables-primary-easing, opacity 500ms $variables-secondary-timing-function;
+    transition-delay: $greeting-right-column-background-animation-duration;
     width: 100%;
   }
 
@@ -93,6 +96,23 @@ $greeting-left-column-background-color:  #252A2E;
     position: relative;
     width: 60%;
 
+    // Use pseudo element for white background so the transform
+    // property may be used for animation performance while prevent
+    // any text rendering bugs from happening
+    &:after {
+      background-color: #ffffff;
+      content: '';
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(1000px);
+      transition: transform $greeting-right-column-background-animation-duration $variables-primary-easing;
+      width: 120%;
+      right: -20%;
+      z-index: 1;
+    }
+
     @include media-query(palm) {
       width: 100%;
       height: auto;
@@ -104,6 +124,30 @@ $greeting-left-column-background-color:  #252A2E;
       .u-vertically-center {
         top: 0;
         transform: translateY(0);
+      }
+    }
+
+    * {
+      transition-duration: 500ms;
+      transition-property: opacity;
+      transition-timing-function: $variables-secondary-timing-function;
+      opacity: 0;
+      z-index: 11;
+
+      @for $i from 1 to 6 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * $greeting-transition-delay-margin + 1;
+        }
+      }
+    }
+
+    &--is-visible {
+      &:after {
+        transform: translateX(0);
+      }
+
+      * {
+        opacity: 1;
       }
     }
   }
@@ -128,25 +172,6 @@ $greeting-left-column-background-color:  #252A2E;
     margin-left: auto;
     margin-right: auto;
     max-width: 480px;
-
-    * {
-      // transform: translateY(50px);
-      // transition-duration: 1000ms, 1000ms;
-      // transition-property: opacity, transform;
-      // transition-timing-function: $variables-primary-easing;
-      // opacity: 0;
-
-      @for $i from 1 to 6 {
-        &:nth-child(#{$i}) {
-          // transition-delay: $i * $greeting-transition-delay-margin + 1;
-        }
-      }
-    }
-
-    &--is-visible * {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }
 

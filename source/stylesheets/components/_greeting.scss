@@ -69,7 +69,7 @@ $greeting-right-column-background-animation-duration: 750ms;
     &--is-finished-loading {
       .greeting__left-column-image {
         opacity: 1;
-        transform: scale(1.05);
+        transform: translateX(0);
       }
     }
   }
@@ -83,9 +83,9 @@ $greeting-right-column-background-animation-duration: 750ms;
     mix-blend-mode: lighten;
     opacity: 0;
     transform-origin: center center;
-    transform: scale(1);
-    transition: transform 1000ms $variables-primary-easing, opacity 500ms $variables-secondary-timing-function;
-    transition-delay: $greeting-right-column-background-animation-duration;
+    transform: translateX(50px);
+    transition: transform 1000ms $variables-primary-easing, opacity 1000ms $variables-secondary-timing-function;
+    transition-delay: 500ms;
     width: 100%;
   }
 

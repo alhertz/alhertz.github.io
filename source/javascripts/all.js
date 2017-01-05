@@ -10,6 +10,7 @@ var $greetingLeftColumnImageContainer = $('.js-greeting-left-column-image-contai
 var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
 var $greetingRightColumn = $('.js-greeting-right-column');
 var $greetingRightColumnContent = $('.js-greeting-right-column-content');
+var $greetingLoadingIndicator = $('.js-greeting-loading-indicator');
 var $socialMediaLinks = $('.js-social-media-links');
 var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
 
@@ -20,6 +21,7 @@ $greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
   $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
   $greetingRightColumn.addClass('greeting__right-column--is-visible')
   $socialMediaLinks.addClass('social-media-links--is-visible');
+  $greetingLoadingIndicator.addClass('greeting__loading-indicator--is-hidden');
 });
 
 //

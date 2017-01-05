@@ -14,6 +14,30 @@ $greeting-right-column-background-animation-duration: 750ms;
   height: 100vh;
   width: 100vw;
 
+  // Loading indicator
+  &__loading-indicator {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: pulse;
+    background-color: darken($greeting-background-color, 2%);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 24px;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    z-index: 111;
+
+    &--is-hidden {
+      display: none;
+    }
+  }
+
   // Left column
   &__left-column {
     background-color: $greeting-background-color;
@@ -47,27 +71,7 @@ $greeting-right-column-background-animation-duration: 750ms;
         opacity: 1;
         transform: scale(1.05);
       }
-
-      .greeting__left-column-loading-indicator {
-        opacity: 0;
-      }
     }
-  }
-
-  &__left-column-loading-indicator {
-    animation-name: pulse;
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
-    display: block;
-    left: 50%;
-    opacity: 1;
-    position: absolute;
-    top: 50%;
-    height: 24px;
-    width: 24px;
-    content: 'sup';
-    background-color: darken($greeting-background-color, 2%);
-    border-radius: 50%;
   }
 
   &__left-column-image {
@@ -96,6 +100,20 @@ $greeting-right-column-background-animation-duration: 750ms;
     position: relative;
     width: 60%;
 
+    @include media-query(palm) {
+      width: 100%;
+      height: auto;
+      padding-bottom: 6rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      padding-top: 6rem;
+
+      .u-vertically-center {
+        top: 0;
+        transform: translateY(0);
+      }
+    }
+
     // Use pseudo element for white background so the transform
     // property may be used for animation performance while prevent
     // any text rendering bugs from happening
@@ -111,19 +129,13 @@ $greeting-right-column-background-animation-duration: 750ms;
       width: 120%;
       right: -20%;
       z-index: 1;
-    }
 
-    @include media-query(palm) {
-      width: 100%;
-      height: auto;
-      padding-bottom: 6rem;
-      padding-left: 5rem;
-      padding-right: 5rem;
-      padding-top: 6rem;
-
-      .u-vertically-center {
-        top: 0;
-        transform: translateY(0);
+      @include media-query(palm) {
+        background-color: $greeting-background-color;
+        right: 0;
+        width: 100%;
+        transform: translateX(0);
+        transition: background-color $greeting-right-column-background-animation-duration $variables-primary-easing;
       }
     }
 
@@ -143,6 +155,7 @@ $greeting-right-column-background-animation-duration: 750ms;
 
     &--is-visible {
       &:after {
+        background-color: #ffffff;
         transform: translateX(0);
       }
 

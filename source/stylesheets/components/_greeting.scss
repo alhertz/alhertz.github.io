@@ -13,6 +13,8 @@ $greeting-right-column-background-animation-duration: 750ms;
   margin: 0;
   height: 100vh;
   width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
 
   // Loading indicator
   &__loading-indicator {

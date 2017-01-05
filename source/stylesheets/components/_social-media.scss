@@ -32,11 +32,11 @@ $transition-delay-margin: 100ms;
     margin-right: 2rem;
     opacity: 0;
     transform: translateX(50px) translateZ(0);
-    transition: transform 600ms $variables-primary-easing, opacity 600ms $variables-secondary-timing-function;
+    transition: transform 350ms $variables-primary-easing, opacity 350ms $variables-secondary-timing-function;
 
     @for $i from 1 to 5 {
       &:nth-child(#{$i}) {
-        transition-delay: $i * $transition-delay-margin + 500ms;
+        transition-delay: $i * $transition-delay-margin + 250ms;
       }
     }
   }

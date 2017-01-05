@@ -83,8 +83,8 @@ $greeting-right-column-background-animation-duration: 750ms;
     mix-blend-mode: lighten;
     opacity: 0;
     transform-origin: center center;
-    transform: translateX(50px);
-    transition: transform 1000ms $variables-primary-easing, opacity 1000ms $variables-secondary-timing-function;
+    transform: translateX(100px);
+    transition: transform 350ms $variables-primary-easing, opacity 350ms $variables-secondary-timing-function;
     transition-delay: 500ms;
     width: 100%;
   }

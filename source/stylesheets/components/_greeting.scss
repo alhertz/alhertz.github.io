@@ -24,7 +24,7 @@ $greeting-right-column-background-animation-duration: 750ms;
     background-color: darken($greeting-background-color, 2%);
     border-radius: 50%;
     content: '';
-    display: block;
+    // display: block;
     height: 24px;
     left: 50%;
     margin-left: -12px;
@@ -34,6 +34,8 @@ $greeting-right-column-background-animation-duration: 750ms;
     top: 50%;
     width: 24px;
     z-index: 111;
+
+    display: none; // temp
 
     &--is-hidden {
       display: none;
@@ -83,9 +85,9 @@ $greeting-right-column-background-animation-duration: 750ms;
     display: block;
     height: 100%;
     mix-blend-mode: lighten;
-    opacity: 0;
+    // opacity: 0;
     transform-origin: center center;
-    transform: translateX(100px);
+    // transform: translateX(100px);
     transition: transform 350ms $variables-primary-easing, opacity 350ms $variables-secondary-timing-function;
     transition-delay: 500ms;
     width: 100%;
@@ -126,11 +128,13 @@ $greeting-right-column-background-animation-duration: 750ms;
       position: absolute;
       right: 0;
       top: 0;
-      transform: translateX(1000px);
+      // transform: translateX(1000px);
       transition: transform $greeting-right-column-background-animation-duration $variables-primary-easing;
-      width: 120%;
-      right: -20%;
+      // width: 120%;
+      // right: -20%;
       z-index: 1;
+
+      width: 100%;
 
       @include media-query(palm) {
         background-color: $greeting-background-color;
@@ -145,7 +149,7 @@ $greeting-right-column-background-animation-duration: 750ms;
       transition-duration: 500ms;
       transition-property: opacity;
       transition-timing-function: $variables-secondary-timing-function;
-      opacity: 0;
+      // opacity: 0;
       z-index: 11;
 
       @for $i from 1 to 6 {

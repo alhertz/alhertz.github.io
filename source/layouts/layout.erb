@@ -10,13 +10,17 @@
     <%= stylesheet_link_tag :all %>
   </head>
 
-  <body class="page page--is-<%= page_classes %>">
-    <main id="main" role="main">
+  <body>
+    <main id="page" role="main" class="page page--is-<%= page_classes %>">
       <%= yield %>
     </main>
 
     <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-    <%= javascript_include_tag :all %>
+    <%= javascript_include_tag :base %>
+
+    <% if current_page.data.page == "index" %>
+      <%= javascript_include_tag :index %>
+    <% end %>
   </body>
 </html>

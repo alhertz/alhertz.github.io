@@ -1,8 +1,21 @@
-.page {
-  opacity: 1;
-  transition: all .3s linear;
+@keyframes fade {
+ 0%   { opacity: 0; }
+ 100% { opacity: 1; }
+}
+
+main {
+  background: #ffffff;
+
+  .page {
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-name: fade;
+    animation-fill-mode: both;
+  }
 
   &.is-exiting {
-    opacity: 0;
+    .page {
+      animation-direction: alternate-reverse;
+    }
   }
 }

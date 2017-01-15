@@ -8,7 +8,7 @@ var $body   = $('html, body'),
       prefetch: true,
       cacheLength: 2,
       onStart: {
-        duration: 1500,
+        duration: 1000,
         render: function ($container) {
           $container.addClass('is-exiting');
           smoothState.restartCSSAnimations();
@@ -16,14 +16,14 @@ var $body   = $('html, body'),
         }
       },
       onReady: {
-        duration: 0,
+        duration: 1000,
         render: function ($container, $newContent) {
           $container.html($newContent);
           $container.removeClass('is-exiting');
         }
       }
     },
-    smoothState = $('#page').smoothState(options).data('smoothState');
+    smoothState = $('#main').smoothState(options).data('smoothState');
 
 
 //

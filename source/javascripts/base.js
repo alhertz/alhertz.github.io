@@ -6,13 +6,13 @@
 var $body   = $('html, body'),
     options = {
       prefetch: true,
-      cacheLength: 2,
+      cacheLength: 0,
       onStart: {
         duration: 1000,
         render: function ($container) {
           $container.addClass('is-exiting');
-          smoothState.restartCSSAnimations();
-          $body.animate({ 'scrollTop': 0 });
+          // smoothState.restartCSSAnimations();
+          // $body.animate({ 'scrollTop': 0 });
         }
       },
       onReady: {

@@ -3,19 +3,17 @@
  100% { opacity: 1; }
 }
 
-main {
+.main {
   background: #ffffff;
+  animation-duration: 1000ms;
+  // animation-timing-function: linear;
+  animation-name: fade;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  position: relative;
 
-  .page {
-    animation-duration: 1000ms;
-    animation-timing-function: linear;
-    animation-name: fade;
-    animation-fill-mode: both;
-  }
 
   &.is-exiting {
-    .page {
-      animation-direction: alternate-reverse;
-    }
+    animation-direction: alternate-reverse;
   }
 }

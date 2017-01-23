@@ -19,6 +19,7 @@ page '/*.txt', layout: false
 # General configuration
 activate :sprockets
 activate :directory_indexes
+activate :autoprefixer
 
 # Reload the browser automatically whenever files change
 configure :development do

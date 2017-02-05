@@ -5,48 +5,48 @@
 //
 // Variables
 //
-var $greetingLeftColumnImageContainer = $('.js-greeting-left-column-image-container');
-var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
-var $greetingRightColumn = $('.js-greeting-right-column');
-var $greetingRightColumnContent = $('.js-greeting-right-column-content');
-var $greetingLoadingIndicator = $('.js-greeting-loading-indicator');
-var $socialMediaLinks = $('.js-social-media-links');
-var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
+// var $greetingLeftColumnImageContainer = $('.js-greeting-left-column-image-container');
+// var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
+// var $greetingRightColumn = $('.js-greeting-right-column');
+// var $greetingRightColumnContent = $('.js-greeting-right-column-content');
+// var $greetingLoadingIndicator = $('.js-greeting-loading-indicator');
+// var $socialMediaLinks = $('.js-social-media-links');
+// var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
 
-//
-// Images loaded
-//
-$greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
-  $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
-  $greetingRightColumn.addClass('greeting__right-column--is-visible')
-  $socialMediaLinks.addClass('social-media-links--is-visible');
-  $greetingLoadingIndicator.addClass('greeting__loading-indicator--is-hidden');
-});
+// //
+// // Images loaded
+// //
+// $greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
+//   $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
+//   $greetingRightColumn.addClass('greeting__right-column--is-visible')
+//   $socialMediaLinks.addClass('social-media-links--is-visible');
+//   $greetingLoadingIndicator.addClass('greeting__loading-indicator--is-hidden');
+// });
 
-//
-// Social media component
-//
-$socialMediaLinkAnchor.mouseover(function() {
-  $(this).addClass('social-media-links__anchor--is-focused');
-  $socialMediaLinks.addClass('social-media-links--has-hovered-anchor');
-});
+// //
+// // Social media component
+// //
+// $socialMediaLinkAnchor.mouseover(function() {
+//   $(this).addClass('social-media-links__anchor--is-focused');
+//   $socialMediaLinks.addClass('social-media-links--has-hovered-anchor');
+// });
 
-$socialMediaLinkAnchor.mouseout(function() {
-  $(this).removeClass('social-media-links__anchor--is-focused');
-  $socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
-});
+// $socialMediaLinkAnchor.mouseout(function() {
+//   $(this).removeClass('social-media-links__anchor--is-focused');
+//   $socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
+// });
 
-//
-// Firebase
-//
-var config = {
-  apiKey: "AIzaSyA4_49yRdL-VsIz-wOFPji-dZnO9npI8pc",
-  authDomain: "hey-al.firebaseapp.com",
-  databaseURL: "https://hey-al.firebaseio.com",
-  storageBucket: "hey-al.appspot.com",
-};
+// //
+// // Firebase
+// //
+// var config = {
+//   apiKey: "AIzaSyA4_49yRdL-VsIz-wOFPji-dZnO9npI8pc",
+//   authDomain: "hey-al.firebaseapp.com",
+//   databaseURL: "https://hey-al.firebaseio.com",
+//   storageBucket: "hey-al.appspot.com",
+// };
 
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
 // Get a reference to the database service
 var database = firebase.database();

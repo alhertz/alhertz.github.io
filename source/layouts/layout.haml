@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport"}/
+    %title= current_page.data.title
+    = favicon_tag 'images/favicon.png'
+    = stylesheet_link_tag :all
+  %body
+    %main#main.main{:role => "main"}
+      %section{:class => "page page--is-#{page_classes}"}
+        = yield
+    / %script{:src => "https://js.pusher.com/3.1/pusher.min.js"}
+    / %script{:src => "https://www.gstatic.com/firebasejs/3.2.1/firebase.js"}
+    = javascript_include_tag :base
+    - if current_page.data.page == "index"
+      = javascript_include_tag :index

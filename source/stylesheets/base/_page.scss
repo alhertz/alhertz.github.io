@@ -1,15 +1,13 @@
 @keyframes fade {
- 0%   { left: -2000px; }
- 100% { left: 0; }
+ 0%   { opacity: 0; }
+ 100% { opacity: 1; }
 }
 
 .main {
   background: #ffffff;
 
-
-
   .page {
-     animation-duration: 500ms;
+    animation-duration: 250ms;
     animation-timing-function: linear;
     animation-name: fade;
     animation-iteration-count: 1;
@@ -17,8 +15,7 @@
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    background: teal;
-    left: -2000px;
+    opacity: 0;
   }
 
   &.is-exiting {

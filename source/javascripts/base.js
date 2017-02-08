@@ -5,35 +5,31 @@
 //= require 'vendor/tinycolor.min.js'
 
 // Smoothstate
-$(function(){
-  'use strict';
-
-  var $body   = $('html, body'),
-      options = {
-        prefetch: true,
-        cacheLength: 2,
-        pageCacheSize: 4,
-        onStart: {
-          duration: 1500,
-          render: function ($container) {
-            $container.addClass('is-exiting');
-            smoothState.restartCSSAnimations();
-            $body.animate({ 'scrollTop': 0 });
-          }
-        },
-        onReady: {
-          duration: 0,
-          render: function ($container, $newContent) {
-            $container.html($newContent);
-            $container.removeClass('is-exiting');
-          }
-        },
-        onAfter: function() {
-          runHomePageIntroAnimation();
+var $body   = $('html, body'),
+    options = {
+      prefetch: true,
+      cacheLength: 2,
+      pageCacheSize: 4,
+      onStart: {
+        duration: 1500,
+        render: function ($container) {
+          $container.addClass('is-exiting');
+          smoothState.restartCSSAnimations();
+          $body.animate({ 'scrollTop': 0 });
         }
       },
-  smoothState = $('#main').smoothState(options).data('smoothState');
-});
+      onReady: {
+        duration: 0,
+        render: function ($container, $newContent) {
+          $container.html($newContent);
+          $container.removeClass('is-exiting');
+        }
+      },
+      onAfter: function() {
+        runHomePageIntroAnimation();
+      }
+    },
+smoothState = $('#main').smoothState(options).data('smoothState');
 
 
 function runHomePageIntroAnimation() {

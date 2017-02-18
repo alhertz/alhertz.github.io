@@ -12,19 +12,13 @@
 
   <body>
     <main id="main" role="main" class="main">
-      <section class="page page--is-<%= page_classes %>">
+      <section class="page page--is-<%= page_classes %> js-page" >
         <%= yield %>
       </section>
     </main>
 
+    <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
     <%= javascript_include_tag :base %>
-
-    <% if current_page.data.page == "index" %>
-      <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-      <%= javascript_include_tag :index %>
-    <% elsif current_page.data.page == "about" %>
-      <%= javascript_include_tag :about %>
-    <% end %>
   </body>
 </html>

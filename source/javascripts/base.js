@@ -26,13 +26,13 @@ var $body   = $('html, body'),
         }
       },
       onAfter: function() {
-        runHomePageIntroAnimation();
+        firePageSpecificScripts();
       }
     },
-smoothState = $('#main').smoothState(options).data('smoothState');
+    smoothState = $('#main').smoothState(options).data('smoothState');
 
 
-function runHomePageIntroAnimation() {
+function firePageSpecificScripts() {
   //
   // Variables
   //

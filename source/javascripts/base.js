@@ -3,6 +3,7 @@
 //= require 'vendor/ev-emitter.js'
 //= require 'vendor/imagesloaded.js'
 //= require 'vendor/tinycolor.min.js'
+//= require 'vendor/instafeed.min.js'
 
 firePageSpecificScripts();
 
@@ -138,7 +139,20 @@ function indexSpecificScript() {
     $(this).removeClass('social-media-links__anchor--is-focused');
     socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
   });
-}
+};
+
+function aboutSpecificScript() {
+  var feed = new Instafeed({
+    get: 'user',
+    userId: '3580023',
+    clientId: '37b600b7218845d8acc7ac92eba572ee',
+    accessToken: '3580023.37b600b.1e5506e20f7f41f1ad22529ea1c9e4d0',
+    limit: 15,
+    resolution: 'standard_resolution'
+  });
+
+  feed.run();
+};
 
 function firePageSpecificScripts() {
   console.log('page specific script fired')
@@ -146,7 +160,7 @@ function firePageSpecificScripts() {
   var page = $('.js-page');
 
   if (page.hasClass("page--is-about")) {
-    console.log('about page');
+    aboutSpecificScript();
   } else if (page.hasClass("page--is-index")) {
     console.log('index page');
     indexSpecificScript();

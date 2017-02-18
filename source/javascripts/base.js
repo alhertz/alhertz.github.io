@@ -4,6 +4,8 @@
 //= require 'vendor/imagesloaded.js'
 //= require 'vendor/tinycolor.min.js'
 
+firePageSpecificScripts();
+
 //
 // Smoothstate
 //
@@ -102,13 +104,7 @@ pusherChannel.bind('sms_received', function(data) {
   $('.js-greeting-right-column-content a').css('color', randomlySelectedColor);
 });
 
-function firePageSpecificScripts() {
-  console.log('page specific script fired')
-
-  var page = $('.js-page');
-  if (page.hasClass("page--is-about") ) {
-    alert(document.title);
-  }
+function indexSpecificScript() {
   //
   // Variables
   //
@@ -142,6 +138,19 @@ function firePageSpecificScripts() {
     $(this).removeClass('social-media-links__anchor--is-focused');
     socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
   });
+}
+
+function firePageSpecificScripts() {
+  console.log('page specific script fired')
+
+  var page = $('.js-page');
+
+  if (page.hasClass("page--is-about")) {
+    console.log('about page');
+  } else if (page.hasClass("page--is-index")) {
+    console.log('index page');
+    indexSpecificScript();
+  }
 };
 
 

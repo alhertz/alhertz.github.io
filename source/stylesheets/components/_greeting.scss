@@ -10,12 +10,16 @@ $greeting-loading-indicator-background-color: #f5f5f5;
 // Component specific styles
 //
 .greeting {
-  // background-color: $greeting-background-color;
+  background-color: $greeting-background-color;
   margin: 0;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
+
+  @include media-query(palm) {
+    overflow: scroll;
+  }
 
   // Left column
   &__left-column {
@@ -60,9 +64,9 @@ $greeting-loading-indicator-background-color: #f5f5f5;
     display: block;
     height: 100%;
     mix-blend-mode: lighten;
-    // opacity: 0;
+    opacity: 0;
     transform-origin: center center;
-    // transform: translateX(100px);
+    transform: translateX(100px);
     transition: transform 350ms $variables-primary-easing, opacity 350ms $variables-secondary-timing-function;
     transition-delay: 500ms;
     width: 100%;
@@ -96,33 +100,33 @@ $greeting-loading-indicator-background-color: #f5f5f5;
     // Use pseudo element for white background so the transform
     // property may be used for animation performance while prevent
     // any text rendering bugs from happening
-    // &:after {
-    //   background-color: #ffffff;
-    //   content: '';
-    //   height: 100%;
-    //   position: absolute;
-    //   right: 0;
-    //   top: 0;
-    //   transform: translateX(1000px);
-    //   transition: transform $greeting-right-column-background-animation-duration $variables-primary-easing;
-    //   width: 120%;
-    //   right: -20%;
-    //   z-index: 1;
+    &:after {
+      background-color: #ffffff;
+      content: '';
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(1000px);
+      transition: transform $greeting-right-column-background-animation-duration $variables-primary-easing;
+      width: 120%;
+      right: -20%;
+      z-index: 1;
 
-    //   @include media-query(palm) {
-    //     background-color: $greeting-background-color;
-    //     right: 0;
-    //     width: 100%;
-    //     transform: translateX(0);
-    //     transition: background-color $greeting-right-column-background-animation-duration $variables-primary-easing;
-    //   }
-    // }
+      @include media-query(palm) {
+        background-color: $greeting-background-color;
+        right: 0;
+        width: 100%;
+        transform: translateX(0);
+        transition: background-color $greeting-right-column-background-animation-duration $variables-primary-easing;
+      }
+    }
 
     * {
       transition-duration: 500ms;
       transition-property: opacity;
       transition-timing-function: $variables-secondary-timing-function;
-      // opacity: 0;
+      opacity: 0;
       z-index: 11;
 
       @for $i from 1 to 6 {

@@ -16,7 +16,9 @@ $greeting-loading-indicator-background-color: #f9f9f9;
   // transition-property: opacity;
   // transition-timing-function: ease-in-out;
   pointer-events: none;
-  opacity: 0;
+  // opacity: 0;
+  display: none;
+  background-color: red;
 
   &__pulse {
     // animation-duration: 2s;

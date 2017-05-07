@@ -23,6 +23,12 @@ var $body   = $('html, body'),
           $body.animate({ 'scrollTop': 0 });
         }
       },
+      onProgress: {
+        duration: 350,
+        render: function ($container) {
+          $container.addClass('is-loading');
+        }
+      },
       onReady: {
         duration: 0,
         render: function ($container, $newContent) {

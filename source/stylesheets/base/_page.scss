@@ -1,6 +1,11 @@
 @keyframes fade {
- 0%   { opacity: 0; }
- 100% { opacity: 1; }
+  0%  {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeout {
@@ -14,7 +19,7 @@
   // .loading-signifier,
   .page {
     animation-duration: 350ms;
-    animation-timing-function: linear;
+    animation-timing-function: $variables-secondary-timing-function;
     animation-name: fade;
     animation-iteration-count: 1;
     animation-fill-mode: both;
@@ -48,6 +53,12 @@
     .loading-signifier {
       // animation-direction: alternate-reverse;
       // opacity: 1;
+    }
+  }
+
+  &.is-loading {
+    .loading-signifier {
+      display: block;
     }
   }
 }

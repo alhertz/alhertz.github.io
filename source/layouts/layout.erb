@@ -12,6 +12,10 @@
 
   <body>
     <main id="main" role="main" class="main">
+      <div class="loading-signifier js-loading-signifier">
+        <span class="loading-signifier__pulse"></span>
+      </div>
+
       <section class="page page--is-<%= page_classes %> js-page" >
         <%= yield %>
       </section>

@@ -16,7 +16,7 @@ var $body   = $('html, body'),
       cacheLength: 2,
       pageCacheSize: 4,
       onStart: {
-        duration: 1500,
+        duration: 350,
         render: function ($container) {
           $container.addClass('is-exiting');
           smoothState.restartCSSAnimations();
@@ -113,7 +113,6 @@ function indexSpecificScript() {
   var greetingLeftColumnImage = $('.js-greeting-left-column-image');
   var greetingRightColumn = $('.js-greeting-right-column');
   var greetingRightColumnContent = $('.js-greeting-right-column-content');
-  var greetingLoadingIndicator = $('.js-greeting-loading-indicator');
   var socialMediaLinks = $('.js-social-media-links');
   var socialMediaLinkAnchor = $('.js-social-media-links-anchor');
 
@@ -124,7 +123,6 @@ function indexSpecificScript() {
     greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
     greetingRightColumn.addClass('greeting__right-column--is-visible')
     socialMediaLinks.addClass('social-media-links--is-visible');
-    greetingLoadingIndicator.addClass('greeting__loading-indicator--is-hidden');
   });
 
   //
@@ -160,6 +158,7 @@ function firePageSpecificScripts() {
   var page = $('.js-page');
 
   if (page.hasClass("page--is-about")) {
+    console.log('about page');
     aboutSpecificScript();
   } else if (page.hasClass("page--is-index")) {
     console.log('index page');

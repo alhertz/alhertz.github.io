@@ -14,9 +14,8 @@
 }
 
 .main {
-  background: #ffffff;
+  background: #252A2E;
 
-  // .loading-signifier,
   .page {
     animation-duration: 350ms;
     animation-timing-function: $variables-secondary-timing-function;
@@ -26,7 +25,6 @@
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    // opacity: 0;
   }
 
   .loading-signifier {

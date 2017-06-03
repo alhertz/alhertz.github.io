@@ -12,13 +12,22 @@
 
   <body>
     <main id="main" role="main" class="main">
-      <div class="loading-signifier js-loading-signifier">
-        <span class="loading-signifier__pulse"></span>
-      </div>
+      <section class="loading-signifier js-loading-signifier">
+        <div class="loading-signifier__pulse"></div>
+      </section>
 
       <section class="page page--is-<%= page_classes %> js-page" >
         <%= yield %>
       </section>
+
+      <nav class="navigation">
+        <ul>
+          <li class="navigation__link"><a href="/" title="Home">Home</a></li>
+          <li class="navigation__link"><a href="/about" title="Home">About</a></li>
+          <li class="navigation__link"><a href="/music" title="Home">Music</a></li>
+          <li class="navigation__link"><a href="/portfolio" title="Home">Portfolio</a></li>
+        </ul>
+      </nav>
     </main>
 
     <script src="https://js.pusher.com/3.1/pusher.min.js"></script>

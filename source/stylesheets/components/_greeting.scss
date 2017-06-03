@@ -2,7 +2,8 @@
 // Component specific variables
 //
 $greeting-transition-delay-margin: 100ms;
-$greeting-background-color:  #252A2E;
+$greeting-transition-delay: 350ms;
+$greeting-background-color: #252A2E;
 $greeting-right-column-background-animation-duration: 750ms;
 $greeting-loading-indicator-background-color: #f5f5f5;
 
@@ -61,7 +62,7 @@ $greeting-loading-indicator-background-color: #f5f5f5;
     background-image: image-url("me.jpg");
     background-position: center center;
     background-size: cover;
-    display: block;
+    display: none;
     height: 100%;
     mix-blend-mode: lighten;
     opacity: 0;
@@ -131,7 +132,7 @@ $greeting-loading-indicator-background-color: #f5f5f5;
 
       @for $i from 1 to 6 {
         &:nth-child(#{$i}) {
-          transition-delay: $i * $greeting-transition-delay-margin + 1;
+          transition-delay: $i * $greeting-transition-delay-margin;
         }
       }
     }

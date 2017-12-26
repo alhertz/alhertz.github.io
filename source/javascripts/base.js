@@ -16,7 +16,7 @@ var $body   = $('html, body'),
       cacheLength: 2,
       pageCacheSize: 4,
       onStart: {
-        duration: 350,
+        duration: 500,
         render: function ($container) {
           $container.addClass('is-exiting');
           smoothState.restartCSSAnimations();
@@ -26,14 +26,14 @@ var $body   = $('html, body'),
       onProgress: {
         duration: 350,
         render: function ($container) {
-          $container.addClass('is-loading');
+          $container.addClass('is-loading').removeClass('is-loading');
         }
       },
       onReady: {
         duration: 0,
         render: function ($container, $newContent) {
           $container.html($newContent);
-          $container.removeClass('is-exiting');
+          $container.removeClass('is-exiting').removeClass('is-loading');
         }
       },
       onAfter: function() {
@@ -41,6 +41,7 @@ var $body   = $('html, body'),
       }
     },
     smoothState = $('#main').smoothState(options).data('smoothState');
+
 
 //
 // Firebase
@@ -111,6 +112,16 @@ pusherChannel.bind('sms_received', function(data) {
   $('.js-greeting-right-column-content a').css('color', randomlySelectedColor);
 });
 
+function firePageSpecificScripts() {
+  var page = $('.js-page');
+
+  if (page.hasClass("page--is-about")) {
+    aboutSpecificScript();
+  } else if (page.hasClass("page--is-index")) {
+    indexSpecificScript();
+  }
+};
+
 function indexSpecificScript() {
   //
   // Variables
@@ -127,7 +138,7 @@ function indexSpecificScript() {
   //
   greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
     greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
-    greetingRightColumn.addClass('greeting__right-column--is-visible')
+    greetingRightColumnContent.addClass('greeting__right-column-content--is-visible')
     socialMediaLinks.addClass('social-media-links--is-visible');
   });
 
@@ -146,6 +157,9 @@ function indexSpecificScript() {
 };
 
 function aboutSpecificScript() {
+  //
+  // Instafeed
+  //
   var feed = new Instafeed({
     get: 'user',
     userId: '3580023',
@@ -157,21 +171,6 @@ function aboutSpecificScript() {
 
   feed.run();
 };
-
-function firePageSpecificScripts() {
-  console.log('page specific script fired')
-
-  var page = $('.js-page');
-
-  if (page.hasClass("page--is-about")) {
-    console.log('about page');
-    aboutSpecificScript();
-  } else if (page.hasClass("page--is-index")) {
-    console.log('index page');
-    indexSpecificScript();
-  }
-};
-
 
 //
 // Google analytics

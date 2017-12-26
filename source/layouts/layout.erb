@@ -16,10 +16,6 @@
         <div class="loading-signifier__pulse"></div>
       </section>
 
-      <section class="page page--is-<%= page_classes %> js-page" >
-        <%= yield %>
-      </section>
-
       <nav class="navigation">
         <ul>
           <li class="navigation__link"><a href="/" title="Home">Home</a></li>
@@ -28,10 +24,11 @@
           <li class="navigation__link"><a href="/portfolio" title="Home">Portfolio</a></li>
         </ul>
       </nav>
-    </main>
 
-    <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+      <section class="page page--is-<%= page_classes %> js-page" >
+        <%= yield %>
+      </section>
+    </main>
     <%= javascript_include_tag :base %>
   </body>
 </html>

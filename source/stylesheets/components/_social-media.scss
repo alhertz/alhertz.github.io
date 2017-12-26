@@ -22,7 +22,7 @@ $transition-delay-margin: 100ms;
 
   &--is-visible {
     .social-media-links__item {
-      transform: translateX(0) translateZ(0);
+      transform: translateY(0) translateZ(0);
       opacity: 1;
     }
   }
@@ -31,14 +31,8 @@ $transition-delay-margin: 100ms;
     display: inline-block;
     margin-right: 2rem;
     opacity: 0;
-    transform: translateX(50px) translateZ(0);
-    transition: transform 350ms $variables-primary-easing, opacity 350ms $variables-secondary-timing-function;
-
-    @for $i from 1 to 5 {
-      &:nth-child(#{$i}) {
-        transition-delay: $i * $transition-delay-margin + 250ms;
-      }
-    }
+    transition: opacity 350ms $variables-secondary-timing-function;
+    transition-delay: 500ms;
   }
 
   &__anchor {

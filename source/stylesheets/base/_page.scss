@@ -8,16 +8,11 @@
   }
 }
 
-@keyframes fadeout {
- 0%   { opacity: 1; }
- 100% { opacity: 0; }
-}
-
 .main {
-  background: #252A2E;
+  background: #ffffff;
 
   .page {
-    animation-duration: 350ms;
+    animation-duration: $variables-primary-transition-duration;
     animation-timing-function: $variables-secondary-timing-function;
     animation-name: fade;
     animation-iteration-count: 1;
@@ -28,35 +23,25 @@
   }
 
   .loading-signifier {
-    // animation-duration: 500ms;
-    // animation-timing-function: linear;
-    // animation-name: fade;
-    // animation-iteration-count: 1;
-    // animation-fill-mode: both;
-    // animation-name: fade;
-    // opacity: 1;
-    // transition-duration: 500ms;
-    // transition-property: opacity;
-    // transition-timing-function: linear;
-    // opacity: 0;
+    animation-duration: $variables-primary-transition-duration;
+    animation-timing-function: linear;
+    opacity: 0;
+    transition-duration: $variables-primary-transition-duration;
+    transition-property: opacity;
+    transition-timing-function: linear;
   }
 
   &.is-exiting {
-
-
     .page {
       animation-direction: alternate-reverse;
-    }
-
-    .loading-signifier {
-      // animation-direction: alternate-reverse;
-      // opacity: 1;
     }
   }
 
   &.is-loading {
     .loading-signifier {
-      display: block;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-name: fade;
     }
   }
 }

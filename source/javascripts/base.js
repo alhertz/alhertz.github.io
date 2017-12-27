@@ -1,41 +1,46 @@
 //= require 'vendor/jquery.js'
+//= require 'vendor/jquery.smoothState.js'
 //= require 'vendor/ev-emitter.js'
 //= require 'vendor/imagesloaded.js'
 //= require 'vendor/tinycolor.min.js'
 
-//
-// Variables
-//
-var $greetingLeftColumnImageContainer = $('.js-greeting-left-column-image-container');
-var $greetingLeftColumnImage = $('.js-greeting-left-column-image');
-var $greetingRightColumn = $('.js-greeting-right-column');
-var $greetingRightColumnContent = $('.js-greeting-right-column-content');
-var $greetingLoadingIndicator = $('.js-greeting-loading-indicator');
-var $socialMediaLinks = $('.js-social-media-links');
-var $socialMediaLinkAnchor = $('.js-social-media-links-anchor');
+firePageSpecificScripts();
 
 //
-// Images loaded
+// Smoothstate
 //
-$greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
-  $greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
-  $greetingRightColumn.addClass('greeting__right-column--is-visible')
-  $socialMediaLinks.addClass('social-media-links--is-visible');
-  $greetingLoadingIndicator.addClass('greeting__loading-indicator--is-hidden');
-});
+var $body   = $('html, body'),
+    options = {
+      prefetch: true,
+      cacheLength: 2,
+      pageCacheSize: 4,
+      onStart: {
+        duration: 500,
+        render: function ($container) {
+          $container.addClass('is-exiting');
+          smoothState.restartCSSAnimations();
+          $body.animate({ 'scrollTop': 0 });
+        }
+      },
+      onProgress: {
+        duration: 350,
+        render: function ($container) {
+          $container.addClass('is-loading').removeClass('is-loading');
+        }
+      },
+      onReady: {
+        duration: 0,
+        render: function ($container, $newContent) {
+          $container.html($newContent);
+          $container.removeClass('is-exiting').removeClass('is-loading');
+        }
+      },
+      onAfter: function() {
+        firePageSpecificScripts();
+      }
+    },
+    smoothState = $('#main').smoothState(options).data('smoothState');
 
-//
-// Social media component
-//
-$socialMediaLinkAnchor.mouseover(function() {
-  $(this).addClass('social-media-links__anchor--is-focused');
-  $socialMediaLinks.addClass('social-media-links--has-hovered-anchor');
-});
-
-$socialMediaLinkAnchor.mouseout(function() {
-  $(this).removeClass('social-media-links__anchor--is-focused');
-  $socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
-});
 
 //
 // Firebase
@@ -102,9 +107,53 @@ pusherChannel.bind('sms_received', function(data) {
   var randomColorFromColorArray = colorArray[Math.floor(Math.random() * colorArray.length)];
   var randomlySelectedColor = tinycolor(randomColorFromColorArray).lighten().desaturate();
 
-  $('.js-greeting-left-column').css('background-color', randomlySelectedColor);
+  $('.js-greeting-left-column')
+    .css('background-color', randomlySelectedColor)
+    .addClass('greeting__left-column--has-custom-background-color');
   $('.js-greeting-right-column-content a').css('color', randomlySelectedColor);
 });
+
+function firePageSpecificScripts() {
+  var page = $('.js-page');
+
+  if (page.hasClass("page--is-index")) {
+    indexSpecificScript();
+  }
+};
+
+function indexSpecificScript() {
+  //
+  // Variables
+  //
+  var greetingLeftColumnImageContainer = $('.js-greeting-left-column-image-container');
+  var greetingLeftColumnImage = $('.js-greeting-left-column-image');
+  var greetingRightColumn = $('.js-greeting-right-column');
+  var greetingRightColumnContent = $('.js-greeting-right-column-content');
+  var socialMediaLinks = $('.js-social-media-links');
+  var socialMediaLinkAnchor = $('.js-social-media-links-anchor');
+
+  //
+  // Images loaded
+  //
+  greetingLeftColumnImage.imagesLoaded({ background: true }, function() {
+    greetingLeftColumnImageContainer.addClass('greeting__left-column-image-container--is-finished-loading');
+    greetingRightColumnContent.addClass('greeting__right-column-content--is-visible')
+    socialMediaLinks.addClass('social-media-links--is-visible');
+  });
+
+  //
+  // Social media component
+  //
+  socialMediaLinkAnchor.mouseover(function() {
+    $(this).addClass('social-media-links__anchor--is-focused');
+    socialMediaLinks.addClass('social-media-links--has-hovered-anchor');
+  });
+
+  socialMediaLinkAnchor.mouseout(function() {
+    $(this).removeClass('social-media-links__anchor--is-focused');
+    socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
+  });
+};
 
 //
 // Google analytics

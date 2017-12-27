@@ -15,7 +15,7 @@
 //
 // Base
 //
-@import "base/page";
+@import "base/base";
 @import "base/typography";
 @import "base/icons";
 
@@ -24,3 +24,7 @@
 //
 @import "components/greeting";
 @import "components/social-media";
+@import "components/instafeed";
+@import "components/loading-signifier";
+@import "components/navigation";
+@import "base/page";

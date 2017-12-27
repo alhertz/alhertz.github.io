@@ -3,7 +3,6 @@
 //= require 'vendor/ev-emitter.js'
 //= require 'vendor/imagesloaded.js'
 //= require 'vendor/tinycolor.min.js'
-//= require 'vendor/instafeed.min.js'
 
 firePageSpecificScripts();
 
@@ -115,9 +114,7 @@ pusherChannel.bind('sms_received', function(data) {
 function firePageSpecificScripts() {
   var page = $('.js-page');
 
-  if (page.hasClass("page--is-about")) {
-    aboutSpecificScript();
-  } else if (page.hasClass("page--is-index")) {
+  if (page.hasClass("page--is-index")) {
     indexSpecificScript();
   }
 };
@@ -154,22 +151,6 @@ function indexSpecificScript() {
     $(this).removeClass('social-media-links__anchor--is-focused');
     socialMediaLinks.removeClass('social-media-links--has-hovered-anchor');
   });
-};
-
-function aboutSpecificScript() {
-  //
-  // Instafeed
-  //
-  var feed = new Instafeed({
-    get: 'user',
-    userId: '3580023',
-    clientId: '37b600b7218845d8acc7ac92eba572ee',
-    accessToken: '3580023.37b600b.1e5506e20f7f41f1ad22529ea1c9e4d0',
-    limit: 15,
-    resolution: 'standard_resolution'
-  });
-
-  feed.run();
 };
 
 //

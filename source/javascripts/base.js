@@ -107,7 +107,9 @@ pusherChannel.bind('sms_received', function(data) {
   var randomColorFromColorArray = colorArray[Math.floor(Math.random() * colorArray.length)];
   var randomlySelectedColor = tinycolor(randomColorFromColorArray).lighten().desaturate();
 
-  $('.js-greeting-left-column').css('background-color', randomlySelectedColor);
+  $('.js-greeting-left-column')
+    .css('background-color', randomlySelectedColor)
+    .addClass('greeting__left-column--has-custom-background-color');
   $('.js-greeting-right-column-content a').css('color', randomlySelectedColor);
 });
 

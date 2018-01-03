@@ -22,7 +22,13 @@
     min-width: 100vw;
 
     &--is-plaid {
-      background-color: #000000;
+      font-size: 80px;
+      text-align: center;
+
+      div {
+        position: relative;
+        padding-top: 80px;
+      }
     }
   }
 
@@ -37,6 +43,7 @@
 
   &.is-exiting {
     .page {
+      animation-duration: 250ms;
       animation-direction: alternate-reverse;
     }
   }

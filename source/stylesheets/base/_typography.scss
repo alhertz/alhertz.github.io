@@ -2,21 +2,61 @@
 // Typography
 //
 
-h2 {
-  font-size: 3rem;
-  font-weight: 400;
-  margin-top: 0;
-  color: #252A2E;
+.heading {
+  font-family: $variables-primary-font-stack;
+
+  &--is-1 {
+    font-size: 8rem;
+    letter-spacing: -1px;
+    line-height: 9.6rem;
+    font-weight: 100;
+  }
+
+  &--is-2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 0;
+    font-family: $variables-primary-font-stack;
+  }
+
+  &--is-3 {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    letter-spacing: -1px;
+    margin-bottom: 1.6rem;
+  }
 }
 
-p {
-  font-size: 2rem;
-  line-height: 1.8;
+.paragraph {
+  font-family: $variables-secondary-font-stack;
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 5.76rem;
+  margin-bottom: 2.4rem;
   margin-top: 0;
-  margin-bottom: 3rem;
 }
 
-a {
-  color: darken(#252A2E, 20%);
-  text-decoration: underline;
+.anchor {
+  color: inherit;
+  display: inline-block;
+  font-family: inherit;
+  position: relative;
+  text-decoration: none;
+
+  &:after {
+    background: rgba(255, 255, 255, 0.2);
+    bottom: 4px;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: background-color $variables-primary-transition-duration  $variables-primary-easing;
+    width: 100%;
+  }
+
+  &:hover {
+    &:after {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
 }

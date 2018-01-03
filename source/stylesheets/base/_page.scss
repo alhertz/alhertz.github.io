@@ -9,7 +9,7 @@
 }
 
 .main {
-  background: #ffffff;
+  background-color: #000000;
 
   .page {
     animation-duration: $variables-primary-transition-duration;
@@ -20,6 +20,10 @@
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
+
+    &--is-plaid {
+      background-color: #000000;
+    }
   }
 
   .loading-signifier {

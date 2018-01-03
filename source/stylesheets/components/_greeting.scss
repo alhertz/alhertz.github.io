@@ -120,6 +120,10 @@ $greeting-loading-indicator-background-color: #f5f5f5;
     }
   }
 
+  &__anchor {
+    color: rgba(255, 255, 255, .8);
+  }
+
   // For optimal characters per line, enforce a max-width on the greeter copy
   &__right-column-content {
     margin-left: auto;

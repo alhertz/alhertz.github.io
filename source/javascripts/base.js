@@ -3,6 +3,7 @@
 //= require 'vendor/ev-emitter.js'
 //= require 'vendor/imagesloaded.js'
 //= require 'vendor/tinycolor.min.js'
+//= require 'vendor/pace.js'
 
 firePageSpecificScripts();
 

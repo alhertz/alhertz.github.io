@@ -9,7 +9,7 @@
 }
 
 .main {
-  background: #ffffff;
+  background-color: #000000;
 
   .page {
     animation-duration: $variables-primary-transition-duration;
@@ -20,6 +20,16 @@
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
+
+    &--is-plaid {
+      font-size: 80px;
+      text-align: center;
+
+      div {
+        position: relative;
+        padding-top: 80px;
+      }
+    }
   }
 
   .loading-signifier {
@@ -33,6 +43,7 @@
 
   &.is-exiting {
     .page {
+      animation-duration: 250ms;
       animation-direction: alternate-reverse;
     }
   }

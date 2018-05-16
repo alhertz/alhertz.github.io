@@ -1,10 +1,13 @@
 //
 // Vendor
 
-@import "vendor/inuit/generic.normalize";
-@import "vendor/inuit/generic.box-sizing";
-@import "vendor/inuit/settings.responsive";
-@import "vendor/inuit/tools.responsive";
+@import "vendor/inuit/_generic.normalize";
+@import "vendor/inuit/_generic.box-sizing";
+@import "vendor/inuit/_settings.responsive";
+@import "vendor/inuit/_tools.responsive";
+@import "vendor/myer-reset";
+@import "vendor/pace";
+@import "https://use.typekit.net/zvq0zou.css";
 
 //
 // Utlities

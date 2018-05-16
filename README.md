@@ -1,16 +1,9 @@
-### Running this site
+### Local development
 
-1. Clone it
 2. `bundle install`
 3. `middleman serve`
 
-👍
+### Deploys
 
-### Deploying this site
-
-1. `rake publish`
-2. Verify that [changes are live](http://hey.al) and all is well
-
-_Note: If `rake publish` fails, `rm -rf build` and try again_
-
-👍👍
+1. Changes to `staging` auto-deploy to [`staging.hey.al`](https://staging.hey.al)
+2. Changes to `master` auto-deploy to [`hey.al`](https://hey.al)

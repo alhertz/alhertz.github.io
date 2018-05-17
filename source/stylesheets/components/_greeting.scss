@@ -11,12 +11,11 @@ $greeting-loading-indicator-background-color: #f5f5f5;
 // Component specific styles
 //
 .greeting {
-  height: 100vh;
+  height: calc(100vh - 8rem);
   margin: 0;
   max-width: 100%;
   overflow: hidden;
   width: 100vw;
-  padding: 4rem;
 
   @include media-query(palm) {
     overflow: scroll;

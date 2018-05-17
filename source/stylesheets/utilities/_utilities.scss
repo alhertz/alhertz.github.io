@@ -11,3 +11,11 @@
     display: none;
   }
 }
+
+.u-clearfix {
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}

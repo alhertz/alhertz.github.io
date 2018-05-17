@@ -12,9 +12,7 @@
 
   <body>
     <main id="main" role="main" class="main">
-      <section class="loading-signifier js-loading-signifier">
-        <div class="loading-signifier__pulse"></div>
-      </section>
+      <span class="main__loading-signifier js-loading-signifier"></span>
 
       <nav class="navigation">
         <ul>
@@ -25,13 +23,14 @@
         </ul>
       </nav>
 
-      <section class="page page--is-<%= page_classes %> js-page" >
+      <section class="main__content page page--is-<%= page_classes %> js-page" >
         <%= yield %>
       </section>
     </main>
 
     <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <%= javascript_include_tag :base %>
   </body>
 </html>

@@ -16,7 +16,7 @@
     animation-timing-function: linear;
     height: 100vh;
     opacity: 0;
-    background-color: #000000;
+    background-color: #111111;
     pointer-events: none;
     position: fixed;
     transition-duration: $variables-primary-transition-duration;
@@ -55,22 +55,22 @@
     animation-fill-mode: both;
   }
 
+  &.is-loading {
+    .main__loading-signifier {
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-name: fade;
+      opacity: 1;
+    }
+  }
+
   &.is-exiting {
     .page {
       animation-duration: 250ms;
       animation-direction: alternate-reverse;
     }
   }
-
-  &.is-loading {
-    .loading-signifier {
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-      animation-name: fade;
-    }
-  }
 }
-
 
 //
 // Component  animations
@@ -87,15 +87,15 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
   }
   70% {
-    box-shadow: 0 0 0 80px rgba(255, 255, 255, 0);
-    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 80px rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 1);
   }
 }

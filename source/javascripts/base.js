@@ -16,24 +16,31 @@ var $body   = $('html, body'),
       cacheLength: 2,
       pageCacheSize: 4,
       onStart: {
-        duration: 500,
+        duration: 250,
         render: function ($container) {
+
+          // Dear future Al,
+          // Update this bit of code to check visitor scroll position
+          // before running addClass and restartCSSAnimations. If visitor HAS
+          // scrolled, animate THEN run addClass and restartCSSAnimations
+          // <3
+
           $container.addClass('is-exiting');
           smoothState.restartCSSAnimations();
           $body.animate({ 'scrollTop': 0 });
         }
       },
       onProgress: {
-        duration: 350,
+        duration: 0,
         render: function ($container) {
-          $container.addClass('is-loading').removeClass('is-loading');
+          $container.removeClass('is-exiting').addClass('is-loading');
         }
       },
       onReady: {
         duration: 0,
         render: function ($container, $newContent) {
+          $container.removeClass('is-loading').removeClass('is-exiting');
           $container.html($newContent);
-          $container.removeClass('is-exiting').removeClass('is-loading');
         }
       },
       onAfter: function() {
@@ -58,7 +65,7 @@ firebase.initializeApp(config);
 // Get a reference to the database service
 var database = firebase.database();
 
-// When an SMS is sent and
+// When an SMS is sent to the website, save it
 function saveSmsToDatabase(text, fromNumber) {
   // An SMS
   var smsData = {

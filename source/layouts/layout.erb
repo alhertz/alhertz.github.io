@@ -8,7 +8,6 @@
     <title><%= current_page.data.title %></title>
     <%= favicon_tag 'images/favicon.png' %>
     <%= stylesheet_link_tag "all" %>
-
   </head>
 
   <body>
@@ -32,6 +31,12 @@
     <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <%= javascript_include_tag :base %>
+    <%= javascript_include_tag "vendor/jquery" %>
+    <%= javascript_include_tag "vendor/smoothstate" %>
+    <%= javascript_include_tag "vendor/ev-emitter" %>
+    <%= javascript_include_tag "vendor/imagesloaded" %>
+    <%= javascript_include_tag "vendor/tinycolor" %>
+    <%= javascript_include_tag "vendor/pace" %>
+    <%= javascript_include_tag "base" %>
   </body>
 </html>

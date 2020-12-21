@@ -6,45 +6,46 @@
   font-family: $variables-primary-font-stack;
 
   &--1 {
-    font-size: 12rem;
-    font-weight: 200;
+    font-size: 4.0rem;
+    font-weight: 600;
     letter-spacing: -1px;
     line-height: 1.2;
+    margin-bottom: 1.6rem;
   }
 
   &--2 {
-    font-size: 8rem;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: -1px;
+    font-size: 3.2rem;
+    letter-spacing: -0.25px;
+    line-height: 3.6rem;
+    margin-bottom: 1.6rem;
     margin-top: 0;
   }
 
   &--3 {
-
-    font-size: 4rem;
-    letter-spacing: -1px;
+    font-size: 2.4rem;
     font-weight: 700;
+    letter-spacing: -1px;
     line-height: 1.2;
     margin-bottom: 1.6rem;
   }
 
   &--4 {
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 1.2rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 1.6rem;
+    margin-bottom: .8rem;
     display: inline-block;
   }
 }
 
+
 .paragraph {
-  
   font-family: $variables-secondary-font-stack;
-  font-size: 4rem;
-  line-height: 5.76rem;
-  margin-bottom: 4rem;
+  font-size: 2.4rem;
+  letter-spacing: -0.25px;
+  line-height: 3.6rem;
+  margin-bottom: 1.6rem;
   margin-top: 0;
 
   @media screen and (prefers-color-scheme: dark) {
@@ -66,13 +67,18 @@
   font-family: inherit;
   position: relative;
   text-decoration: none;
-  padding-left: 4px;
-  padding-right: 4px;
 
   @media screen and (prefers-color-scheme: dark) {
+    color: #ffffff;
+
     &:after {
-      background: #222222;
-      color: #ffffff;
+      background-color: #666666;
+    }
+
+    &:hover {
+      &:after {
+        background-color: #999999;
+      }
     }
   }
 
@@ -80,27 +86,25 @@
     color: #111111;
 
     &:after {
-      background: #eeeeee;
+      background-color: #999999; 
+    }
+
+    &:hover {
+      &:after {
+        background-color: #666666;
+      }
     }
   }
 
   &:after {
-    left: 0;
-    bottom: 4px;
+    bottom: 2px;
     content: '';
     display: block;
     height: 2px;
+    left: 0;
     position: absolute;
-    transform: scaleY(14);
-    transform-origin: bottom center;
-    transition: transform $variables-primary-transition-duration  $variables-primary-easing;
+    transition: background-color $variables-primary-transition-duration  $variables-primary-easing;
     width: 100%;
     z-index: -1;
-  }
-
-  &:hover {
-    &:after {
-      transform: scaleY(1);
-    }
   }
 }

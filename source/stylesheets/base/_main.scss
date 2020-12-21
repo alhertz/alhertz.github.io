@@ -3,8 +3,6 @@
 // Component styles
 //
 .main {
-  background-color: #000000;
-
   &__content {
     position: relative;
     padding: 4rem;
@@ -16,7 +14,6 @@
     animation-timing-function: linear;
     height: 100vh;
     opacity: 0;
-    background-color: #111111;
     pointer-events: none;
     position: fixed;
     transition-duration: $variables-primary-transition-duration;

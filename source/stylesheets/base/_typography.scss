@@ -2,21 +2,109 @@
 // Typography
 //
 
-h2 {
-  font-size: 3rem;
-  font-weight: 400;
-  margin-top: 0;
-  color: #252A2E;
+.heading {
+  font-family: $variables-primary-font-stack;
+
+  &--1 {
+    font-size: 4.0rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+  }
+
+  &--2 {
+    font-size: 3.2rem;
+    letter-spacing: -0.25px;
+    line-height: 3.6rem;
+    margin-bottom: 1.6rem;
+    margin-top: 0;
+  }
+
+  &--3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+  }
+
+  &--4 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+    display: inline-block;
+  }
 }
 
-p {
-  font-size: 2rem;
-  line-height: 1.8;
+
+.paragraph {
+  font-family: $variables-secondary-font-stack;
+  font-size: 2.4rem;
+  letter-spacing: -0.25px;
+  line-height: 3.6rem;
+  margin-bottom: 1.6rem;
   margin-top: 0;
-  margin-bottom: 3rem;
+
+  @media screen and (prefers-color-scheme: dark) {
+    color: #999999;
+  }
+
+  @media screen and (prefers-color-scheme: light) {
+    color: #444444;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-a {
-  color: darken(#252A2E, 20%);
-  text-decoration: underline;
+.anchor {
+  color: inherit;
+  display: inline-block;
+  font-family: inherit;
+  position: relative;
+  text-decoration: none;
+
+  @media screen and (prefers-color-scheme: dark) {
+    color: #ffffff;
+
+    &:after {
+      background-color: #666666;
+    }
+
+    &:hover {
+      &:after {
+        background-color: #999999;
+      }
+    }
+  }
+
+  @media screen and (prefers-color-scheme: light) {
+    color: #111111;
+
+    &:after {
+      background-color: #999999; 
+    }
+
+    &:hover {
+      &:after {
+        background-color: #666666;
+      }
+    }
+  }
+
+  &:after {
+    bottom: 2px;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: background-color $variables-primary-transition-duration  $variables-primary-easing;
+    width: 100%;
+    z-index: -1;
+  }
 }

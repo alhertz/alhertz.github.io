@@ -15,6 +15,10 @@ $transition-delay-margin: 100ms;
   width: 100%;
   z-index: 111;
 
+  @include media-query(palm) {
+    display: none;
+  }
+
   &--has-hovered-anchor {
     .social-media-links__anchor             { opacity: 0.5; }
     .social-media-links__anchor--is-focused { opacity: 1; }

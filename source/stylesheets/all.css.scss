@@ -7,7 +7,6 @@
 @import "vendor/inuit/_tools.responsive";
 @import "vendor/myer-reset";
 @import "vendor/pace";
-@import "https://use.typekit.net/zvq0zou.css";
 
 //
 // Utlities
@@ -30,3 +29,8 @@
 @import "components/greeting";
 @import "components/social-media";
 @import "components/navigation";
+
+//
+// Pages
+//
+@import "pages/plaid";

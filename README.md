@@ -1,7 +1,7 @@
-### Local development
+### Development
 
-2. `bundle install`
-3. `middleman serve`
+1. `bundle install`
+2. `middleman serve`
 
 ### Deploys
 

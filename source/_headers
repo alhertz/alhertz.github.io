@@ -1,2 +1,4 @@
 /plaid
   Basic-Auth: yerp:nerp
+/projects
+  Basic-Auth: yerp:nerp

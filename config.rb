@@ -29,3 +29,5 @@ configure :build do
   # Hash assets
   activate :asset_hash
 end
+
+redirect "/misc", to: "/miscellaneous"

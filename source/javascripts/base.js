@@ -53,35 +53,35 @@ var $body   = $('html, body'),
 //
 // Firebase
 //
-var config = {
-  apiKey: "AIzaSyA4_49yRdL-VsIz-wOFPji-dZnO9npI8pc",
-  authDomain: "hey-al.firebaseapp.com",
-  databaseURL: "https://hey-al.firebaseio.com",
-  storageBucket: "hey-al.appspot.com",
-};
+// var config = {
+//   apiKey: "AIzaSyA4_49yRdL-VsIz-wOFPji-dZnO9npI8pc",
+//   authDomain: "hey-al.firebaseapp.com",
+//   databaseURL: "https://hey-al.firebaseio.com",
+//   storageBucket: "hey-al.appspot.com",
+// };
 
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
-// Get a reference to the database service
-var database = firebase.database();
+// // Get a reference to the database service
+// var database = firebase.database();
 
-// When an SMS is sent to the website, save it
-function saveSmsToDatabase(text, fromNumber) {
-  // An SMS
-  var smsData = {
-    text: text,
-    fromNumber: fromNumber
-  };
+// // When an SMS is sent to the website, save it
+// function saveSmsToDatabase(text, fromNumber) {
+//   // An SMS
+//   var smsData = {
+//     text: text,
+//     fromNumber: fromNumber
+//   };
 
-  // Get a key for a new SMS
-  var newSmsKey = firebase.database().ref().child('texts').push().key;
+//   // Get a key for a new SMS
+//   var newSmsKey = firebase.database().ref().child('texts').push().key;
 
-  // Write the new SMS's data to the texts list in Firebase
-  var updates = {};
-  updates['/texts/' + newSmsKey] = smsData;
+//   // Write the new SMS's data to the texts list in Firebase
+//   var updates = {};
+//   updates['/texts/' + newSmsKey] = smsData;
 
-  return firebase.database().ref().update(updates);
-}
+//   return firebase.database().ref().update(updates);
+// }
 
 //
 // Pusher

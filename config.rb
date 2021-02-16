@@ -28,5 +28,5 @@ configure :build do
   activate :minify_javascript
 
   # Hash assets
-  activate :asset_hash
+  # activate :asset_hash
 end
